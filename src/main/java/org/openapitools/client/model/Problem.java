@@ -190,4 +190,63 @@ public class Problem {
     return o.toString().replace("\n", "\n    ");
   }
 
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>();
+    openapiFields.add("type");
+    openapiFields.add("title");
+    openapiFields.add("detail");
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("type");
+    openapiRequiredFields.add("title");
+    openapiRequiredFields.add("detail");
+  }
+
+  public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
+    @SuppressWarnings("unchecked")
+    @Override
+    public <T> TypeAdapter<T> create(Gson gson, TypeToken<T> type) {
+       if (!Problem.class.isAssignableFrom(type.getRawType())) {
+         return null; // this class only serializes 'Problem' and its subtypes
+       }
+       final TypeAdapter<JsonElement> elementAdapter = gson.getAdapter(JsonElement.class);
+       final TypeAdapter<Problem> thisAdapter
+                        = gson.getDelegateAdapter(this, TypeToken.get(Problem.class));
+
+       return (TypeAdapter<T>) new TypeAdapter<Problem>() {
+           @Override
+           public void write(JsonWriter out, Problem value) throws IOException {
+             JsonObject obj = thisAdapter.toJsonTree(value).getAsJsonObject();
+             elementAdapter.write(out, obj);
+           }
+
+           @Override
+           public Problem read(JsonReader in) throws IOException {
+             JsonObject obj = elementAdapter.read(in).getAsJsonObject();
+             Set<Entry<String, JsonElement>> entries = obj.entrySet();//will return members of your object
+             // check to see if the JSON string contains additional fields
+             for (Entry<String, JsonElement> entry: entries) {
+               if (!Problem.openapiFields.contains(entry.getKey())) {
+                throw new IllegalArgumentException("The field `" + entry.getKey() + "` in the JSON string is not defined in the `Problem` properties");
+               }
+             }
+
+             // check to make sure all required properties/fields are present in the JSON string
+             for (String requiredField : Problem.openapiRequiredFields) {
+               if (obj.get(requiredField) == null) {
+                 throw new IllegalArgumentException("The required field `" + requiredField + "` is not found in the JSON string");
+               }
+             }
+
+             return thisAdapter.fromJsonTree(obj);
+           }
+
+       }.nullSafe();
+    }
+  }
 }
