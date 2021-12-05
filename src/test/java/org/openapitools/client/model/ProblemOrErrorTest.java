@@ -121,7 +121,7 @@ public class ProblemOrErrorTest {
         Assert.assertEquals(i.getType(), "https://api.twitter.com/2/problems/streaming-connection");
         Assert.assertEquals(i.getTitle(), "ConnectionException");
         Assert.assertEquals(i.getDetail(), "This stream is currently at the maximum allowed connection limit.");
-        Assert.assertEquals(i.getConnectionIssue(), "TooManyConnections");
+        Assert.assertEquals(i.getConnectionIssue(), ConnectionExceptionProblem.ConnectionIssueEnum.TOOMANYCONNECTIONS);
     }
 
     /**
