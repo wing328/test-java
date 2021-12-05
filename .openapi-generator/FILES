@@ -105,6 +105,7 @@ docs/Point.md
 docs/Poll.md
 docs/PollOption.md
 docs/Problem.md
+docs/ProblemOrError.md
 docs/ReplySettings.md
 docs/ResourceNotFoundProblem.md
 docs/ResourceNotFoundProblemAllOf.md
@@ -314,6 +315,7 @@ src/main/java/org/openapitools/client/model/Point.java
 src/main/java/org/openapitools/client/model/Poll.java
 src/main/java/org/openapitools/client/model/PollOption.java
 src/main/java/org/openapitools/client/model/Problem.java
+src/main/java/org/openapitools/client/model/ProblemOrError.java
 src/main/java/org/openapitools/client/model/ReplySettings.java
 src/main/java/org/openapitools/client/model/ResourceNotFoundProblem.java
 src/main/java/org/openapitools/client/model/ResourceNotFoundProblemAllOf.java

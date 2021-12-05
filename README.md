@@ -293,6 +293,7 @@ Class | Method | HTTP request | Description
  - [Poll](docs/Poll.md)
  - [PollOption](docs/PollOption.md)
  - [Problem](docs/Problem.md)
+ - [ProblemOrError](docs/ProblemOrError.md)
  - [ReplySettings](docs/ReplySettings.md)
  - [ResourceNotFoundProblem](docs/ResourceNotFoundProblem.md)
  - [ResourceNotFoundProblemAllOf](docs/ResourceNotFoundProblemAllOf.md)
