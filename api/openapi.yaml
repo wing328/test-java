@@ -12789,6 +12789,10 @@ components:
         registration_url:
           format: uri
           type: string
+        client_id:
+          type: string
+        required_enrollment:
+          type: string
       type: object
     DisallowedResourceProblem_allOf:
       properties:

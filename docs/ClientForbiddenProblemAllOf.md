@@ -9,6 +9,8 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **reason** | [**ReasonEnum**](#ReasonEnum) |  |  [optional]
 **registrationUrl** | **URI** |  |  [optional]
+**clientId** | **String** |  |  [optional]
+**requiredEnrollment** | **String** |  |  [optional]
 
 
 
