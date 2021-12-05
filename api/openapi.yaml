@@ -9881,11 +9881,6 @@ components:
       allOf:
       - $ref: '#/components/schemas/Problem'
       description: A problem that indicates the user's rule set is not compliant.
-    ProblemOrError:
-      description: Problem or Error
-      oneOf:
-      - $ref: '#/components/schemas/Problem'
-      - $ref: '#/components/schemas/Error'
     Problem:
       description: An HTTP Problem Details object, as defined in IETF RFC 7807 (https://tools.ietf.org/html/rfc7807).
       discriminator:
@@ -12788,10 +12783,6 @@ components:
           type: string
         registration_url:
           format: uri
-          type: string
-        client_id:
-          type: string
-        required_enrollment:
           type: string
       type: object
     DisallowedResourceProblem_allOf:
