@@ -23,6 +23,7 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import org.openapitools.client.ApiClient;
 import org.openapitools.client.model.AddRulesRequest;
 import org.openapitools.client.model.DeleteRulesRequest;
 import org.openapitools.client.model.DeleteRulesRequestDelete;
@@ -43,7 +44,15 @@ public class AddOrDeleteRulesRequestTest {
      */
     @Test
     public void testAddOrDeleteRulesRequest() {
-        // TODO: test AddOrDeleteRulesRequest
+        ApiClient apiClient = new ApiClient();
+        AddOrDeleteRulesRequest r = new AddOrDeleteRulesRequest();
+        AddRulesRequest add = new AddRulesRequest();
+        RuleNoId rule = new RuleNoId();
+        rule.setValue("Blue");
+        add.addAddItem(rule);
+        r.setActualInstance(add);
+        //AddOrDeleteRulesResponse result = apiInstance.addOrDeleteRules(r, false);
+        Assert.assertEquals(apiClient.getJSON().getGson().toJson(r), "{\"add\":[{\"value\":\"Blue\"}]}");
     }
 
     /**
