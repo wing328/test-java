@@ -108,55 +108,11 @@ public class Example {
       AddOrDeleteRulesResponse result = apiInstance.addOrDeleteRules(addOrDeleteRulesRequest, dryRun);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#addOrDeleteRules");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -221,55 +177,11 @@ public class Example {
       SingleComplianceJobResponse result = apiInstance.createBatchComplianceJob(createBatchComplianceJobRequest);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#createBatchComplianceJob");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -330,55 +242,11 @@ public class Example {
       TweetCreateResponse result = apiInstance.createTweet(createTweetRequest);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#createTweet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -439,55 +307,11 @@ public class Example {
       TweetDeleteResponse result = apiInstance.deleteTweetById(id);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#deleteTweetById");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -550,55 +374,11 @@ public class Example {
       SingleUserLookupResponse result = apiInstance.findMyUser(expansions, tweetFields, userFields);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#findMyUser");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -667,55 +447,11 @@ public class Example {
       SingleSpaceLookupResponse result = apiInstance.findSpaceById(id, spaceFields, expansions);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#findSpaceById");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -784,55 +520,11 @@ public class Example {
       MultiSpaceLookupResponse result = apiInstance.findSpacesByCreatorIds(userIds, spaceFields, expansions);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#findSpacesByCreatorIds");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -901,55 +593,11 @@ public class Example {
       MultiSpaceLookupResponse result = apiInstance.findSpacesByIds(ids, spaceFields, expansions);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#findSpacesByIds");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -1022,55 +670,11 @@ public class Example {
       SingleTweetLookupResponse result = apiInstance.findTweetById(id, expansions, tweetFields, userFields, mediaFields, placeFields, pollFields);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#findTweetById");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -1147,55 +751,11 @@ public class Example {
       MultiTweetLookupResponse result = apiInstance.findTweetsById(ids, expansions, tweetFields, userFields, mediaFields, placeFields, pollFields);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#findTweetsById");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -1269,55 +829,11 @@ public class Example {
       SingleUserLookupResponse result = apiInstance.findUserById(id, expansions, tweetFields, userFields);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#findUserById");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -1388,55 +904,11 @@ public class Example {
       SingleUserLookupResponse result = apiInstance.findUserByUsername(username, expansions, tweetFields, userFields);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#findUserByUsername");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -1507,55 +979,11 @@ public class Example {
       MultiUserLookupResponse result = apiInstance.findUsersById(ids, expansions, tweetFields, userFields);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#findUsersById");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -1626,55 +1054,11 @@ public class Example {
       MultiUserLookupResponse result = apiInstance.findUsersByUsername(usernames, expansions, tweetFields, userFields);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#findUsersByUsername");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -1741,55 +1125,11 @@ public class Example {
       SingleComplianceJobResponse result = apiInstance.getBatchComplianceJob(id);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#getBatchComplianceJob");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -1847,55 +1187,11 @@ public class Example {
       Object result = apiInstance.getOpenApiSpec();
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#getOpenApiSpec");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -1957,55 +1253,11 @@ public class Example {
       GetRulesResponse result = apiInstance.getRules(ids, maxResults, paginationToken);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#getRules");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -2077,55 +1329,11 @@ public class Example {
       MultiListResponse result = apiInstance.getUserListMemberships(id, maxResults, paginationToken, listFields, expansions, userFields);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#getUserListMemberships");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -2192,55 +1400,11 @@ public class Example {
       HideReplyByIdResponse result = apiInstance.hideReplyById(id, hideReplyByIdRequest);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#hideReplyById");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -2303,55 +1467,11 @@ public class Example {
       ListMemberResponse result = apiInstance.listAddMember(id, listAddMemberRequest);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#listAddMember");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -2417,55 +1537,11 @@ public class Example {
       MultiComplianceJobResponse result = apiInstance.listBatchComplianceJobs(type, status);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#listBatchComplianceJobs");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -2536,55 +1612,11 @@ public class Example {
       ListLookupMultipleUsersLookupResponse result = apiInstance.listGetFollowers(id, maxResults, paginationToken, expansions, tweetFields, userFields);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#listGetFollowers");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -2659,55 +1691,11 @@ public class Example {
       ListLookupMultipleUsersLookupResponse result = apiInstance.listGetMembers(id, maxResults, paginationToken, expansions, tweetFields, userFields);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#listGetMembers");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -2773,55 +1761,11 @@ public class Example {
       ListCreateResponse result = apiInstance.listIdCreate(listCreateRequest);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#listIdCreate");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -2882,55 +1826,11 @@ public class Example {
       ListDeleteResponse result = apiInstance.listIdDelete(id);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#listIdDelete");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -2998,55 +1898,11 @@ public class Example {
       SingleListLookupResponse result = apiInstance.listIdGet(id, listFields, expansions, userFields);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#listIdGet");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -3111,55 +1967,11 @@ public class Example {
       ListUpdateResponse result = apiInstance.listIdUpdate(id, listUpdateRequest);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#listIdUpdate");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -3222,55 +2034,11 @@ public class Example {
       ListMemberResponse result = apiInstance.listRemoveMember(id, userId);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#listRemoveMember");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -3333,55 +2101,11 @@ public class Example {
       ListFollowedResponse result = apiInstance.listUserFollow(id, listFollowRequest);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#listUserFollow");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -3452,55 +2176,11 @@ public class Example {
       MultiListResponse result = apiInstance.listUserOwnedLists(id, maxResults, paginationToken, listFields, expansions, userFields);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#listUserOwnedLists");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -3567,55 +2247,11 @@ public class Example {
       ListPinnedResponse result = apiInstance.listUserPin(id, listPinRequest);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#listUserPin");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -3680,55 +2316,11 @@ public class Example {
       MultiListNoPaginationResponse result = apiInstance.listUserPinnedLists(id, listFields, expansions, userFields);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#listUserPinnedLists");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -3793,55 +2385,11 @@ public class Example {
       ListFollowedResponse result = apiInstance.listUserUnfollow(id, listId);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#listUserUnfollow");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -3904,55 +2452,11 @@ public class Example {
       ListPinnedResponse result = apiInstance.listUserUnpin(id, listId);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#listUserUnpin");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -4026,55 +2530,11 @@ public class Example {
       ListsIdTweetsResponse result = apiInstance.listsIdTweets(id, maxResults, paginationToken, expansions, tweetFields, userFields, mediaFields, placeFields, pollFields);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#listsIdTweets");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -4152,55 +2612,11 @@ public class Example {
       StreamingTweet result = apiInstance.sampleStream(expansions, tweetFields, userFields, mediaFields, placeFields, pollFields, backfillMinutes);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#sampleStream");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -4275,55 +2691,11 @@ public class Example {
       MultiSpaceLookupResponse result = apiInstance.searchSpaces(query, state, maxResults, spaceFields, expansions);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#searchSpaces");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -4397,55 +2769,11 @@ public class Example {
       FilteredStreamingTweet result = apiInstance.searchStream(expansions, tweetFields, userFields, mediaFields, placeFields, pollFields, backfillMinutes);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#searchStream");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -4517,55 +2845,11 @@ public class Example {
       MultiUserLookupResponse result = apiInstance.spaceBuyers(id, userFields);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#spaceBuyers");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -4633,55 +2917,11 @@ public class Example {
       MultiTweetLookupResponse result = apiInstance.spaceTweets(id, maxResults, tweetFields);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#spaceTweets");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -4754,55 +2994,11 @@ public class Example {
       TweetCountsResponse result = apiInstance.tweetCountsFullArchiveSearch(query, startTime, endTime, sinceId, untilId, nextToken, granularity);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#tweetCountsFullArchiveSearch");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -4879,55 +3075,11 @@ public class Example {
       TweetCountsResponse result = apiInstance.tweetCountsRecentSearch(query, startTime, endTime, sinceId, untilId, nextToken, granularity);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#tweetCountsRecentSearch");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -5009,55 +3161,11 @@ public class Example {
       TweetSearchResponse result = apiInstance.tweetsFullarchiveSearch(query, startTime, endTime, sinceId, untilId, maxResults, nextToken, expansions, tweetFields, userFields, mediaFields, placeFields, pollFields);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#tweetsFullarchiveSearch");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -5136,55 +3244,11 @@ public class Example {
       GenericMultipleUsersLookupResponse result = apiInstance.tweetsIdLikingUsers(id, maxResults, paginationToken);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#tweetsIdLikingUsers");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -5253,55 +3317,11 @@ public class Example {
       GenericMultipleUsersLookupResponse result = apiInstance.tweetsIdRetweetingUsers(id, maxResults, paginationToken);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#tweetsIdRetweetingUsers");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -5380,55 +3400,11 @@ public class Example {
       TweetSearchResponse result = apiInstance.tweetsRecentSearch(query, startTime, endTime, sinceId, untilId, maxResults, nextToken, expansions, tweetFields, userFields, mediaFields, placeFields, pollFields);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#tweetsRecentSearch");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -5510,55 +3486,11 @@ public class Example {
       MultiListResponse result = apiInstance.userFollowedLists(id, maxResults, paginationToken, listFields, expansions, userFields);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#userFollowedLists");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -5630,55 +3562,11 @@ public class Example {
       GenericMultipleUsersLookupResponse result = apiInstance.usernameFollowers(username, maxResults, paginationToken);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#usernameFollowers");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -5747,55 +3635,11 @@ public class Example {
       UsersFollowingLookupResponse result = apiInstance.usernameFollowing(username, maxResults, paginationToken);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#usernameFollowing");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -5874,55 +3718,11 @@ public class Example {
       GenericTweetsTimelineResponse result = apiInstance.usersByUsernameMentions(username, sinceId, untilId, maxResults, paginationToken, startTime, endTime, expansions, tweetFields, userFields, mediaFields, placeFields, pollFields);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#usersByUsernameMentions");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -6012,55 +3812,11 @@ public class Example {
       GenericTweetsTimelineResponse result = apiInstance.usersByUsernameTweets(username, sinceId, untilId, maxResults, paginationToken, startTime, endTime, exclude, expansions, tweetFields, userFields, mediaFields, placeFields, pollFields);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#usersByUsernameTweets");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -6135,55 +3891,11 @@ public class Example {
       UsersBlockingMutationResponse result = apiInstance.usersIdBlock(id, usersIdBlockRequest);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#usersIdBlock");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -6247,55 +3959,11 @@ public class Example {
       GenericMultipleUsersLookupResponse result = apiInstance.usersIdBlocking(id, maxResults, paginationToken);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#usersIdBlocking");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -6359,55 +4027,11 @@ public class Example {
       UsersFollowingCreateResponse result = apiInstance.usersIdFollow(id, usersIdFollowRequest);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#usersIdFollow");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -6475,55 +4099,11 @@ public class Example {
       GenericMultipleUsersLookupResponse result = apiInstance.usersIdFollowers(id, maxResults, paginationToken);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#usersIdFollowers");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -6592,55 +4172,11 @@ public class Example {
       UsersFollowingLookupResponse result = apiInstance.usersIdFollowing(id, maxResults, paginationToken);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#usersIdFollowing");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -6704,55 +4240,11 @@ public class Example {
       UsersLikesCreateResponse result = apiInstance.usersIdLike(id, usersLikesCreateRequest);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#usersIdLike");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -6826,55 +4318,11 @@ public class Example {
       UsersIdLikedTweetsResponse result = apiInstance.usersIdLikedTweets(id, maxResults, paginationToken, expansions, tweetFields, userFields, mediaFields, placeFields, pollFields);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#usersIdLikedTweets");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -6959,55 +4407,11 @@ public class Example {
       GenericTweetsTimelineResponse result = apiInstance.usersIdMentions(id, sinceId, untilId, maxResults, paginationToken, startTime, endTime, expansions, tweetFields, userFields, mediaFields, placeFields, pollFields);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#usersIdMentions");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -7081,55 +4485,11 @@ public class Example {
       UsersMutingMutationResponse result = apiInstance.usersIdMute(id, usersIdMuteRequest);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#usersIdMute");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -7193,55 +4553,11 @@ public class Example {
       GenericMultipleUsersLookupResponse result = apiInstance.usersIdMuting(id, maxResults, paginationToken);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#usersIdMuting");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -7305,55 +4621,11 @@ public class Example {
       UsersRetweetsCreateResponse result = apiInstance.usersIdRetweets(id, usersRetweetsCreateRequest);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#usersIdRetweets");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -7432,55 +4704,11 @@ public class Example {
       GenericTweetsTimelineResponse result = apiInstance.usersIdTweets(id, sinceId, untilId, maxResults, exclude, paginationToken, startTime, endTime, expansions, tweetFields, userFields, mediaFields, placeFields, pollFields);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#usersIdTweets");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -7555,55 +4783,11 @@ public class Example {
       UsersBlockingMutationResponse result = apiInstance.usersIdUnblock(sourceUserId, targetUserId);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#usersIdUnblock");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -7666,55 +4850,11 @@ public class Example {
       UsersFollowingDeleteResponse result = apiInstance.usersIdUnfollow(sourceUserId, targetUserId);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#usersIdUnfollow");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -7777,55 +4917,11 @@ public class Example {
       UsersLikesDeleteResponse result = apiInstance.usersIdUnlike(id, tweetId);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#usersIdUnlike");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -7888,55 +4984,11 @@ public class Example {
       UsersMutingMutationResponse result = apiInstance.usersIdUnmute(sourceUserId, targetUserId);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#usersIdUnmute");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }
@@ -7999,55 +5051,11 @@ public class Example {
       UsersRetweetsDeleteResponse result = apiInstance.usersIdUnretweets(id, sourceTweetId);
       System.out.println(result);
     } catch (ApiException e) {
-      if (e.getErrorObject() instanceof Error) {
-        // do something here
-      } else if (e.getErrorObject() instanceof GenericProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRequestProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientForbiddenProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceNotFoundProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnavailableProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ResourceUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof FieldUnauthorizedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DisallowedResourceProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UnsupportedAuthenticationProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof UsageCapExceededProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConnectionExceptionProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ClientDisconnectedProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof OperationalDisconnectProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof RulesCapProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof InvalidRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof DuplicateRuleProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof ConflictProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof NonCompliantRulesProblem) {
-        // do something here
-      } else if (e.getErrorObject() instanceof Problem) {
-        // do something here
-      } else {
-        // something else happened
-        System.err.println("Exception when calling {{{classname}}}#{{{operationId}}}");
-        System.err.println("Status code: " + e.getCode());
-        System.err.println("Reason: " + e.getResponseBody());
-        System.err.println("Response headers: " + e.getResponseHeaders());
-        e.printStackTrace();
-      }
-
+      System.err.println("Exception when calling TwitterApi#usersIdUnretweets");
+      System.err.println("Status code: " + e.getCode());
+      System.err.println("Reason: " + e.getResponseBody());
+      System.err.println("Response headers: " + e.getResponseHeaders());
+      e.printStackTrace();
     }
   }
 }

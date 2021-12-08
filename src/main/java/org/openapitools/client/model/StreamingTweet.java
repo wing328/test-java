@@ -113,7 +113,7 @@ public class StreamingTweet extends AbstractOpenApiSchema {
 
                     // deserialize SingleTweetLookupResponse
                     try {
-                        deserialized = adapterSingleTweetLookupResponse.fromJsonTree(jsonObject);
+                        deserialized = adapterSingleTweetLookupResponse.fromJsonTree(jsonObject.deepCopy());
                         match++;
                         log.log(Level.FINER, "Input data matches schema 'SingleTweetLookupResponse'");
                     } catch (Exception e) {
@@ -123,7 +123,7 @@ public class StreamingTweet extends AbstractOpenApiSchema {
 
                     // deserialize StreamingTweetOneOf
                     try {
-                        deserialized = adapterStreamingTweetOneOf.fromJsonTree(jsonObject);
+                        deserialized = adapterStreamingTweetOneOf.fromJsonTree(jsonObject.deepCopy());
                         match++;
                         log.log(Level.FINER, "Input data matches schema 'StreamingTweetOneOf'");
                     } catch (Exception e) {

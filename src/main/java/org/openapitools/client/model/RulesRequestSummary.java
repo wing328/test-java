@@ -108,7 +108,7 @@ public class RulesRequestSummary extends AbstractOpenApiSchema {
 
                     // deserialize RulesRequestSummaryOneOf
                     try {
-                        deserialized = adapterRulesRequestSummaryOneOf.fromJsonTree(jsonObject);
+                        deserialized = adapterRulesRequestSummaryOneOf.fromJsonTree(jsonObject.deepCopy());
                         match++;
                         log.log(Level.FINER, "Input data matches schema 'RulesRequestSummaryOneOf'");
                     } catch (Exception e) {
@@ -118,7 +118,7 @@ public class RulesRequestSummary extends AbstractOpenApiSchema {
 
                     // deserialize RulesRequestSummaryOneOf1
                     try {
-                        deserialized = adapterRulesRequestSummaryOneOf1.fromJsonTree(jsonObject);
+                        deserialized = adapterRulesRequestSummaryOneOf1.fromJsonTree(jsonObject.deepCopy());
                         match++;
                         log.log(Level.FINER, "Input data matches schema 'RulesRequestSummaryOneOf1'");
                     } catch (Exception e) {

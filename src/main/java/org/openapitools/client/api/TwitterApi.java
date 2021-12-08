@@ -93,7 +93,6 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
-import javax.ws.rs.core.GenericType;
 
 public class TwitterApi {
     private ApiClient localVarApiClient;
@@ -213,14 +212,8 @@ public class TwitterApi {
      */
     public ApiResponse<AddOrDeleteRulesResponse> addOrDeleteRulesWithHttpInfo(AddOrDeleteRulesRequest addOrDeleteRulesRequest, Boolean dryRun) throws ApiException {
         okhttp3.Call localVarCall = addOrDeleteRulesValidateBeforeCall(addOrDeleteRulesRequest, dryRun, null);
-        try {
-            Type localVarReturnType = new TypeToken<AddOrDeleteRulesResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<AddOrDeleteRulesResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -337,14 +330,8 @@ public class TwitterApi {
      */
     public ApiResponse<SingleComplianceJobResponse> createBatchComplianceJobWithHttpInfo(CreateBatchComplianceJobRequest createBatchComplianceJobRequest) throws ApiException {
         okhttp3.Call localVarCall = createBatchComplianceJobValidateBeforeCall(createBatchComplianceJobRequest, null);
-        try {
-            Type localVarReturnType = new TypeToken<SingleComplianceJobResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<SingleComplianceJobResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -455,14 +442,8 @@ public class TwitterApi {
      */
     public ApiResponse<TweetCreateResponse> createTweetWithHttpInfo(CreateTweetRequest createTweetRequest) throws ApiException {
         okhttp3.Call localVarCall = createTweetValidateBeforeCall(createTweetRequest, null);
-        try {
-            Type localVarReturnType = new TypeToken<TweetCreateResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<TweetCreateResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -579,14 +560,8 @@ public class TwitterApi {
      */
     public ApiResponse<TweetDeleteResponse> deleteTweetByIdWithHttpInfo(String id) throws ApiException {
         okhttp3.Call localVarCall = deleteTweetByIdValidateBeforeCall(id, null);
-        try {
-            Type localVarReturnType = new TypeToken<TweetDeleteResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<TweetDeleteResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -715,14 +690,8 @@ public class TwitterApi {
      */
     public ApiResponse<SingleUserLookupResponse> findMyUserWithHttpInfo(Set<String> expansions, Set<String> tweetFields, Set<String> userFields) throws ApiException {
         okhttp3.Call localVarCall = findMyUserValidateBeforeCall(expansions, tweetFields, userFields, null);
-        try {
-            Type localVarReturnType = new TypeToken<SingleUserLookupResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<SingleUserLookupResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -855,14 +824,8 @@ public class TwitterApi {
      */
     public ApiResponse<SingleSpaceLookupResponse> findSpaceByIdWithHttpInfo(String id, Set<String> spaceFields, Set<String> expansions) throws ApiException {
         okhttp3.Call localVarCall = findSpaceByIdValidateBeforeCall(id, spaceFields, expansions, null);
-        try {
-            Type localVarReturnType = new TypeToken<SingleSpaceLookupResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<SingleSpaceLookupResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -998,14 +961,8 @@ public class TwitterApi {
      */
     public ApiResponse<MultiSpaceLookupResponse> findSpacesByCreatorIdsWithHttpInfo(List<String> userIds, Set<String> spaceFields, Set<String> expansions) throws ApiException {
         okhttp3.Call localVarCall = findSpacesByCreatorIdsValidateBeforeCall(userIds, spaceFields, expansions, null);
-        try {
-            Type localVarReturnType = new TypeToken<MultiSpaceLookupResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<MultiSpaceLookupResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -1141,14 +1098,8 @@ public class TwitterApi {
      */
     public ApiResponse<MultiSpaceLookupResponse> findSpacesByIdsWithHttpInfo(List<String> ids, Set<String> spaceFields, Set<String> expansions) throws ApiException {
         okhttp3.Call localVarCall = findSpacesByIdsValidateBeforeCall(ids, spaceFields, expansions, null);
-        try {
-            Type localVarReturnType = new TypeToken<MultiSpaceLookupResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<MultiSpaceLookupResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -1309,14 +1260,8 @@ public class TwitterApi {
      */
     public ApiResponse<SingleTweetLookupResponse> findTweetByIdWithHttpInfo(String id, Set<String> expansions, Set<String> tweetFields, Set<String> userFields, Set<String> mediaFields, Set<String> placeFields, Set<String> pollFields) throws ApiException {
         okhttp3.Call localVarCall = findTweetByIdValidateBeforeCall(id, expansions, tweetFields, userFields, mediaFields, placeFields, pollFields, null);
-        try {
-            Type localVarReturnType = new TypeToken<SingleTweetLookupResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<SingleTweetLookupResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -1484,14 +1429,8 @@ public class TwitterApi {
      */
     public ApiResponse<MultiTweetLookupResponse> findTweetsByIdWithHttpInfo(List<String> ids, Set<String> expansions, Set<String> tweetFields, Set<String> userFields, Set<String> mediaFields, Set<String> placeFields, Set<String> pollFields) throws ApiException {
         okhttp3.Call localVarCall = findTweetsByIdValidateBeforeCall(ids, expansions, tweetFields, userFields, mediaFields, placeFields, pollFields, null);
-        try {
-            Type localVarReturnType = new TypeToken<MultiTweetLookupResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<MultiTweetLookupResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -1635,14 +1574,8 @@ public class TwitterApi {
      */
     public ApiResponse<SingleUserLookupResponse> findUserByIdWithHttpInfo(String id, Set<String> expansions, Set<String> tweetFields, Set<String> userFields) throws ApiException {
         okhttp3.Call localVarCall = findUserByIdValidateBeforeCall(id, expansions, tweetFields, userFields, null);
-        try {
-            Type localVarReturnType = new TypeToken<SingleUserLookupResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<SingleUserLookupResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -1783,14 +1716,8 @@ public class TwitterApi {
      */
     public ApiResponse<SingleUserLookupResponse> findUserByUsernameWithHttpInfo(String username, Set<String> expansions, Set<String> tweetFields, Set<String> userFields) throws ApiException {
         okhttp3.Call localVarCall = findUserByUsernameValidateBeforeCall(username, expansions, tweetFields, userFields, null);
-        try {
-            Type localVarReturnType = new TypeToken<SingleUserLookupResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<SingleUserLookupResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -1934,14 +1861,8 @@ public class TwitterApi {
      */
     public ApiResponse<MultiUserLookupResponse> findUsersByIdWithHttpInfo(List<String> ids, Set<String> expansions, Set<String> tweetFields, Set<String> userFields) throws ApiException {
         okhttp3.Call localVarCall = findUsersByIdValidateBeforeCall(ids, expansions, tweetFields, userFields, null);
-        try {
-            Type localVarReturnType = new TypeToken<MultiUserLookupResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<MultiUserLookupResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -2085,14 +2006,8 @@ public class TwitterApi {
      */
     public ApiResponse<MultiUserLookupResponse> findUsersByUsernameWithHttpInfo(List<String> usernames, Set<String> expansions, Set<String> tweetFields, Set<String> userFields) throws ApiException {
         okhttp3.Call localVarCall = findUsersByUsernameValidateBeforeCall(usernames, expansions, tweetFields, userFields, null);
-        try {
-            Type localVarReturnType = new TypeToken<MultiUserLookupResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<MultiUserLookupResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -2212,14 +2127,8 @@ public class TwitterApi {
      */
     public ApiResponse<SingleComplianceJobResponse> getBatchComplianceJobWithHttpInfo(String id) throws ApiException {
         okhttp3.Call localVarCall = getBatchComplianceJobValidateBeforeCall(id, null);
-        try {
-            Type localVarReturnType = new TypeToken<SingleComplianceJobResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<SingleComplianceJobResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -2324,14 +2233,8 @@ public class TwitterApi {
      */
     public ApiResponse<Object> getOpenApiSpecWithHttpInfo() throws ApiException {
         okhttp3.Call localVarCall = getOpenApiSpecValidateBeforeCall(null);
-        try {
-            Type localVarReturnType = new TypeToken<Object>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<Object>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -2458,14 +2361,8 @@ public class TwitterApi {
      */
     public ApiResponse<GetRulesResponse> getRulesWithHttpInfo(List<String> ids, Integer maxResults, String paginationToken) throws ApiException {
         okhttp3.Call localVarCall = getRulesValidateBeforeCall(ids, maxResults, paginationToken, null);
-        try {
-            Type localVarReturnType = new TypeToken<GetRulesResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<GetRulesResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -2619,14 +2516,8 @@ public class TwitterApi {
      */
     public ApiResponse<MultiListResponse> getUserListMembershipsWithHttpInfo(String id, Integer maxResults, Long paginationToken, Set<String> listFields, Set<String> expansions, Set<String> userFields) throws ApiException {
         okhttp3.Call localVarCall = getUserListMembershipsValidateBeforeCall(id, maxResults, paginationToken, listFields, expansions, userFields, null);
-        try {
-            Type localVarReturnType = new TypeToken<MultiListResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<MultiListResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -2751,14 +2642,8 @@ public class TwitterApi {
      */
     public ApiResponse<HideReplyByIdResponse> hideReplyByIdWithHttpInfo(String id, HideReplyByIdRequest hideReplyByIdRequest) throws ApiException {
         okhttp3.Call localVarCall = hideReplyByIdValidateBeforeCall(id, hideReplyByIdRequest, null);
-        try {
-            Type localVarReturnType = new TypeToken<HideReplyByIdResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<HideReplyByIdResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -2879,14 +2764,8 @@ public class TwitterApi {
      */
     public ApiResponse<ListMemberResponse> listAddMemberWithHttpInfo(String id, ListAddMemberRequest listAddMemberRequest) throws ApiException {
         okhttp3.Call localVarCall = listAddMemberValidateBeforeCall(id, listAddMemberRequest, null);
-        try {
-            Type localVarReturnType = new TypeToken<ListMemberResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<ListMemberResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -3014,14 +2893,8 @@ public class TwitterApi {
      */
     public ApiResponse<MultiComplianceJobResponse> listBatchComplianceJobsWithHttpInfo(ComplianceJobType type, ComplianceJobStatus status) throws ApiException {
         okhttp3.Call localVarCall = listBatchComplianceJobsValidateBeforeCall(type, status, null);
-        try {
-            Type localVarReturnType = new TypeToken<MultiComplianceJobResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<MultiComplianceJobResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -3174,14 +3047,8 @@ public class TwitterApi {
      */
     public ApiResponse<ListLookupMultipleUsersLookupResponse> listGetFollowersWithHttpInfo(String id, Integer maxResults, Long paginationToken, Set<String> expansions, Set<String> tweetFields, Set<String> userFields) throws ApiException {
         okhttp3.Call localVarCall = listGetFollowersValidateBeforeCall(id, maxResults, paginationToken, expansions, tweetFields, userFields, null);
-        try {
-            Type localVarReturnType = new TypeToken<ListLookupMultipleUsersLookupResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<ListLookupMultipleUsersLookupResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -3338,14 +3205,8 @@ public class TwitterApi {
      */
     public ApiResponse<ListLookupMultipleUsersLookupResponse> listGetMembersWithHttpInfo(String id, Integer maxResults, Long paginationToken, Set<String> expansions, Set<String> tweetFields, Set<String> userFields) throws ApiException {
         okhttp3.Call localVarCall = listGetMembersValidateBeforeCall(id, maxResults, paginationToken, expansions, tweetFields, userFields, null);
-        try {
-            Type localVarReturnType = new TypeToken<ListLookupMultipleUsersLookupResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<ListLookupMultipleUsersLookupResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -3461,14 +3322,8 @@ public class TwitterApi {
      */
     public ApiResponse<ListCreateResponse> listIdCreateWithHttpInfo(ListCreateRequest listCreateRequest) throws ApiException {
         okhttp3.Call localVarCall = listIdCreateValidateBeforeCall(listCreateRequest, null);
-        try {
-            Type localVarReturnType = new TypeToken<ListCreateResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<ListCreateResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -3585,14 +3440,8 @@ public class TwitterApi {
      */
     public ApiResponse<ListDeleteResponse> listIdDeleteWithHttpInfo(String id) throws ApiException {
         okhttp3.Call localVarCall = listIdDeleteValidateBeforeCall(id, null);
-        try {
-            Type localVarReturnType = new TypeToken<ListDeleteResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<ListDeleteResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -3730,14 +3579,8 @@ public class TwitterApi {
      */
     public ApiResponse<SingleListLookupResponse> listIdGetWithHttpInfo(String id, Set<String> listFields, Set<String> expansions, Set<String> userFields) throws ApiException {
         okhttp3.Call localVarCall = listIdGetValidateBeforeCall(id, listFields, expansions, userFields, null);
-        try {
-            Type localVarReturnType = new TypeToken<SingleListLookupResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<SingleListLookupResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -3860,14 +3703,8 @@ public class TwitterApi {
      */
     public ApiResponse<ListUpdateResponse> listIdUpdateWithHttpInfo(String id, ListUpdateRequest listUpdateRequest) throws ApiException {
         okhttp3.Call localVarCall = listIdUpdateValidateBeforeCall(id, listUpdateRequest, null);
-        try {
-            Type localVarReturnType = new TypeToken<ListUpdateResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<ListUpdateResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -3994,14 +3831,8 @@ public class TwitterApi {
      */
     public ApiResponse<ListMemberResponse> listRemoveMemberWithHttpInfo(String id, String userId) throws ApiException {
         okhttp3.Call localVarCall = listRemoveMemberValidateBeforeCall(id, userId, null);
-        try {
-            Type localVarReturnType = new TypeToken<ListMemberResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<ListMemberResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -4122,14 +3953,8 @@ public class TwitterApi {
      */
     public ApiResponse<ListFollowedResponse> listUserFollowWithHttpInfo(String id, ListFollowRequest listFollowRequest) throws ApiException {
         okhttp3.Call localVarCall = listUserFollowValidateBeforeCall(id, listFollowRequest, null);
-        try {
-            Type localVarReturnType = new TypeToken<ListFollowedResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<ListFollowedResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -4282,14 +4107,8 @@ public class TwitterApi {
      */
     public ApiResponse<MultiListResponse> listUserOwnedListsWithHttpInfo(String id, Integer maxResults, Long paginationToken, Set<String> listFields, Set<String> expansions, Set<String> userFields) throws ApiException {
         okhttp3.Call localVarCall = listUserOwnedListsValidateBeforeCall(id, maxResults, paginationToken, listFields, expansions, userFields, null);
-        try {
-            Type localVarReturnType = new TypeToken<MultiListResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<MultiListResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -4414,14 +4233,8 @@ public class TwitterApi {
      */
     public ApiResponse<ListPinnedResponse> listUserPinWithHttpInfo(String id, ListPinRequest listPinRequest) throws ApiException {
         okhttp3.Call localVarCall = listUserPinValidateBeforeCall(id, listPinRequest, null);
-        try {
-            Type localVarReturnType = new TypeToken<ListPinnedResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<ListPinnedResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -4560,14 +4373,8 @@ public class TwitterApi {
      */
     public ApiResponse<MultiListNoPaginationResponse> listUserPinnedListsWithHttpInfo(String id, Set<String> listFields, Set<String> expansions, Set<String> userFields) throws ApiException {
         okhttp3.Call localVarCall = listUserPinnedListsValidateBeforeCall(id, listFields, expansions, userFields, null);
-        try {
-            Type localVarReturnType = new TypeToken<MultiListNoPaginationResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<MultiListNoPaginationResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -4696,14 +4503,8 @@ public class TwitterApi {
      */
     public ApiResponse<ListFollowedResponse> listUserUnfollowWithHttpInfo(String id, String listId) throws ApiException {
         okhttp3.Call localVarCall = listUserUnfollowValidateBeforeCall(id, listId, null);
-        try {
-            Type localVarReturnType = new TypeToken<ListFollowedResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<ListFollowedResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -4830,14 +4631,8 @@ public class TwitterApi {
      */
     public ApiResponse<ListPinnedResponse> listUserUnpinWithHttpInfo(String id, String listId) throws ApiException {
         okhttp3.Call localVarCall = listUserUnpinValidateBeforeCall(id, listId, null);
-        try {
-            Type localVarReturnType = new TypeToken<ListPinnedResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<ListPinnedResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -5011,14 +4806,8 @@ public class TwitterApi {
      */
     public ApiResponse<ListsIdTweetsResponse> listsIdTweetsWithHttpInfo(String id, Integer maxResults, String paginationToken, Set<String> expansions, Set<String> tweetFields, Set<String> userFields, Set<String> mediaFields, Set<String> placeFields, Set<String> pollFields) throws ApiException {
         okhttp3.Call localVarCall = listsIdTweetsValidateBeforeCall(id, maxResults, paginationToken, expansions, tweetFields, userFields, mediaFields, placeFields, pollFields, null);
-        try {
-            Type localVarReturnType = new TypeToken<ListsIdTweetsResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<ListsIdTweetsResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -5183,14 +4972,8 @@ public class TwitterApi {
      */
     public ApiResponse<StreamingTweet> sampleStreamWithHttpInfo(Set<String> expansions, Set<String> tweetFields, Set<String> userFields, Set<String> mediaFields, Set<String> placeFields, Set<String> pollFields, Integer backfillMinutes) throws ApiException {
         okhttp3.Call localVarCall = sampleStreamValidateBeforeCall(expansions, tweetFields, userFields, mediaFields, placeFields, pollFields, backfillMinutes, null);
-        try {
-            Type localVarReturnType = new TypeToken<StreamingTweet>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<StreamingTweet>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -5344,14 +5127,8 @@ public class TwitterApi {
      */
     public ApiResponse<MultiSpaceLookupResponse> searchSpacesWithHttpInfo(String query, String state, Integer maxResults, Set<String> spaceFields, Set<String> expansions) throws ApiException {
         okhttp3.Call localVarCall = searchSpacesValidateBeforeCall(query, state, maxResults, spaceFields, expansions, null);
-        try {
-            Type localVarReturnType = new TypeToken<MultiSpaceLookupResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<MultiSpaceLookupResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -5512,14 +5289,8 @@ public class TwitterApi {
      */
     public ApiResponse<FilteredStreamingTweet> searchStreamWithHttpInfo(Set<String> expansions, Set<String> tweetFields, Set<String> userFields, Set<String> mediaFields, Set<String> placeFields, Set<String> pollFields, Integer backfillMinutes) throws ApiException {
         okhttp3.Call localVarCall = searchStreamValidateBeforeCall(expansions, tweetFields, userFields, mediaFields, placeFields, pollFields, backfillMinutes, null);
-        try {
-            Type localVarReturnType = new TypeToken<FilteredStreamingTweet>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<FilteredStreamingTweet>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -5649,14 +5420,8 @@ public class TwitterApi {
      */
     public ApiResponse<MultiUserLookupResponse> spaceBuyersWithHttpInfo(String id, Set<String> userFields) throws ApiException {
         okhttp3.Call localVarCall = spaceBuyersValidateBeforeCall(id, userFields, null);
-        try {
-            Type localVarReturnType = new TypeToken<MultiUserLookupResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<MultiUserLookupResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -5788,14 +5553,8 @@ public class TwitterApi {
      */
     public ApiResponse<MultiTweetLookupResponse> spaceTweetsWithHttpInfo(String id, Integer maxResults, Set<String> tweetFields) throws ApiException {
         okhttp3.Call localVarCall = spaceTweetsValidateBeforeCall(id, maxResults, tweetFields, null);
-        try {
-            Type localVarReturnType = new TypeToken<MultiTweetLookupResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<MultiTweetLookupResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -5959,14 +5718,8 @@ public class TwitterApi {
      */
     public ApiResponse<TweetCountsResponse> tweetCountsFullArchiveSearchWithHttpInfo(String query, OffsetDateTime startTime, OffsetDateTime endTime, String sinceId, String untilId, String nextToken, Granularity granularity) throws ApiException {
         okhttp3.Call localVarCall = tweetCountsFullArchiveSearchValidateBeforeCall(query, startTime, endTime, sinceId, untilId, nextToken, granularity, null);
-        try {
-            Type localVarReturnType = new TypeToken<TweetCountsResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<TweetCountsResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -6134,14 +5887,8 @@ public class TwitterApi {
      */
     public ApiResponse<TweetCountsResponse> tweetCountsRecentSearchWithHttpInfo(String query, OffsetDateTime startTime, OffsetDateTime endTime, String sinceId, String untilId, String nextToken, Granularity granularity) throws ApiException {
         okhttp3.Call localVarCall = tweetCountsRecentSearchValidateBeforeCall(query, startTime, endTime, sinceId, untilId, nextToken, granularity, null);
-        try {
-            Type localVarReturnType = new TypeToken<TweetCountsResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<TweetCountsResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -6351,14 +6098,8 @@ public class TwitterApi {
      */
     public ApiResponse<TweetSearchResponse> tweetsFullarchiveSearchWithHttpInfo(String query, OffsetDateTime startTime, OffsetDateTime endTime, String sinceId, String untilId, Integer maxResults, String nextToken, Set<String> expansions, Set<String> tweetFields, Set<String> userFields, Set<String> mediaFields, Set<String> placeFields, Set<String> pollFields) throws ApiException {
         okhttp3.Call localVarCall = tweetsFullarchiveSearchValidateBeforeCall(query, startTime, endTime, sinceId, untilId, maxResults, nextToken, expansions, tweetFields, userFields, mediaFields, placeFields, pollFields, null);
-        try {
-            Type localVarReturnType = new TypeToken<TweetSearchResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<TweetSearchResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -6501,14 +6242,8 @@ public class TwitterApi {
      */
     public ApiResponse<GenericMultipleUsersLookupResponse> tweetsIdLikingUsersWithHttpInfo(String id, Integer maxResults, String paginationToken) throws ApiException {
         okhttp3.Call localVarCall = tweetsIdLikingUsersValidateBeforeCall(id, maxResults, paginationToken, null);
-        try {
-            Type localVarReturnType = new TypeToken<GenericMultipleUsersLookupResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<GenericMultipleUsersLookupResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -6641,14 +6376,8 @@ public class TwitterApi {
      */
     public ApiResponse<GenericMultipleUsersLookupResponse> tweetsIdRetweetingUsersWithHttpInfo(String id, Integer maxResults, String paginationToken) throws ApiException {
         okhttp3.Call localVarCall = tweetsIdRetweetingUsersValidateBeforeCall(id, maxResults, paginationToken, null);
-        try {
-            Type localVarReturnType = new TypeToken<GenericMultipleUsersLookupResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<GenericMultipleUsersLookupResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -6854,14 +6583,8 @@ public class TwitterApi {
      */
     public ApiResponse<TweetSearchResponse> tweetsRecentSearchWithHttpInfo(String query, OffsetDateTime startTime, OffsetDateTime endTime, String sinceId, String untilId, Integer maxResults, String nextToken, Set<String> expansions, Set<String> tweetFields, Set<String> userFields, Set<String> mediaFields, Set<String> placeFields, Set<String> pollFields) throws ApiException {
         okhttp3.Call localVarCall = tweetsRecentSearchValidateBeforeCall(query, startTime, endTime, sinceId, untilId, maxResults, nextToken, expansions, tweetFields, userFields, mediaFields, placeFields, pollFields, null);
-        try {
-            Type localVarReturnType = new TypeToken<TweetSearchResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<TweetSearchResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -7025,14 +6748,8 @@ public class TwitterApi {
      */
     public ApiResponse<MultiListResponse> userFollowedListsWithHttpInfo(String id, Integer maxResults, Long paginationToken, Set<String> listFields, Set<String> expansions, Set<String> userFields) throws ApiException {
         okhttp3.Call localVarCall = userFollowedListsValidateBeforeCall(id, maxResults, paginationToken, listFields, expansions, userFields, null);
-        try {
-            Type localVarReturnType = new TypeToken<MultiListResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<MultiListResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -7168,14 +6885,8 @@ public class TwitterApi {
      */
     public ApiResponse<GenericMultipleUsersLookupResponse> usernameFollowersWithHttpInfo(String username, Integer maxResults, String paginationToken) throws ApiException {
         okhttp3.Call localVarCall = usernameFollowersValidateBeforeCall(username, maxResults, paginationToken, null);
-        try {
-            Type localVarReturnType = new TypeToken<GenericMultipleUsersLookupResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<GenericMultipleUsersLookupResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -7308,14 +7019,8 @@ public class TwitterApi {
      */
     public ApiResponse<UsersFollowingLookupResponse> usernameFollowingWithHttpInfo(String username, Integer maxResults, String paginationToken) throws ApiException {
         okhttp3.Call localVarCall = usernameFollowingValidateBeforeCall(username, maxResults, paginationToken, null);
-        try {
-            Type localVarReturnType = new TypeToken<UsersFollowingLookupResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<UsersFollowingLookupResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -7518,14 +7223,8 @@ public class TwitterApi {
      */
     public ApiResponse<GenericTweetsTimelineResponse> usersByUsernameMentionsWithHttpInfo(String username, String sinceId, String untilId, Integer maxResults, String paginationToken, OffsetDateTime startTime, OffsetDateTime endTime, Set<String> expansions, Set<String> tweetFields, Set<String> userFields, Set<String> mediaFields, Set<String> placeFields, Set<String> pollFields) throws ApiException {
         okhttp3.Call localVarCall = usersByUsernameMentionsValidateBeforeCall(username, sinceId, untilId, maxResults, paginationToken, startTime, endTime, expansions, tweetFields, userFields, mediaFields, placeFields, pollFields, null);
-        try {
-            Type localVarReturnType = new TypeToken<GenericTweetsTimelineResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<GenericTweetsTimelineResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -7745,14 +7444,8 @@ public class TwitterApi {
      */
     public ApiResponse<GenericTweetsTimelineResponse> usersByUsernameTweetsWithHttpInfo(String username, String sinceId, String untilId, Integer maxResults, String paginationToken, OffsetDateTime startTime, OffsetDateTime endTime, Set<String> exclude, Set<String> expansions, Set<String> tweetFields, Set<String> userFields, Set<String> mediaFields, Set<String> placeFields, Set<String> pollFields) throws ApiException {
         okhttp3.Call localVarCall = usersByUsernameTweetsValidateBeforeCall(username, sinceId, untilId, maxResults, paginationToken, startTime, endTime, exclude, expansions, tweetFields, userFields, mediaFields, placeFields, pollFields, null);
-        try {
-            Type localVarReturnType = new TypeToken<GenericTweetsTimelineResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<GenericTweetsTimelineResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -7885,14 +7578,8 @@ public class TwitterApi {
      */
     public ApiResponse<UsersBlockingMutationResponse> usersIdBlockWithHttpInfo(String id, UsersIdBlockRequest usersIdBlockRequest) throws ApiException {
         okhttp3.Call localVarCall = usersIdBlockValidateBeforeCall(id, usersIdBlockRequest, null);
-        try {
-            Type localVarReturnType = new TypeToken<UsersBlockingMutationResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<UsersBlockingMutationResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -8024,14 +7711,8 @@ public class TwitterApi {
      */
     public ApiResponse<GenericMultipleUsersLookupResponse> usersIdBlockingWithHttpInfo(String id, Integer maxResults, String paginationToken) throws ApiException {
         okhttp3.Call localVarCall = usersIdBlockingValidateBeforeCall(id, maxResults, paginationToken, null);
-        try {
-            Type localVarReturnType = new TypeToken<GenericMultipleUsersLookupResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<GenericMultipleUsersLookupResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -8153,14 +7834,8 @@ public class TwitterApi {
      */
     public ApiResponse<UsersFollowingCreateResponse> usersIdFollowWithHttpInfo(String id, UsersIdFollowRequest usersIdFollowRequest) throws ApiException {
         okhttp3.Call localVarCall = usersIdFollowValidateBeforeCall(id, usersIdFollowRequest, null);
-        try {
-            Type localVarReturnType = new TypeToken<UsersFollowingCreateResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<UsersFollowingCreateResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -8292,14 +7967,8 @@ public class TwitterApi {
      */
     public ApiResponse<GenericMultipleUsersLookupResponse> usersIdFollowersWithHttpInfo(String id, Integer maxResults, String paginationToken) throws ApiException {
         okhttp3.Call localVarCall = usersIdFollowersValidateBeforeCall(id, maxResults, paginationToken, null);
-        try {
-            Type localVarReturnType = new TypeToken<GenericMultipleUsersLookupResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<GenericMultipleUsersLookupResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -8432,14 +8101,8 @@ public class TwitterApi {
      */
     public ApiResponse<UsersFollowingLookupResponse> usersIdFollowingWithHttpInfo(String id, Integer maxResults, String paginationToken) throws ApiException {
         okhttp3.Call localVarCall = usersIdFollowingValidateBeforeCall(id, maxResults, paginationToken, null);
-        try {
-            Type localVarReturnType = new TypeToken<UsersFollowingLookupResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<UsersFollowingLookupResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -8561,14 +8224,8 @@ public class TwitterApi {
      */
     public ApiResponse<UsersLikesCreateResponse> usersIdLikeWithHttpInfo(String id, UsersLikesCreateRequest usersLikesCreateRequest) throws ApiException {
         okhttp3.Call localVarCall = usersIdLikeValidateBeforeCall(id, usersLikesCreateRequest, null);
-        try {
-            Type localVarReturnType = new TypeToken<UsersLikesCreateResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<UsersLikesCreateResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -8742,14 +8399,8 @@ public class TwitterApi {
      */
     public ApiResponse<UsersIdLikedTweetsResponse> usersIdLikedTweetsWithHttpInfo(String id, Integer maxResults, String paginationToken, Set<String> expansions, Set<String> tweetFields, Set<String> userFields, Set<String> mediaFields, Set<String> placeFields, Set<String> pollFields) throws ApiException {
         okhttp3.Call localVarCall = usersIdLikedTweetsValidateBeforeCall(id, maxResults, paginationToken, expansions, tweetFields, userFields, mediaFields, placeFields, pollFields, null);
-        try {
-            Type localVarReturnType = new TypeToken<UsersIdLikedTweetsResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<UsersIdLikedTweetsResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -8958,14 +8609,8 @@ public class TwitterApi {
      */
     public ApiResponse<GenericTweetsTimelineResponse> usersIdMentionsWithHttpInfo(String id, String sinceId, String untilId, Integer maxResults, String paginationToken, OffsetDateTime startTime, OffsetDateTime endTime, Set<String> expansions, Set<String> tweetFields, Set<String> userFields, Set<String> mediaFields, Set<String> placeFields, Set<String> pollFields) throws ApiException {
         okhttp3.Call localVarCall = usersIdMentionsValidateBeforeCall(id, sinceId, untilId, maxResults, paginationToken, startTime, endTime, expansions, tweetFields, userFields, mediaFields, placeFields, pollFields, null);
-        try {
-            Type localVarReturnType = new TypeToken<GenericTweetsTimelineResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<GenericTweetsTimelineResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -9097,14 +8742,8 @@ public class TwitterApi {
      */
     public ApiResponse<UsersMutingMutationResponse> usersIdMuteWithHttpInfo(String id, UsersIdMuteRequest usersIdMuteRequest) throws ApiException {
         okhttp3.Call localVarCall = usersIdMuteValidateBeforeCall(id, usersIdMuteRequest, null);
-        try {
-            Type localVarReturnType = new TypeToken<UsersMutingMutationResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<UsersMutingMutationResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -9236,14 +8875,8 @@ public class TwitterApi {
      */
     public ApiResponse<GenericMultipleUsersLookupResponse> usersIdMutingWithHttpInfo(String id, Integer maxResults, String paginationToken) throws ApiException {
         okhttp3.Call localVarCall = usersIdMutingValidateBeforeCall(id, maxResults, paginationToken, null);
-        try {
-            Type localVarReturnType = new TypeToken<GenericMultipleUsersLookupResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<GenericMultipleUsersLookupResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -9365,14 +8998,8 @@ public class TwitterApi {
      */
     public ApiResponse<UsersRetweetsCreateResponse> usersIdRetweetsWithHttpInfo(String id, UsersRetweetsCreateRequest usersRetweetsCreateRequest) throws ApiException {
         okhttp3.Call localVarCall = usersIdRetweetsValidateBeforeCall(id, usersRetweetsCreateRequest, null);
-        try {
-            Type localVarReturnType = new TypeToken<UsersRetweetsCreateResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<UsersRetweetsCreateResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -9581,14 +9208,8 @@ public class TwitterApi {
      */
     public ApiResponse<GenericTweetsTimelineResponse> usersIdTweetsWithHttpInfo(String id, String sinceId, String untilId, Integer maxResults, Set<String> exclude, String paginationToken, OffsetDateTime startTime, OffsetDateTime endTime, Set<String> expansions, Set<String> tweetFields, Set<String> userFields, Set<String> mediaFields, Set<String> placeFields, Set<String> pollFields) throws ApiException {
         okhttp3.Call localVarCall = usersIdTweetsValidateBeforeCall(id, sinceId, untilId, maxResults, exclude, paginationToken, startTime, endTime, expansions, tweetFields, userFields, mediaFields, placeFields, pollFields, null);
-        try {
-            Type localVarReturnType = new TypeToken<GenericTweetsTimelineResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<GenericTweetsTimelineResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -9727,14 +9348,8 @@ public class TwitterApi {
      */
     public ApiResponse<UsersBlockingMutationResponse> usersIdUnblockWithHttpInfo(String sourceUserId, String targetUserId) throws ApiException {
         okhttp3.Call localVarCall = usersIdUnblockValidateBeforeCall(sourceUserId, targetUserId, null);
-        try {
-            Type localVarReturnType = new TypeToken<UsersBlockingMutationResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<UsersBlockingMutationResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -9861,14 +9476,8 @@ public class TwitterApi {
      */
     public ApiResponse<UsersFollowingDeleteResponse> usersIdUnfollowWithHttpInfo(String sourceUserId, String targetUserId) throws ApiException {
         okhttp3.Call localVarCall = usersIdUnfollowValidateBeforeCall(sourceUserId, targetUserId, null);
-        try {
-            Type localVarReturnType = new TypeToken<UsersFollowingDeleteResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<UsersFollowingDeleteResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -9995,14 +9604,8 @@ public class TwitterApi {
      */
     public ApiResponse<UsersLikesDeleteResponse> usersIdUnlikeWithHttpInfo(String id, String tweetId) throws ApiException {
         okhttp3.Call localVarCall = usersIdUnlikeValidateBeforeCall(id, tweetId, null);
-        try {
-            Type localVarReturnType = new TypeToken<UsersLikesDeleteResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<UsersLikesDeleteResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -10129,14 +9732,8 @@ public class TwitterApi {
      */
     public ApiResponse<UsersMutingMutationResponse> usersIdUnmuteWithHttpInfo(String sourceUserId, String targetUserId) throws ApiException {
         okhttp3.Call localVarCall = usersIdUnmuteValidateBeforeCall(sourceUserId, targetUserId, null);
-        try {
-            Type localVarReturnType = new TypeToken<UsersMutingMutationResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<UsersMutingMutationResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**
@@ -10263,14 +9860,8 @@ public class TwitterApi {
      */
     public ApiResponse<UsersRetweetsDeleteResponse> usersIdUnretweetsWithHttpInfo(String id, String sourceTweetId) throws ApiException {
         okhttp3.Call localVarCall = usersIdUnretweetsValidateBeforeCall(id, sourceTweetId, null);
-        try {
-            Type localVarReturnType = new TypeToken<UsersRetweetsDeleteResponse>(){}.getType();
-            return localVarApiClient.execute(localVarCall, localVarReturnType);
-        } catch (ApiException e) {
-            e.setErrorObject(localVarApiClient.getJSON().getGson().fromJson(e.getResponseBody(), new TypeToken<org.openapitools.client.model.ProblemOrError>(){}.getType()));
-            e.setErrorObjectType(new GenericType<org.openapitools.client.model.ProblemOrError>(){});
-            throw e;
-        }
+        Type localVarReturnType = new TypeToken<UsersRetweetsDeleteResponse>(){}.getType();
+        return localVarApiClient.execute(localVarCall, localVarReturnType);
     }
 
     /**

@@ -112,7 +112,7 @@ public class AddOrDeleteRulesRequest extends AbstractOpenApiSchema {
 
                     // deserialize AddRulesRequest
                     try {
-                        deserialized = adapterAddRulesRequest.fromJsonTree(jsonObject);
+                        deserialized = adapterAddRulesRequest.fromJsonTree(jsonObject.deepCopy());
                         match++;
                         log.log(Level.FINER, "Input data matches schema 'AddRulesRequest'");
                     } catch (Exception e) {
@@ -122,7 +122,7 @@ public class AddOrDeleteRulesRequest extends AbstractOpenApiSchema {
 
                     // deserialize DeleteRulesRequest
                     try {
-                        deserialized = adapterDeleteRulesRequest.fromJsonTree(jsonObject);
+                        deserialized = adapterDeleteRulesRequest.fromJsonTree(jsonObject.deepCopy());
                         match++;
                         log.log(Level.FINER, "Input data matches schema 'DeleteRulesRequest'");
                     } catch (Exception e) {

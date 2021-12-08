@@ -205,26 +205,27 @@ public class ListCreateRequest {
 
            @Override
            public ListCreateRequest read(JsonReader in) throws IOException {
-             JsonObject obj = elementAdapter.read(in).getAsJsonObject();
-             Set<Entry<String, JsonElement>> entries = obj.entrySet();//will return members of your object
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject().deepCopy();
+             Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
              // check to see if the JSON string contains additional fields
-             for (Entry<String, JsonElement> entry: entries) {
+             for (Entry<String, JsonElement> entry : entries) {
                if (!ListCreateRequest.openapiFields.contains(entry.getKey())) {
-                throw new IllegalArgumentException("The field `" + entry.getKey() + "` in the JSON string is not defined in the `ListCreateRequest` properties");
+                 throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ListCreateRequest` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
                }
              }
 
              // check to make sure all required properties/fields are present in the JSON string
              for (String requiredField : ListCreateRequest.openapiRequiredFields) {
-               if (obj.get(requiredField) == null) {
-                 throw new IllegalArgumentException("The required field `" + requiredField + "` is not found in the JSON string");
+               if (jsonObj.get(requiredField) == null) {
+                 throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
                }
              }
 
-             return thisAdapter.fromJsonTree(obj);
+             return thisAdapter.fromJsonTree(jsonObj);
            }
 
        }.nullSafe();
     }
   }
 }
+

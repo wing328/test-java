@@ -108,7 +108,7 @@ public class ProblemOrError extends AbstractOpenApiSchema {
 
                     // deserialize Error
                     try {
-                        deserialized = adapterError.fromJsonTree(jsonObject);
+                        deserialized = adapterError.fromJsonTree(jsonObject.deepCopy());
                         match++;
                         log.log(Level.FINER, "Input data matches schema 'Error'");
                     } catch (Exception e) {
@@ -118,7 +118,7 @@ public class ProblemOrError extends AbstractOpenApiSchema {
 
                     // deserialize Problem
                     try {
-                        deserialized = adapterProblem.fromJsonTree(jsonObject);
+                        deserialized = adapterProblem.fromJsonTree(jsonObject.deepCopy());
                         match++;
                         log.log(Level.FINER, "Input data matches schema 'Problem'");
                     } catch (Exception e) {

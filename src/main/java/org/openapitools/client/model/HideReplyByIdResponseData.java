@@ -144,19 +144,20 @@ public class HideReplyByIdResponseData {
 
            @Override
            public HideReplyByIdResponseData read(JsonReader in) throws IOException {
-             JsonObject obj = elementAdapter.read(in).getAsJsonObject();
-             Set<Entry<String, JsonElement>> entries = obj.entrySet();//will return members of your object
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject().deepCopy();
+             Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
              // check to see if the JSON string contains additional fields
-             for (Entry<String, JsonElement> entry: entries) {
+             for (Entry<String, JsonElement> entry : entries) {
                if (!HideReplyByIdResponseData.openapiFields.contains(entry.getKey())) {
-                throw new IllegalArgumentException("The field `" + entry.getKey() + "` in the JSON string is not defined in the `HideReplyByIdResponseData` properties");
+                 throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `HideReplyByIdResponseData` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
                }
              }
 
-             return thisAdapter.fromJsonTree(obj);
+             return thisAdapter.fromJsonTree(jsonObj);
            }
 
        }.nullSafe();
     }
   }
 }
+
