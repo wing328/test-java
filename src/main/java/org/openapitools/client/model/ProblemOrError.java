@@ -77,16 +77,23 @@ public class ProblemOrError extends AbstractOpenApiSchema {
             return (TypeAdapter<T>) new TypeAdapter<ProblemOrError>() {
                 @Override
                 public void write(JsonWriter out, ProblemOrError value) throws IOException {
+                    if (value == null || value.getActualInstance() == null) {
+                        elementAdapter.write(out, null);
+                        return;
+                    }
+
                     // check if the actual instance is of the type `Error`
                     if (value.getActualInstance() instanceof Error) {
                         JsonObject obj = adapterError.toJsonTree((Error)value.getActualInstance()).getAsJsonObject();
                         elementAdapter.write(out, obj);
+                        return;
                     }
 
                     // check if the actual instance is of the type `Problem`
                     if (value.getActualInstance() instanceof Problem) {
                         JsonObject obj = adapterProblem.toJsonTree((Problem)value.getActualInstance()).getAsJsonObject();
                         elementAdapter.write(out, obj);
+                        return;
                     }
 
                     throw new IOException("Failed to deserialize as the type doesn't match oneOf schemas: Error, Problem");

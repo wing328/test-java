@@ -82,16 +82,23 @@ public class StreamingTweet extends AbstractOpenApiSchema {
             return (TypeAdapter<T>) new TypeAdapter<StreamingTweet>() {
                 @Override
                 public void write(JsonWriter out, StreamingTweet value) throws IOException {
+                    if (value == null || value.getActualInstance() == null) {
+                        elementAdapter.write(out, null);
+                        return;
+                    }
+
                     // check if the actual instance is of the type `SingleTweetLookupResponse`
                     if (value.getActualInstance() instanceof SingleTweetLookupResponse) {
                         JsonObject obj = adapterSingleTweetLookupResponse.toJsonTree((SingleTweetLookupResponse)value.getActualInstance()).getAsJsonObject();
                         elementAdapter.write(out, obj);
+                        return;
                     }
 
                     // check if the actual instance is of the type `StreamingTweetOneOf`
                     if (value.getActualInstance() instanceof StreamingTweetOneOf) {
                         JsonObject obj = adapterStreamingTweetOneOf.toJsonTree((StreamingTweetOneOf)value.getActualInstance()).getAsJsonObject();
                         elementAdapter.write(out, obj);
+                        return;
                     }
 
                     throw new IOException("Failed to deserialize as the type doesn't match oneOf schemas: SingleTweetLookupResponse, StreamingTweetOneOf");

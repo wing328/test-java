@@ -81,16 +81,23 @@ public class AddOrDeleteRulesResponse extends AbstractOpenApiSchema {
             return (TypeAdapter<T>) new TypeAdapter<AddOrDeleteRulesResponse>() {
                 @Override
                 public void write(JsonWriter out, AddOrDeleteRulesResponse value) throws IOException {
+                    if (value == null || value.getActualInstance() == null) {
+                        elementAdapter.write(out, null);
+                        return;
+                    }
+
                     // check if the actual instance is of the type `AddRulesResponse`
                     if (value.getActualInstance() instanceof AddRulesResponse) {
                         JsonObject obj = adapterAddRulesResponse.toJsonTree((AddRulesResponse)value.getActualInstance()).getAsJsonObject();
                         elementAdapter.write(out, obj);
+                        return;
                     }
 
                     // check if the actual instance is of the type `DeleteRulesResponse`
                     if (value.getActualInstance() instanceof DeleteRulesResponse) {
                         JsonObject obj = adapterDeleteRulesResponse.toJsonTree((DeleteRulesResponse)value.getActualInstance()).getAsJsonObject();
                         elementAdapter.write(out, obj);
+                        return;
                     }
 
                     throw new IOException("Failed to deserialize as the type doesn't match oneOf schemas: AddRulesResponse, DeleteRulesResponse");

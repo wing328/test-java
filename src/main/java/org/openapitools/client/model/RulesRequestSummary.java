@@ -77,16 +77,23 @@ public class RulesRequestSummary extends AbstractOpenApiSchema {
             return (TypeAdapter<T>) new TypeAdapter<RulesRequestSummary>() {
                 @Override
                 public void write(JsonWriter out, RulesRequestSummary value) throws IOException {
+                    if (value == null || value.getActualInstance() == null) {
+                        elementAdapter.write(out, null);
+                        return;
+                    }
+
                     // check if the actual instance is of the type `RulesRequestSummaryOneOf`
                     if (value.getActualInstance() instanceof RulesRequestSummaryOneOf) {
                         JsonObject obj = adapterRulesRequestSummaryOneOf.toJsonTree((RulesRequestSummaryOneOf)value.getActualInstance()).getAsJsonObject();
                         elementAdapter.write(out, obj);
+                        return;
                     }
 
                     // check if the actual instance is of the type `RulesRequestSummaryOneOf1`
                     if (value.getActualInstance() instanceof RulesRequestSummaryOneOf1) {
                         JsonObject obj = adapterRulesRequestSummaryOneOf1.toJsonTree((RulesRequestSummaryOneOf1)value.getActualInstance()).getAsJsonObject();
                         elementAdapter.write(out, obj);
+                        return;
                     }
 
                     throw new IOException("Failed to deserialize as the type doesn't match oneOf schemas: RulesRequestSummaryOneOf, RulesRequestSummaryOneOf1");
