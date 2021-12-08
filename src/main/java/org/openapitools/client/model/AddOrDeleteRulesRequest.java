@@ -100,7 +100,7 @@ public class AddOrDeleteRulesRequest extends AbstractOpenApiSchema {
                         return;
                     }
 
-                    throw new IOException("Failed to deserialize as the type doesn't match oneOf schemas: AddRulesRequest, DeleteRulesRequest");
+                    throw new IOException("Failed to serialize as the type doesn't match oneOf schemas: AddRulesRequest, DeleteRulesRequest");
                 }
 
                 @Override
@@ -136,7 +136,7 @@ public class AddOrDeleteRulesRequest extends AbstractOpenApiSchema {
                         return ret;
                     }
 
-                    throw new IOException(String.format("Failed deserialization for AddOrDeleteRulesRequest: %d classes match result, expected 1", match));
+                    throw new IOException(String.format("Failed deserialization for AddOrDeleteRulesRequest: %d classes match result, expected 1. JSON: %s", match, jsonObject.toString()));
                 }
             }.nullSafe();
         }

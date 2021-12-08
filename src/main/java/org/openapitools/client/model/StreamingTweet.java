@@ -101,7 +101,7 @@ public class StreamingTweet extends AbstractOpenApiSchema {
                         return;
                     }
 
-                    throw new IOException("Failed to deserialize as the type doesn't match oneOf schemas: SingleTweetLookupResponse, StreamingTweetOneOf");
+                    throw new IOException("Failed to serialize as the type doesn't match oneOf schemas: SingleTweetLookupResponse, StreamingTweetOneOf");
                 }
 
                 @Override
@@ -137,7 +137,7 @@ public class StreamingTweet extends AbstractOpenApiSchema {
                         return ret;
                     }
 
-                    throw new IOException(String.format("Failed deserialization for StreamingTweet: %d classes match result, expected 1", match));
+                    throw new IOException(String.format("Failed deserialization for StreamingTweet: %d classes match result, expected 1. JSON: %s", match, jsonObject.toString()));
                 }
             }.nullSafe();
         }

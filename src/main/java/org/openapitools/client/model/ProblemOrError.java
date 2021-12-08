@@ -96,7 +96,7 @@ public class ProblemOrError extends AbstractOpenApiSchema {
                         return;
                     }
 
-                    throw new IOException("Failed to deserialize as the type doesn't match oneOf schemas: Error, Problem");
+                    throw new IOException("Failed to serialize as the type doesn't match oneOf schemas: Error, Problem");
                 }
 
                 @Override
@@ -132,7 +132,7 @@ public class ProblemOrError extends AbstractOpenApiSchema {
                         return ret;
                     }
 
-                    throw new IOException(String.format("Failed deserialization for ProblemOrError: %d classes match result, expected 1", match));
+                    throw new IOException(String.format("Failed deserialization for ProblemOrError: %d classes match result, expected 1. JSON: %s", match, jsonObject.toString()));
                 }
             }.nullSafe();
         }
