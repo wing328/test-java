@@ -72,9 +72,8 @@ public class AddOrDeleteRulesResponseTest {
         });
         Assert.assertEquals(e2.getMessage(), "The field `data` in the JSON string is not defined in the `DeleteRulesResponse` properties. JSON: {\"data\":[{\"value\":\"Blue\",\"id\":\"1468410959987314694\"}],\"meta\":{\"sent\":\"2021-12-08T02:43:49.329Z\",\"summary\":{\"created\":1,\"not_created\":0,\"valid\":1,\"invalid\":0}}}");
 
-        // TODO need to fix
+        // successfully deserialization without exception
         AddOrDeleteRulesResponse r = apiClient.getJSON().getGson().fromJson(jsonString, AddOrDeleteRulesResponse.class);
-        //Assert.assertEquals(apiClient.getJSON().getGson().toJson(r), "{\"add\":[{\"value\":\"Blue\"}]}");        
     }
 
     /**
