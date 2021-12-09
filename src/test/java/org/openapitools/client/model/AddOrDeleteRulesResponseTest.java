@@ -52,8 +52,9 @@ public class AddOrDeleteRulesResponseTest {
         });
         Assert.assertEquals(e2.getMessage(), "The field `created` in the JSON string is not defined in the `RulesRequestSummaryOneOf1` properties. JSON: {\"created\":1,\"not_created\":0,\"valid\":1,\"invalid\":0}");
 
-        // TODO need to fix as it shouldn't result in 2 match
+        // only match RulesRequestSummaryOneOf
         RulesRequestSummary theAddRulesResponse = apiClient.getJSON().getGson().fromJson(jsonString, RulesRequestSummary.class);
+        Assert.assertTrue(theAddRulesResponse.getActualInstance() instanceof RulesRequestSummaryOneOf);
     }
 
     /**
@@ -63,7 +64,7 @@ public class AddOrDeleteRulesResponseTest {
     public void testAddOrDeleteRulesResponse() {
         String jsonString = "{\"data\":[{\"value\":\"Blue\",\"id\":\"1468410959987314694\"}],\"meta\":{\"sent\":\"2021-12-08T02:43:49.329Z\",\"summary\":{\"created\":1,\"not_created\":0,\"valid\":1,\"invalid\":0}}}";
         // AddRulesResponse
-        //AddRulesResponse theAddRulesResponse = apiClient.getJSON().getGson().fromJson(jsonString, AddRulesResponse.class);
+        AddRulesResponse theAddRulesResponse = apiClient.getJSON().getGson().fromJson(jsonString, AddRulesResponse.class);
 
         // DeleteRulesResponse
         Exception e2 = Assert.assertThrows(java.lang.IllegalArgumentException.class, () -> {
@@ -72,7 +73,7 @@ public class AddOrDeleteRulesResponseTest {
         Assert.assertEquals(e2.getMessage(), "The field `data` in the JSON string is not defined in the `DeleteRulesResponse` properties. JSON: {\"data\":[{\"value\":\"Blue\",\"id\":\"1468410959987314694\"}],\"meta\":{\"sent\":\"2021-12-08T02:43:49.329Z\",\"summary\":{\"created\":1,\"not_created\":0,\"valid\":1,\"invalid\":0}}}");
 
         // TODO need to fix
-        //AddOrDeleteRulesResponse r = apiClient.getJSON().getGson().fromJson(jsonString, AddOrDeleteRulesResponse.class);
+        AddOrDeleteRulesResponse r = apiClient.getJSON().getGson().fromJson(jsonString, AddOrDeleteRulesResponse.class);
         //Assert.assertEquals(apiClient.getJSON().getGson().toJson(r), "{\"add\":[{\"value\":\"Blue\"}]}");        
     }
 

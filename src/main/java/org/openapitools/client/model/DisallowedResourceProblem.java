@@ -288,6 +288,7 @@ public class DisallowedResourceProblem extends Problem {
     return o.toString().replace("\n", "\n    ");
   }
 
+
   public static HashSet<String> openapiFields;
   public static HashSet<String> openapiRequiredFields;
 
@@ -311,6 +312,29 @@ public class DisallowedResourceProblem extends Problem {
     openapiRequiredFields.add("detail");
   }
 
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to DisallowedResourceProblem
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!DisallowedResourceProblem.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `DisallowedResourceProblem` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : DisallowedResourceProblem.openapiRequiredFields) {
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        }
+      }
+  }
+
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
     @SuppressWarnings("unchecked")
     @Override
@@ -332,21 +356,7 @@ public class DisallowedResourceProblem extends Problem {
            @Override
            public DisallowedResourceProblem read(JsonReader in) throws IOException {
              JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject().deepCopy();
-             Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-             // check to see if the JSON string contains additional fields
-             for (Entry<String, JsonElement> entry : entries) {
-               if (!DisallowedResourceProblem.openapiFields.contains(entry.getKey())) {
-                 throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `DisallowedResourceProblem` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-               }
-             }
-
-             // check to make sure all required properties/fields are present in the JSON string
-             for (String requiredField : DisallowedResourceProblem.openapiRequiredFields) {
-               if (jsonObj.get(requiredField) == null) {
-                 throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
-               }
-             }
-
+             validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
            }
 

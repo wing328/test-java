@@ -228,6 +228,7 @@ public class GenericTweetsTimelineResponseMeta {
     return o.toString().replace("\n", "\n    ");
   }
 
+
   public static HashSet<String> openapiFields;
   public static HashSet<String> openapiRequiredFields;
 
@@ -242,6 +243,22 @@ public class GenericTweetsTimelineResponseMeta {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+  }
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to GenericTweetsTimelineResponseMeta
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!GenericTweetsTimelineResponseMeta.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `GenericTweetsTimelineResponseMeta` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
@@ -265,14 +282,7 @@ public class GenericTweetsTimelineResponseMeta {
            @Override
            public GenericTweetsTimelineResponseMeta read(JsonReader in) throws IOException {
              JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject().deepCopy();
-             Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-             // check to see if the JSON string contains additional fields
-             for (Entry<String, JsonElement> entry : entries) {
-               if (!GenericTweetsTimelineResponseMeta.openapiFields.contains(entry.getKey())) {
-                 throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `GenericTweetsTimelineResponseMeta` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-               }
-             }
-
+             validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
            }
 

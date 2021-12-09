@@ -105,10 +105,13 @@ public class ProblemOrError extends AbstractOpenApiSchema {
                     JsonObject jsonObject = elementAdapter.read(in).getAsJsonObject();
 
                     int match = 0;
+                    TypeAdapter actualAdapter = elementAdapter;
 
                     // deserialize Error
                     try {
-                        deserialized = adapterError.fromJsonTree(jsonObject.deepCopy());
+                        // validate the JSON object to see if any excpetion is thrown
+                        Error.validateJsonObject(jsonObject.deepCopy());
+                        actualAdapter = adapterError;
                         match++;
                         log.log(Level.FINER, "Input data matches schema 'Error'");
                     } catch (Exception e) {
@@ -118,7 +121,9 @@ public class ProblemOrError extends AbstractOpenApiSchema {
 
                     // deserialize Problem
                     try {
-                        deserialized = adapterProblem.fromJsonTree(jsonObject.deepCopy());
+                        // validate the JSON object to see if any excpetion is thrown
+                        Problem.validateJsonObject(jsonObject.deepCopy());
+                        actualAdapter = adapterProblem;
                         match++;
                         log.log(Level.FINER, "Input data matches schema 'Problem'");
                     } catch (Exception e) {
@@ -128,7 +133,7 @@ public class ProblemOrError extends AbstractOpenApiSchema {
 
                     if (match == 1) {
                         ProblemOrError ret = new ProblemOrError();
-                        ret.setActualInstance(deserialized);
+                        ret.setActualInstance(actualAdapter.fromJsonTree(jsonObject.deepCopy()));
                         return ret;
                     }
 
@@ -223,5 +228,33 @@ public class ProblemOrError extends AbstractOpenApiSchema {
         return (Problem)super.getActualInstance();
     }
 
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to ProblemOrError
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+    // validate oneOf schemas one by one
+    int validCount = 0;
+    // validate the json string with Error
+    try {
+      Error.validateJsonObject(jsonObj);
+      validCount++;
+    } catch (Exception e) {
+      // continue to the next one
+    }
+    // validate the json string with Problem
+    try {
+      Problem.validateJsonObject(jsonObj);
+      validCount++;
+    } catch (Exception e) {
+      // continue to the next one
+    }
+    if (validCount != 1) {
+      throw new IOException(String.format("The JSON string is invalid for ProblemOrError with oneOf schemas: Error, Problem. %d class(es) match the result, expected 1. JSON: %s", validCount, jsonObj.toString()));
+    }
+  }
 }
 

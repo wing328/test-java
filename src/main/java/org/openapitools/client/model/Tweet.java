@@ -693,6 +693,7 @@ public class Tweet {
     return o.toString().replace("\n", "\n    ");
   }
 
+
   public static HashSet<String> openapiFields;
   public static HashSet<String> openapiRequiredFields;
 
@@ -726,6 +727,53 @@ public class Tweet {
     openapiRequiredFields.add("text");
   }
 
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to Tweet
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!Tweet.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Tweet` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : Tweet.openapiRequiredFields) {
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        }
+      }
+
+      // validate the field `attachments`
+      TweetAttachments.validateJsonObject(jsonObj.getAsJsonObject("attachments"));
+
+      // validate the field `withheld`
+      TweetWithheld.validateJsonObject(jsonObj.getAsJsonObject("withheld"));
+
+      // validate the field `geo`
+      TweetGeo.validateJsonObject(jsonObj.getAsJsonObject("geo"));
+
+      // validate the field `entities`
+      FullTextEntities.validateJsonObject(jsonObj.getAsJsonObject("entities"));
+
+      // validate the field `public_metrics`
+      TweetPublicMetrics.validateJsonObject(jsonObj.getAsJsonObject("public_metrics"));
+
+      // validate the field `non_public_metrics`
+      TweetNonPublicMetrics.validateJsonObject(jsonObj.getAsJsonObject("non_public_metrics"));
+
+      // validate the field `promoted_metrics`
+      TweetPromotedMetrics.validateJsonObject(jsonObj.getAsJsonObject("promoted_metrics"));
+
+      // validate the field `organic_metrics`
+      TweetOrganicMetrics.validateJsonObject(jsonObj.getAsJsonObject("organic_metrics"));
+  }
+
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
     @SuppressWarnings("unchecked")
     @Override
@@ -747,21 +795,7 @@ public class Tweet {
            @Override
            public Tweet read(JsonReader in) throws IOException {
              JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject().deepCopy();
-             Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-             // check to see if the JSON string contains additional fields
-             for (Entry<String, JsonElement> entry : entries) {
-               if (!Tweet.openapiFields.contains(entry.getKey())) {
-                 throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Tweet` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-               }
-             }
-
-             // check to make sure all required properties/fields are present in the JSON string
-             for (String requiredField : Tweet.openapiRequiredFields) {
-               if (jsonObj.get(requiredField) == null) {
-                 throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
-               }
-             }
-
+             validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
            }
 

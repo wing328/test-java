@@ -221,6 +221,7 @@ public class ListLookupMultipleUsersLookupResponse {
     return o.toString().replace("\n", "\n    ");
   }
 
+
   public static HashSet<String> openapiFields;
   public static HashSet<String> openapiRequiredFields;
 
@@ -234,6 +235,28 @@ public class ListLookupMultipleUsersLookupResponse {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+  }
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to ListLookupMultipleUsersLookupResponse
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!ListLookupMultipleUsersLookupResponse.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ListLookupMultipleUsersLookupResponse` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+
+      // validate the field `includes`
+      Expansions.validateJsonObject(jsonObj.getAsJsonObject("includes"));
+
+      // validate the field `meta`
+      ListLookupMultipleUsersLookupResponseMeta.validateJsonObject(jsonObj.getAsJsonObject("meta"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
@@ -257,14 +280,7 @@ public class ListLookupMultipleUsersLookupResponse {
            @Override
            public ListLookupMultipleUsersLookupResponse read(JsonReader in) throws IOException {
              JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject().deepCopy();
-             Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
-             // check to see if the JSON string contains additional fields
-             for (Entry<String, JsonElement> entry : entries) {
-               if (!ListLookupMultipleUsersLookupResponse.openapiFields.contains(entry.getKey())) {
-                 throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ListLookupMultipleUsersLookupResponse` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
-               }
-             }
-
+             validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
            }
 
