@@ -229,6 +229,13 @@ public class Media {
   * @throws IOException if the JSON Object is invalid with respect to Media
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (Media.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has reuqired fields
+          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", Media.openapiRequiredFields.toString()));
+        }
+      }
 
       String discriminatorValue = jsonObj.get("type").getAsString();
       switch (discriminatorValue) {

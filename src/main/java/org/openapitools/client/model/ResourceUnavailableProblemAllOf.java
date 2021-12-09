@@ -244,6 +244,13 @@ public class ResourceUnavailableProblemAllOf {
   * @throws IOException if the JSON Object is invalid with respect to ResourceUnavailableProblemAllOf
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (ResourceUnavailableProblemAllOf.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has reuqired fields
+          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", ResourceUnavailableProblemAllOf.openapiRequiredFields.toString()));
+        }
+      }
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {

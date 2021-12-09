@@ -192,6 +192,13 @@ public class ListLookupMultipleUsersLookupResponseMeta {
   * @throws IOException if the JSON Object is invalid with respect to ListLookupMultipleUsersLookupResponseMeta
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (ListLookupMultipleUsersLookupResponseMeta.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has reuqired fields
+          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", ListLookupMultipleUsersLookupResponseMeta.openapiRequiredFields.toString()));
+        }
+      }
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {

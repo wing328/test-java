@@ -173,6 +173,13 @@ public class ListCreateResponse {
   * @throws IOException if the JSON Object is invalid with respect to ListCreateResponse
   */
   public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (ListCreateResponse.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has reuqired fields
+          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", ListCreateResponse.openapiRequiredFields.toString()));
+        }
+      }
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
       // check to see if the JSON string contains additional fields
       for (Entry<String, JsonElement> entry : entries) {
@@ -182,6 +189,7 @@ public class ListCreateResponse {
       }
 
       // validate the field `data`
+      List.validateJsonObject(jsonObj.getAsJsonObject("data"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

@@ -753,6 +753,7 @@ public class JSON {
             .registerTypeAdapterFactory(new org.openapitools.client.model.ListsIdTweetsResponse.CustomTypeAdapterFactory())
             .registerTypeAdapterFactory(new org.openapitools.client.model.MentionEntity.CustomTypeAdapterFactory())
             .registerTypeAdapterFactory(new org.openapitools.client.model.MentionFields.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new org.openapitools.client.model.ModelList.CustomTypeAdapterFactory())
             .registerTypeAdapterFactory(new org.openapitools.client.model.MultiComplianceJobResponse.CustomTypeAdapterFactory())
             .registerTypeAdapterFactory(new org.openapitools.client.model.MultiListNoPaginationResponse.CustomTypeAdapterFactory())
             .registerTypeAdapterFactory(new org.openapitools.client.model.MultiListNoPaginationResponseMeta.CustomTypeAdapterFactory())

@@ -86,6 +86,7 @@ docs/ListsIdTweetsResponse.md
 docs/Media.md
 docs/MentionEntity.md
 docs/MentionFields.md
+docs/ModelList.md
 docs/MultiComplianceJobResponse.md
 docs/MultiListNoPaginationResponse.md
 docs/MultiListNoPaginationResponseMeta.md
@@ -296,6 +297,7 @@ src/main/java/org/openapitools/client/model/ListsIdTweetsResponse.java
 src/main/java/org/openapitools/client/model/Media.java
 src/main/java/org/openapitools/client/model/MentionEntity.java
 src/main/java/org/openapitools/client/model/MentionFields.java
+src/main/java/org/openapitools/client/model/ModelList.java
 src/main/java/org/openapitools/client/model/MultiComplianceJobResponse.java
 src/main/java/org/openapitools/client/model/MultiListNoPaginationResponse.java
 src/main/java/org/openapitools/client/model/MultiListNoPaginationResponseMeta.java
@@ -395,3 +397,4 @@ src/main/java/org/openapitools/client/model/VideoAllOfNonPublicMetrics.java
 src/main/java/org/openapitools/client/model/VideoAllOfOrganicMetrics.java
 src/main/java/org/openapitools/client/model/VideoAllOfPromotedMetrics.java
 src/main/java/org/openapitools/client/model/VideoAllOfPublicMetrics.java
+src/test/java/org/openapitools/client/model/ModelListTest.java
