@@ -25,6 +25,7 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import org.openapitools.client.model.ModelList;
 import org.openapitools.client.model.Problem;
 
 import com.google.gson.Gson;
@@ -50,7 +51,7 @@ import java.util.Set;
 public class ListCreateResponse {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
-  private List data;
+  private ModelList data;
 
   public static final String SERIALIZED_NAME_ERRORS = "errors";
   @SerializedName(SERIALIZED_NAME_ERRORS)
@@ -59,7 +60,7 @@ public class ListCreateResponse {
   public ListCreateResponse() { 
   }
 
-  public ListCreateResponse data(List data) {
+  public ListCreateResponse data(ModelList data) {
     
     this.data = data;
     return this;
@@ -72,12 +73,12 @@ public class ListCreateResponse {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List getData() {
+  public ModelList getData() {
     return data;
   }
 
 
-  public void setData(List data) {
+  public void setData(ModelList data) {
     this.data = data;
   }
 
@@ -189,7 +190,7 @@ public class ListCreateResponse {
       }
 
       // validate the field `data`
-      List.validateJsonObject(jsonObj.getAsJsonObject("data"));
+      ModelList.validateJsonObject(jsonObj.getAsJsonObject("data"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {

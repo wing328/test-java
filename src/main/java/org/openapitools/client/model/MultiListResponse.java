@@ -25,6 +25,7 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import org.openapitools.client.model.ModelList;
 import org.openapitools.client.model.MultiListResponseMeta;
 import org.openapitools.client.model.Problem;
 
@@ -51,7 +52,7 @@ import java.util.Set;
 public class MultiListResponse {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
-  private List<List> data = null;
+  private List<ModelList> data = null;
 
   public static final String SERIALIZED_NAME_META = "meta";
   @SerializedName(SERIALIZED_NAME_META)
@@ -64,15 +65,15 @@ public class MultiListResponse {
   public MultiListResponse() { 
   }
 
-  public MultiListResponse data(List<List> data) {
+  public MultiListResponse data(List<ModelList> data) {
     
     this.data = data;
     return this;
   }
 
-  public MultiListResponse addDataItem(List dataItem) {
+  public MultiListResponse addDataItem(ModelList dataItem) {
     if (this.data == null) {
-      this.data = new ArrayList<List>();
+      this.data = new ArrayList<ModelList>();
     }
     this.data.add(dataItem);
     return this;
@@ -85,12 +86,12 @@ public class MultiListResponse {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<List> getData() {
+  public List<ModelList> getData() {
     return data;
   }
 
 
-  public void setData(List<List> data) {
+  public void setData(List<ModelList> data) {
     this.data = data;
   }
 

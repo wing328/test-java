@@ -397,4 +397,3 @@ src/main/java/org/openapitools/client/model/VideoAllOfNonPublicMetrics.java
 src/main/java/org/openapitools/client/model/VideoAllOfOrganicMetrics.java
 src/main/java/org/openapitools/client/model/VideoAllOfPromotedMetrics.java
 src/main/java/org/openapitools/client/model/VideoAllOfPublicMetrics.java
-src/test/java/org/openapitools/client/model/ModelListTest.java
