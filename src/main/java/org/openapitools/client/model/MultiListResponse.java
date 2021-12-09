@@ -25,6 +25,7 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import org.openapitools.client.model.ModelList;
 import org.openapitools.client.model.MultiListResponseMeta;
 import org.openapitools.client.model.Problem;
 
@@ -51,7 +52,7 @@ import java.util.Set;
 public class MultiListResponse {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
-  private List<List> data = null;
+  private List<ModelList> data = null;
 
   public static final String SERIALIZED_NAME_META = "meta";
   @SerializedName(SERIALIZED_NAME_META)
@@ -64,15 +65,15 @@ public class MultiListResponse {
   public MultiListResponse() { 
   }
 
-  public MultiListResponse data(List<List> data) {
+  public MultiListResponse data(List<ModelList> data) {
     
     this.data = data;
     return this;
   }
 
-  public MultiListResponse addDataItem(List dataItem) {
+  public MultiListResponse addDataItem(ModelList dataItem) {
     if (this.data == null) {
-      this.data = new ArrayList<List>();
+      this.data = new ArrayList<ModelList>();
     }
     this.data.add(dataItem);
     return this;
@@ -85,12 +86,12 @@ public class MultiListResponse {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List<List> getData() {
+  public List<ModelList> getData() {
     return data;
   }
 
 
-  public void setData(List<List> data) {
+  public void setData(List<ModelList> data) {
     this.data = data;
   }
 
@@ -190,6 +191,7 @@ public class MultiListResponse {
     return o.toString().replace("\n", "\n    ");
   }
 
+
   public static HashSet<String> openapiFields;
   public static HashSet<String> openapiRequiredFields;
 
@@ -202,6 +204,32 @@ public class MultiListResponse {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+  }
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to MultiListResponse
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (MultiListResponse.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has reuqired fields
+          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", MultiListResponse.openapiRequiredFields.toString()));
+        }
+      }
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!MultiListResponse.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `MultiListResponse` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+
+      // validate the field `meta`
+      MultiListResponseMeta.validateJsonObject(jsonObj.getAsJsonObject("meta"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
@@ -224,19 +252,13 @@ public class MultiListResponse {
 
            @Override
            public MultiListResponse read(JsonReader in) throws IOException {
-             JsonObject obj = elementAdapter.read(in).getAsJsonObject();
-             Set<Entry<String, JsonElement>> entries = obj.entrySet();//will return members of your object
-             // check to see if the JSON string contains additional fields
-             for (Entry<String, JsonElement> entry: entries) {
-               if (!MultiListResponse.openapiFields.contains(entry.getKey())) {
-                throw new IllegalArgumentException("The field `" + entry.getKey() + "` in the JSON string is not defined in the `MultiListResponse` properties");
-               }
-             }
-
-             return thisAdapter.fromJsonTree(obj);
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject().deepCopy();
+             validateJsonObject(jsonObj);
+             return thisAdapter.fromJsonTree(jsonObj);
            }
 
        }.nullSafe();
     }
   }
 }
+

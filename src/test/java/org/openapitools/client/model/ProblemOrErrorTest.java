@@ -18,6 +18,8 @@ import com.google.gson.annotations.JsonAdapter;
 import com.google.gson.annotations.SerializedName;
 import com.google.gson.stream.JsonReader;
 import com.google.gson.stream.JsonWriter;
+import com.google.gson.JsonObject;
+import com.google.gson.JsonParser;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
@@ -34,6 +36,34 @@ import org.junit.Test;
  */
 public class ProblemOrErrorTest {
     private final ProblemOrError model = new ProblemOrError();
+
+    /**
+     * Model tests for Problem
+     */
+    @Test
+    public void testProblemInvalidRequestProblem() throws IOException {
+        ApiClient apiClient = new ApiClient();
+        // error payload obtained from https://www.postman.com/twitter/workspace/twitter-s-public-workspace/example/9956214-5eb266c9-ae5e-422a-85db-05e8784d83c3
+        String jsonString = "{\n" +
+                "    \"errors\": [\n" +
+                "        {\n" +
+                "            \"parameters\": {\n" +
+                "                \"ids\": [\n" +
+                "                    \"783214,2244994945,6253282,495309159,172020392,95731075,2548985366,277761722,17874544,300392950,87532773,372575989,3260518932,121291606,158079127,3282859598,103770785,586198217,216531294,1526228120,222953824,1603818258,2548979088,2244983430,1347713256,376825877,6844292,738118115595165697,738118487122419712,218984871,2550997820,1159458169,2296297326,234489024,3873936134,2228891959,791978718,427475002,1194267639100723200,1168976680867762177,905409822,738115375477362688,88723966,1049385226424786944,284201599,1705676064,2861317614,3873965293,1244731491088809984,4172587277,717465714357972992,862314223,2551000568,2548977510,1159274324,783214,2244994945,6253282,495309159,172020392,95731075,2548985366,277761722,17874544,300392950,87532773,372575989,3260518932,121291606,158079127,3282859598,103770785,586198217,216531294,1526228120,222953824,1603818258,2548979088,2244983430,1347713256,376825877,6844292,738118115595165697,738118487122419712,218984871,2550997820,1159458169,2296297326,234489024,3873936134,2228891959,791978718,427475002,1194267639100723200,1168976680867762177,905409822,738115375477362688,88723966,1049385226424786944,284201599,1705676064,2861317614,3873965293,1244731491088809984,4172587277,717465714357972992,862314223,2551000568,2548977510,1159274324\"\n" +
+                "                ]\n" +
+                "            },\n" +
+                "            \"message\": \"size [110] is not between 1 and 100\"\n" +
+                "        }\n" +
+                "    ],\n" +
+                "    \"title\": \"Invalid Request\",\n" +
+                "    \"detail\": \"One or more parameters to your request was invalid.\",\n" +
+                "    \"type\": \"https://api.twitter.com/2/problems/invalid-request\"\n" +
+                "}";
+
+        //Problem a = apiClient.getJSON().getGson().fromJson(jsonString, Problem.class);
+        JsonObject jsonObject = new JsonParser().parse(jsonString).getAsJsonObject();
+        Problem.validateJsonObject(jsonObject);
+    }
 
     /**
      * Model tests for ProblemOrError

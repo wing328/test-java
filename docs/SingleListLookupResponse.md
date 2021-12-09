@@ -7,7 +7,7 @@
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
-**data** | [**List**](List.md) |  |  [optional]
+**data** | [**ModelList**](ModelList.md) |  |  [optional]
 **errors** | [**List&lt;Problem&gt;**](Problem.md) |  |  [optional]
 
 

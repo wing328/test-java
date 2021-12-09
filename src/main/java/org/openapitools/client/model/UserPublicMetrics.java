@@ -200,6 +200,7 @@ public class UserPublicMetrics {
     return o.toString().replace("\n", "\n    ");
   }
 
+
   public static HashSet<String> openapiFields;
   public static HashSet<String> openapiRequiredFields;
 
@@ -217,6 +218,36 @@ public class UserPublicMetrics {
     openapiRequiredFields.add("following_count");
     openapiRequiredFields.add("tweet_count");
     openapiRequiredFields.add("listed_count");
+  }
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to UserPublicMetrics
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (UserPublicMetrics.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has reuqired fields
+          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", UserPublicMetrics.openapiRequiredFields.toString()));
+        }
+      }
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!UserPublicMetrics.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `UserPublicMetrics` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+
+      // check to make sure all required properties/fields are present in the JSON string
+      for (String requiredField : UserPublicMetrics.openapiRequiredFields) {
+        if (jsonObj.get(requiredField) == null) {
+          throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
+        }
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
@@ -239,26 +270,13 @@ public class UserPublicMetrics {
 
            @Override
            public UserPublicMetrics read(JsonReader in) throws IOException {
-             JsonObject obj = elementAdapter.read(in).getAsJsonObject();
-             Set<Entry<String, JsonElement>> entries = obj.entrySet();//will return members of your object
-             // check to see if the JSON string contains additional fields
-             for (Entry<String, JsonElement> entry: entries) {
-               if (!UserPublicMetrics.openapiFields.contains(entry.getKey())) {
-                throw new IllegalArgumentException("The field `" + entry.getKey() + "` in the JSON string is not defined in the `UserPublicMetrics` properties");
-               }
-             }
-
-             // check to make sure all required properties/fields are present in the JSON string
-             for (String requiredField : UserPublicMetrics.openapiRequiredFields) {
-               if (obj.get(requiredField) == null) {
-                 throw new IllegalArgumentException("The required field `" + requiredField + "` is not found in the JSON string");
-               }
-             }
-
-             return thisAdapter.fromJsonTree(obj);
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject().deepCopy();
+             validateJsonObject(jsonObj);
+             return thisAdapter.fromJsonTree(jsonObj);
            }
 
        }.nullSafe();
     }
   }
 }
+

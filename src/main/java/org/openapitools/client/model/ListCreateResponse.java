@@ -25,6 +25,7 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import org.openapitools.client.model.ModelList;
 import org.openapitools.client.model.Problem;
 
 import com.google.gson.Gson;
@@ -50,7 +51,7 @@ import java.util.Set;
 public class ListCreateResponse {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
-  private List data;
+  private ModelList data;
 
   public static final String SERIALIZED_NAME_ERRORS = "errors";
   @SerializedName(SERIALIZED_NAME_ERRORS)
@@ -59,7 +60,7 @@ public class ListCreateResponse {
   public ListCreateResponse() { 
   }
 
-  public ListCreateResponse data(List data) {
+  public ListCreateResponse data(ModelList data) {
     
     this.data = data;
     return this;
@@ -72,12 +73,12 @@ public class ListCreateResponse {
   @javax.annotation.Nullable
   @ApiModelProperty(value = "")
 
-  public List getData() {
+  public ModelList getData() {
     return data;
   }
 
 
-  public void setData(List data) {
+  public void setData(ModelList data) {
     this.data = data;
   }
 
@@ -152,6 +153,7 @@ public class ListCreateResponse {
     return o.toString().replace("\n", "\n    ");
   }
 
+
   public static HashSet<String> openapiFields;
   public static HashSet<String> openapiRequiredFields;
 
@@ -163,6 +165,32 @@ public class ListCreateResponse {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+  }
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to ListCreateResponse
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (ListCreateResponse.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has reuqired fields
+          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", ListCreateResponse.openapiRequiredFields.toString()));
+        }
+      }
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!ListCreateResponse.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ListCreateResponse` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+
+      // validate the field `data`
+      ModelList.validateJsonObject(jsonObj.getAsJsonObject("data"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
@@ -185,19 +213,13 @@ public class ListCreateResponse {
 
            @Override
            public ListCreateResponse read(JsonReader in) throws IOException {
-             JsonObject obj = elementAdapter.read(in).getAsJsonObject();
-             Set<Entry<String, JsonElement>> entries = obj.entrySet();//will return members of your object
-             // check to see if the JSON string contains additional fields
-             for (Entry<String, JsonElement> entry: entries) {
-               if (!ListCreateResponse.openapiFields.contains(entry.getKey())) {
-                throw new IllegalArgumentException("The field `" + entry.getKey() + "` in the JSON string is not defined in the `ListCreateResponse` properties");
-               }
-             }
-
-             return thisAdapter.fromJsonTree(obj);
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject().deepCopy();
+             validateJsonObject(jsonObj);
+             return thisAdapter.fromJsonTree(jsonObj);
            }
 
        }.nullSafe();
     }
   }
 }
+

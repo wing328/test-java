@@ -113,6 +113,7 @@ public class HideReplyByIdResponse {
     return o.toString().replace("\n", "\n    ");
   }
 
+
   public static HashSet<String> openapiFields;
   public static HashSet<String> openapiRequiredFields;
 
@@ -123,6 +124,32 @@ public class HideReplyByIdResponse {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+  }
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to HideReplyByIdResponse
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (HideReplyByIdResponse.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has reuqired fields
+          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", HideReplyByIdResponse.openapiRequiredFields.toString()));
+        }
+      }
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!HideReplyByIdResponse.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `HideReplyByIdResponse` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+
+      // validate the field `data`
+      HideReplyByIdResponseData.validateJsonObject(jsonObj.getAsJsonObject("data"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
@@ -145,19 +172,13 @@ public class HideReplyByIdResponse {
 
            @Override
            public HideReplyByIdResponse read(JsonReader in) throws IOException {
-             JsonObject obj = elementAdapter.read(in).getAsJsonObject();
-             Set<Entry<String, JsonElement>> entries = obj.entrySet();//will return members of your object
-             // check to see if the JSON string contains additional fields
-             for (Entry<String, JsonElement> entry: entries) {
-               if (!HideReplyByIdResponse.openapiFields.contains(entry.getKey())) {
-                throw new IllegalArgumentException("The field `" + entry.getKey() + "` in the JSON string is not defined in the `HideReplyByIdResponse` properties");
-               }
-             }
-
-             return thisAdapter.fromJsonTree(obj);
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject().deepCopy();
+             validateJsonObject(jsonObj);
+             return thisAdapter.fromJsonTree(jsonObj);
            }
 
        }.nullSafe();
     }
   }
 }
+

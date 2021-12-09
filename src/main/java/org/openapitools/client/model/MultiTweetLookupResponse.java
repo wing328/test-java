@@ -191,6 +191,7 @@ public class MultiTweetLookupResponse {
     return o.toString().replace("\n", "\n    ");
   }
 
+
   public static HashSet<String> openapiFields;
   public static HashSet<String> openapiRequiredFields;
 
@@ -203,6 +204,32 @@ public class MultiTweetLookupResponse {
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
+  }
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to MultiTweetLookupResponse
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (MultiTweetLookupResponse.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has reuqired fields
+          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", MultiTweetLookupResponse.openapiRequiredFields.toString()));
+        }
+      }
+      Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
+      // check to see if the JSON string contains additional fields
+      for (Entry<String, JsonElement> entry : entries) {
+        if (!MultiTweetLookupResponse.openapiFields.contains(entry.getKey())) {
+          throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `MultiTweetLookupResponse` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
+        }
+      }
+
+      // validate the field `includes`
+      Expansions.validateJsonObject(jsonObj.getAsJsonObject("includes"));
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
@@ -225,19 +252,13 @@ public class MultiTweetLookupResponse {
 
            @Override
            public MultiTweetLookupResponse read(JsonReader in) throws IOException {
-             JsonObject obj = elementAdapter.read(in).getAsJsonObject();
-             Set<Entry<String, JsonElement>> entries = obj.entrySet();//will return members of your object
-             // check to see if the JSON string contains additional fields
-             for (Entry<String, JsonElement> entry: entries) {
-               if (!MultiTweetLookupResponse.openapiFields.contains(entry.getKey())) {
-                throw new IllegalArgumentException("The field `" + entry.getKey() + "` in the JSON string is not defined in the `MultiTweetLookupResponse` properties");
-               }
-             }
-
-             return thisAdapter.fromJsonTree(obj);
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject().deepCopy();
+             validateJsonObject(jsonObj);
+             return thisAdapter.fromJsonTree(jsonObj);
            }
 
        }.nullSafe();
     }
   }
 }
+

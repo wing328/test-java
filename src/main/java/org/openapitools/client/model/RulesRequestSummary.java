@@ -105,10 +105,13 @@ public class RulesRequestSummary extends AbstractOpenApiSchema {
                     JsonObject jsonObject = elementAdapter.read(in).getAsJsonObject();
 
                     int match = 0;
+                    TypeAdapter actualAdapter = elementAdapter;
 
                     // deserialize RulesRequestSummaryOneOf
                     try {
-                        deserialized = adapterRulesRequestSummaryOneOf.fromJsonTree(jsonObject);
+                        // validate the JSON object to see if any excpetion is thrown
+                        RulesRequestSummaryOneOf.validateJsonObject(jsonObject.deepCopy());
+                        actualAdapter = adapterRulesRequestSummaryOneOf;
                         match++;
                         log.log(Level.FINER, "Input data matches schema 'RulesRequestSummaryOneOf'");
                     } catch (Exception e) {
@@ -118,7 +121,9 @@ public class RulesRequestSummary extends AbstractOpenApiSchema {
 
                     // deserialize RulesRequestSummaryOneOf1
                     try {
-                        deserialized = adapterRulesRequestSummaryOneOf1.fromJsonTree(jsonObject);
+                        // validate the JSON object to see if any excpetion is thrown
+                        RulesRequestSummaryOneOf1.validateJsonObject(jsonObject.deepCopy());
+                        actualAdapter = adapterRulesRequestSummaryOneOf1;
                         match++;
                         log.log(Level.FINER, "Input data matches schema 'RulesRequestSummaryOneOf1'");
                     } catch (Exception e) {
@@ -128,7 +133,7 @@ public class RulesRequestSummary extends AbstractOpenApiSchema {
 
                     if (match == 1) {
                         RulesRequestSummary ret = new RulesRequestSummary();
-                        ret.setActualInstance(deserialized);
+                        ret.setActualInstance(actualAdapter.fromJsonTree(jsonObject.deepCopy()));
                         return ret;
                     }
 
@@ -223,5 +228,33 @@ public class RulesRequestSummary extends AbstractOpenApiSchema {
         return (RulesRequestSummaryOneOf1)super.getActualInstance();
     }
 
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to RulesRequestSummary
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+    // validate oneOf schemas one by one
+    int validCount = 0;
+    // validate the json string with RulesRequestSummaryOneOf
+    try {
+      RulesRequestSummaryOneOf.validateJsonObject(jsonObj);
+      validCount++;
+    } catch (Exception e) {
+      // continue to the next one
+    }
+    // validate the json string with RulesRequestSummaryOneOf1
+    try {
+      RulesRequestSummaryOneOf1.validateJsonObject(jsonObj);
+      validCount++;
+    } catch (Exception e) {
+      // continue to the next one
+    }
+    if (validCount != 1) {
+      throw new IOException(String.format("The JSON string is invalid for RulesRequestSummary with oneOf schemas: RulesRequestSummaryOneOf, RulesRequestSummaryOneOf1. %d class(es) match the result, expected 1. JSON: %s", validCount, jsonObj.toString()));
+    }
+  }
 }
 

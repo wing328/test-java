@@ -109,10 +109,13 @@ public class AddOrDeleteRulesResponse extends AbstractOpenApiSchema {
                     JsonObject jsonObject = elementAdapter.read(in).getAsJsonObject();
 
                     int match = 0;
+                    TypeAdapter actualAdapter = elementAdapter;
 
                     // deserialize AddRulesResponse
                     try {
-                        deserialized = adapterAddRulesResponse.fromJsonTree(jsonObject);
+                        // validate the JSON object to see if any excpetion is thrown
+                        AddRulesResponse.validateJsonObject(jsonObject.deepCopy());
+                        actualAdapter = adapterAddRulesResponse;
                         match++;
                         log.log(Level.FINER, "Input data matches schema 'AddRulesResponse'");
                     } catch (Exception e) {
@@ -122,7 +125,9 @@ public class AddOrDeleteRulesResponse extends AbstractOpenApiSchema {
 
                     // deserialize DeleteRulesResponse
                     try {
-                        deserialized = adapterDeleteRulesResponse.fromJsonTree(jsonObject);
+                        // validate the JSON object to see if any excpetion is thrown
+                        DeleteRulesResponse.validateJsonObject(jsonObject.deepCopy());
+                        actualAdapter = adapterDeleteRulesResponse;
                         match++;
                         log.log(Level.FINER, "Input data matches schema 'DeleteRulesResponse'");
                     } catch (Exception e) {
@@ -132,7 +137,7 @@ public class AddOrDeleteRulesResponse extends AbstractOpenApiSchema {
 
                     if (match == 1) {
                         AddOrDeleteRulesResponse ret = new AddOrDeleteRulesResponse();
-                        ret.setActualInstance(deserialized);
+                        ret.setActualInstance(actualAdapter.fromJsonTree(jsonObject.deepCopy()));
                         return ret;
                     }
 
@@ -227,5 +232,33 @@ public class AddOrDeleteRulesResponse extends AbstractOpenApiSchema {
         return (DeleteRulesResponse)super.getActualInstance();
     }
 
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to AddOrDeleteRulesResponse
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+    // validate oneOf schemas one by one
+    int validCount = 0;
+    // validate the json string with AddRulesResponse
+    try {
+      AddRulesResponse.validateJsonObject(jsonObj);
+      validCount++;
+    } catch (Exception e) {
+      // continue to the next one
+    }
+    // validate the json string with DeleteRulesResponse
+    try {
+      DeleteRulesResponse.validateJsonObject(jsonObj);
+      validCount++;
+    } catch (Exception e) {
+      // continue to the next one
+    }
+    if (validCount != 1) {
+      throw new IOException(String.format("The JSON string is invalid for AddOrDeleteRulesResponse with oneOf schemas: AddRulesResponse, DeleteRulesResponse. %d class(es) match the result, expected 1. JSON: %s", validCount, jsonObj.toString()));
+    }
+  }
 }
 

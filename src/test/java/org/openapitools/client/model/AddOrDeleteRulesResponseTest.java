@@ -23,6 +23,7 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import org.openapitools.client.ApiClient;
 import org.openapitools.client.model.AddRulesResponse;
 import org.openapitools.client.model.DeleteRulesResponse;
 import org.openapitools.client.model.Rule;
@@ -37,13 +38,43 @@ import org.junit.Test;
  */
 public class AddOrDeleteRulesResponseTest {
     private final AddOrDeleteRulesResponse model = new AddOrDeleteRulesResponse();
+    public ApiClient apiClient = new ApiClient();
+
+    @Test
+    public void testRulesRequestSummary() {
+        String jsonString = "{\"created\":1,\"not_created\":0,\"valid\":1,\"invalid\":0}";
+
+        // match and no exception
+        RulesRequestSummaryOneOf theRulesRequestSummaryOneOf = apiClient.getJSON().getGson().fromJson(jsonString, RulesRequestSummaryOneOf.class);
+        // no match results in exception
+        Exception e2 = Assert.assertThrows(java.lang.IllegalArgumentException.class, () -> {
+            RulesRequestSummaryOneOf1 theRulesRequestSummaryOneOf1 = apiClient.getJSON().getGson().fromJson(jsonString, RulesRequestSummaryOneOf1.class);
+        });
+        Assert.assertEquals(e2.getMessage(), "The field `created` in the JSON string is not defined in the `RulesRequestSummaryOneOf1` properties. JSON: {\"created\":1,\"not_created\":0,\"valid\":1,\"invalid\":0}");
+
+        // only match RulesRequestSummaryOneOf
+        RulesRequestSummary theAddRulesResponse = apiClient.getJSON().getGson().fromJson(jsonString, RulesRequestSummary.class);
+        Assert.assertTrue(theAddRulesResponse.getActualInstance() instanceof RulesRequestSummaryOneOf);
+    }
 
     /**
      * Model tests for AddOrDeleteRulesResponse
      */
     @Test
     public void testAddOrDeleteRulesResponse() {
-        // TODO: test AddOrDeleteRulesResponse
+        String jsonString = "{\"data\":[{\"value\":\"Blue\",\"id\":\"1468410959987314694\"}],\"meta\":{\"sent\":\"2021-12-08T02:43:49.329Z\",\"summary\":{\"created\":1,\"not_created\":0,\"valid\":1,\"invalid\":0}}}";
+        // AddRulesResponse
+        AddRulesResponse theAddRulesResponse = apiClient.getJSON().getGson().fromJson(jsonString, AddRulesResponse.class);
+
+        // DeleteRulesResponse
+        Exception e2 = Assert.assertThrows(java.lang.IllegalArgumentException.class, () -> {
+            DeleteRulesResponse theDeleteRulesResponse = apiClient.getJSON().getGson().fromJson(jsonString, DeleteRulesResponse.class);
+        });
+        Assert.assertEquals(e2.getMessage(), "The field `data` in the JSON string is not defined in the `DeleteRulesResponse` properties. JSON: {\"data\":[{\"value\":\"Blue\",\"id\":\"1468410959987314694\"}],\"meta\":{\"sent\":\"2021-12-08T02:43:49.329Z\",\"summary\":{\"created\":1,\"not_created\":0,\"valid\":1,\"invalid\":0}}}");
+
+        // TODO need to fix
+        AddOrDeleteRulesResponse r = apiClient.getJSON().getGson().fromJson(jsonString, AddOrDeleteRulesResponse.class);
+        //Assert.assertEquals(apiClient.getJSON().getGson().toJson(r), "{\"add\":[{\"value\":\"Blue\"}]}");        
     }
 
     /**

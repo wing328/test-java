@@ -205,4 +205,62 @@ public class Media {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>();
+    openapiFields.add("type");
+    openapiFields.add("media_key");
+    openapiFields.add("height");
+    openapiFields.add("width");
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("type");
+  }
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to Media
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (Media.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has reuqired fields
+          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", Media.openapiRequiredFields.toString()));
+        }
+      }
+
+      String discriminatorValue = jsonObj.get("type").getAsString();
+      switch (discriminatorValue) {
+        case "AnimatedGif":
+          AnimatedGif.validateJsonObject(jsonObj);
+          break;
+        case "Photo":
+          Photo.validateJsonObject(jsonObj);
+          break;
+        case "Video":
+          Video.validateJsonObject(jsonObj);
+          break;
+        case "animated_gif":
+          AnimatedGif.validateJsonObject(jsonObj);
+          break;
+        case "photo":
+          Photo.validateJsonObject(jsonObj);
+          break;
+        case "video":
+          Video.validateJsonObject(jsonObj);
+          break;
+        default: 
+          throw new IllegalArgumentException(String.format("The value of the `type` field `%s` does not match any key defined in the discriminator's mapping.", discriminatorValue));
+      }
+  }
+
 }
+

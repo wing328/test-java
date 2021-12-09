@@ -190,4 +190,153 @@ public class Problem {
     return o.toString().replace("\n", "\n    ");
   }
 
+
+  public static HashSet<String> openapiFields;
+  public static HashSet<String> openapiRequiredFields;
+
+  static {
+    // a set of all properties/fields (JSON key names)
+    openapiFields = new HashSet<String>();
+    openapiFields.add("type");
+    openapiFields.add("title");
+    openapiFields.add("detail");
+
+    // a set of required properties/fields (JSON key names)
+    openapiRequiredFields = new HashSet<String>();
+    openapiRequiredFields.add("type");
+    openapiRequiredFields.add("title");
+    openapiRequiredFields.add("detail");
+  }
+
+ /**
+  * Validates the JSON Object and throws an exception if issues found
+  *
+  * @param jsonObj JSON Object
+  * @throws IOException if the JSON Object is invalid with respect to Problem
+  */
+  public static void validateJsonObject(JsonObject jsonObj) throws IOException {
+      if (jsonObj == null) {
+        if (Problem.openapiRequiredFields.isEmpty()) {
+          return;
+        } else { // has reuqired fields
+          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", Problem.openapiRequiredFields.toString()));
+        }
+      }
+
+      String discriminatorValue = jsonObj.get("type").getAsString();
+      switch (discriminatorValue) {
+        case "ClientDisconnectedProblem":
+          ClientDisconnectedProblem.validateJsonObject(jsonObj);
+          break;
+        case "ClientForbiddenProblem":
+          ClientForbiddenProblem.validateJsonObject(jsonObj);
+          break;
+        case "ConflictProblem":
+          ConflictProblem.validateJsonObject(jsonObj);
+          break;
+        case "ConnectionExceptionProblem":
+          ConnectionExceptionProblem.validateJsonObject(jsonObj);
+          break;
+        case "DisallowedResourceProblem":
+          DisallowedResourceProblem.validateJsonObject(jsonObj);
+          break;
+        case "DuplicateRuleProblem":
+          DuplicateRuleProblem.validateJsonObject(jsonObj);
+          break;
+        case "FieldUnauthorizedProblem":
+          FieldUnauthorizedProblem.validateJsonObject(jsonObj);
+          break;
+        case "GenericProblem":
+          GenericProblem.validateJsonObject(jsonObj);
+          break;
+        case "InvalidRequestProblem":
+          InvalidRequestProblem.validateJsonObject(jsonObj);
+          break;
+        case "InvalidRuleProblem":
+          InvalidRuleProblem.validateJsonObject(jsonObj);
+          break;
+        case "NonCompliantRulesProblem":
+          NonCompliantRulesProblem.validateJsonObject(jsonObj);
+          break;
+        case "OperationalDisconnectProblem":
+          OperationalDisconnectProblem.validateJsonObject(jsonObj);
+          break;
+        case "ResourceNotFoundProblem":
+          ResourceNotFoundProblem.validateJsonObject(jsonObj);
+          break;
+        case "ResourceUnauthorizedProblem":
+          ResourceUnauthorizedProblem.validateJsonObject(jsonObj);
+          break;
+        case "ResourceUnavailableProblem":
+          ResourceUnavailableProblem.validateJsonObject(jsonObj);
+          break;
+        case "RulesCapProblem":
+          RulesCapProblem.validateJsonObject(jsonObj);
+          break;
+        case "UnsupportedAuthenticationProblem":
+          UnsupportedAuthenticationProblem.validateJsonObject(jsonObj);
+          break;
+        case "UsageCapExceededProblem":
+          UsageCapExceededProblem.validateJsonObject(jsonObj);
+          break;
+        case "about:blank":
+          GenericProblem.validateJsonObject(jsonObj);
+          break;
+        case "https://api.twitter.com/2/problems/client-disconnected":
+          ClientDisconnectedProblem.validateJsonObject(jsonObj);
+          break;
+        case "https://api.twitter.com/2/problems/client-forbidden":
+          ClientForbiddenProblem.validateJsonObject(jsonObj);
+          break;
+        case "https://api.twitter.com/2/problems/conflict":
+          ConflictProblem.validateJsonObject(jsonObj);
+          break;
+        case "https://api.twitter.com/2/problems/disallowed-resource":
+          DisallowedResourceProblem.validateJsonObject(jsonObj);
+          break;
+        case "https://api.twitter.com/2/problems/duplicate-rules":
+          DuplicateRuleProblem.validateJsonObject(jsonObj);
+          break;
+        case "https://api.twitter.com/2/problems/invalid-request":
+          InvalidRequestProblem.validateJsonObject(jsonObj);
+          break;
+        case "https://api.twitter.com/2/problems/invalid-rules":
+          InvalidRuleProblem.validateJsonObject(jsonObj);
+          break;
+        case "https://api.twitter.com/2/problems/noncompliant-rules":
+          NonCompliantRulesProblem.validateJsonObject(jsonObj);
+          break;
+        case "https://api.twitter.com/2/problems/not-authorized-for-field":
+          FieldUnauthorizedProblem.validateJsonObject(jsonObj);
+          break;
+        case "https://api.twitter.com/2/problems/not-authorized-for-resource":
+          ResourceUnauthorizedProblem.validateJsonObject(jsonObj);
+          break;
+        case "https://api.twitter.com/2/problems/operational-disconnect":
+          OperationalDisconnectProblem.validateJsonObject(jsonObj);
+          break;
+        case "https://api.twitter.com/2/problems/resource-not-found":
+          ResourceNotFoundProblem.validateJsonObject(jsonObj);
+          break;
+        case "https://api.twitter.com/2/problems/resource-unavailable":
+          ResourceUnavailableProblem.validateJsonObject(jsonObj);
+          break;
+        case "https://api.twitter.com/2/problems/rule-cap":
+          RulesCapProblem.validateJsonObject(jsonObj);
+          break;
+        case "https://api.twitter.com/2/problems/streaming-connection":
+          ConnectionExceptionProblem.validateJsonObject(jsonObj);
+          break;
+        case "https://api.twitter.com/2/problems/unsupported-authentication":
+          UnsupportedAuthenticationProblem.validateJsonObject(jsonObj);
+          break;
+        case "https://api.twitter.com/2/problems/usage-capped":
+          UsageCapExceededProblem.validateJsonObject(jsonObj);
+          break;
+        default: 
+          throw new IllegalArgumentException(String.format("The value of the `type` field `%s` does not match any key defined in the discriminator's mapping.", discriminatorValue));
+      }
+  }
+
 }
+
