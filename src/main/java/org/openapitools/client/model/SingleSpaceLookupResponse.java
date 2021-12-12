@@ -209,7 +209,7 @@ public class SingleSpaceLookupResponse {
         if (SingleSpaceLookupResponse.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has reuqired fields
-          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", SingleSpaceLookupResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in SingleSpaceLookupResponse is not found in the empty JSON string", SingleSpaceLookupResponse.openapiRequiredFields.toString()));
         }
       }
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
@@ -219,12 +219,14 @@ public class SingleSpaceLookupResponse {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `SingleSpaceLookupResponse` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
-
-      // validate the field `data`
-      Space.validateJsonObject(jsonObj.getAsJsonObject("data"));
-
-      // validate the field `includes`
-      Expansions.validateJsonObject(jsonObj.getAsJsonObject("includes"));
+      // validate the optional field `data`
+      if (jsonObj.getAsJsonObject("data") != null) {
+        Space.validateJsonObject(jsonObj.getAsJsonObject("data"));
+      }
+      // validate the optional field `includes`
+      if (jsonObj.getAsJsonObject("includes") != null) {
+        Expansions.validateJsonObject(jsonObj.getAsJsonObject("includes"));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
@@ -247,7 +249,7 @@ public class SingleSpaceLookupResponse {
 
            @Override
            public SingleSpaceLookupResponse read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject().deepCopy();
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
            }

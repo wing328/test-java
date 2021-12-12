@@ -168,7 +168,7 @@ public class TweetGeo {
         if (TweetGeo.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has reuqired fields
-          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", TweetGeo.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in TweetGeo is not found in the empty JSON string", TweetGeo.openapiRequiredFields.toString()));
         }
       }
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
@@ -178,9 +178,10 @@ public class TweetGeo {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `TweetGeo` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
-
-      // validate the field `coordinates`
-      Point.validateJsonObject(jsonObj.getAsJsonObject("coordinates"));
+      // validate the optional field `coordinates`
+      if (jsonObj.getAsJsonObject("coordinates") != null) {
+        Point.validateJsonObject(jsonObj.getAsJsonObject("coordinates"));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
@@ -203,7 +204,7 @@ public class TweetGeo {
 
            @Override
            public TweetGeo read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject().deepCopy();
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
            }

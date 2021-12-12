@@ -136,7 +136,7 @@ public class MultiListNoPaginationResponseMeta {
         if (MultiListNoPaginationResponseMeta.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has reuqired fields
-          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", MultiListNoPaginationResponseMeta.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in MultiListNoPaginationResponseMeta is not found in the empty JSON string", MultiListNoPaginationResponseMeta.openapiRequiredFields.toString()));
         }
       }
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
@@ -168,7 +168,7 @@ public class MultiListNoPaginationResponseMeta {
 
            @Override
            public MultiListNoPaginationResponseMeta read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject().deepCopy();
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
            }

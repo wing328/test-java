@@ -171,7 +171,7 @@ public class ContextAnnotation {
         if (ContextAnnotation.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has reuqired fields
-          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", ContextAnnotation.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in ContextAnnotation is not found in the empty JSON string", ContextAnnotation.openapiRequiredFields.toString()));
         }
       }
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
@@ -188,12 +188,14 @@ public class ContextAnnotation {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
-
-      // validate the field `domain`
-      ContextAnnotationDomainFields.validateJsonObject(jsonObj.getAsJsonObject("domain"));
-
-      // validate the field `entity`
-      ContextAnnotationEntityFields.validateJsonObject(jsonObj.getAsJsonObject("entity"));
+      // validate the optional field `domain`
+      if (jsonObj.getAsJsonObject("domain") != null) {
+        ContextAnnotationDomainFields.validateJsonObject(jsonObj.getAsJsonObject("domain"));
+      }
+      // validate the optional field `entity`
+      if (jsonObj.getAsJsonObject("entity") != null) {
+        ContextAnnotationEntityFields.validateJsonObject(jsonObj.getAsJsonObject("entity"));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
@@ -216,7 +218,7 @@ public class ContextAnnotation {
 
            @Override
            public ContextAnnotation read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject().deepCopy();
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
            }

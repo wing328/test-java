@@ -134,7 +134,7 @@ public class ConflictProblem extends Problem {
         if (ConflictProblem.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has reuqired fields
-          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", ConflictProblem.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in ConflictProblem is not found in the empty JSON string", ConflictProblem.openapiRequiredFields.toString()));
         }
       }
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
@@ -173,7 +173,7 @@ public class ConflictProblem extends Problem {
 
            @Override
            public ConflictProblem read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject().deepCopy();
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
            }

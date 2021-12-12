@@ -136,7 +136,7 @@ public class HideReplyByIdResponseData {
         if (HideReplyByIdResponseData.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has reuqired fields
-          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", HideReplyByIdResponseData.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in HideReplyByIdResponseData is not found in the empty JSON string", HideReplyByIdResponseData.openapiRequiredFields.toString()));
         }
       }
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
@@ -168,7 +168,7 @@ public class HideReplyByIdResponseData {
 
            @Override
            public HideReplyByIdResponseData read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject().deepCopy();
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
            }

@@ -115,7 +115,7 @@ public class StreamingTweet extends AbstractOpenApiSchema {
                     // deserialize SingleTweetLookupResponse
                     try {
                         // validate the JSON object to see if any excpetion is thrown
-                        SingleTweetLookupResponse.validateJsonObject(jsonObject.deepCopy());
+                        SingleTweetLookupResponse.validateJsonObject(jsonObject);
                         actualAdapter = adapterSingleTweetLookupResponse;
                         match++;
                         log.log(Level.FINER, "Input data matches schema 'SingleTweetLookupResponse'");
@@ -127,7 +127,7 @@ public class StreamingTweet extends AbstractOpenApiSchema {
                     // deserialize StreamingTweetOneOf
                     try {
                         // validate the JSON object to see if any excpetion is thrown
-                        StreamingTweetOneOf.validateJsonObject(jsonObject.deepCopy());
+                        StreamingTweetOneOf.validateJsonObject(jsonObject);
                         actualAdapter = adapterStreamingTweetOneOf;
                         match++;
                         log.log(Level.FINER, "Input data matches schema 'StreamingTweetOneOf'");
@@ -138,7 +138,7 @@ public class StreamingTweet extends AbstractOpenApiSchema {
 
                     if (match == 1) {
                         StreamingTweet ret = new StreamingTweet();
-                        ret.setActualInstance(actualAdapter.fromJsonTree(jsonObject.deepCopy()));
+                        ret.setActualInstance(actualAdapter.fromJsonTree(jsonObject));
                         return ret;
                     }
 

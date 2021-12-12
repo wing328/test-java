@@ -217,7 +217,7 @@ public class TweetCountsResponse {
         if (TweetCountsResponse.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has reuqired fields
-          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", TweetCountsResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in TweetCountsResponse is not found in the empty JSON string", TweetCountsResponse.openapiRequiredFields.toString()));
         }
       }
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
@@ -227,9 +227,10 @@ public class TweetCountsResponse {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `TweetCountsResponse` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
-
-      // validate the field `meta`
-      TweetCountsResponseMeta.validateJsonObject(jsonObj.getAsJsonObject("meta"));
+      // validate the optional field `meta`
+      if (jsonObj.getAsJsonObject("meta") != null) {
+        TweetCountsResponseMeta.validateJsonObject(jsonObj.getAsJsonObject("meta"));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
@@ -252,7 +253,7 @@ public class TweetCountsResponse {
 
            @Override
            public TweetCountsResponse read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject().deepCopy();
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
            }

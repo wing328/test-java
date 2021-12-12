@@ -198,7 +198,7 @@ public class Rule {
         if (Rule.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has reuqired fields
-          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", Rule.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in Rule is not found in the empty JSON string", Rule.openapiRequiredFields.toString()));
         }
       }
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
@@ -237,7 +237,7 @@ public class Rule {
 
            @Override
            public Rule read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject().deepCopy();
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
            }

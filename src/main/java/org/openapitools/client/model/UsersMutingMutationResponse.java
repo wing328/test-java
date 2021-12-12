@@ -178,7 +178,7 @@ public class UsersMutingMutationResponse {
         if (UsersMutingMutationResponse.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has reuqired fields
-          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", UsersMutingMutationResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in UsersMutingMutationResponse is not found in the empty JSON string", UsersMutingMutationResponse.openapiRequiredFields.toString()));
         }
       }
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
@@ -188,9 +188,10 @@ public class UsersMutingMutationResponse {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `UsersMutingMutationResponse` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
-
-      // validate the field `data`
-      UsersMutingMutationResponseData.validateJsonObject(jsonObj.getAsJsonObject("data"));
+      // validate the optional field `data`
+      if (jsonObj.getAsJsonObject("data") != null) {
+        UsersMutingMutationResponseData.validateJsonObject(jsonObj.getAsJsonObject("data"));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
@@ -213,7 +214,7 @@ public class UsersMutingMutationResponse {
 
            @Override
            public UsersMutingMutationResponse read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject().deepCopy();
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
            }

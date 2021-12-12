@@ -114,7 +114,7 @@ public class AddOrDeleteRulesRequest extends AbstractOpenApiSchema {
                     // deserialize AddRulesRequest
                     try {
                         // validate the JSON object to see if any excpetion is thrown
-                        AddRulesRequest.validateJsonObject(jsonObject.deepCopy());
+                        AddRulesRequest.validateJsonObject(jsonObject);
                         actualAdapter = adapterAddRulesRequest;
                         match++;
                         log.log(Level.FINER, "Input data matches schema 'AddRulesRequest'");
@@ -126,7 +126,7 @@ public class AddOrDeleteRulesRequest extends AbstractOpenApiSchema {
                     // deserialize DeleteRulesRequest
                     try {
                         // validate the JSON object to see if any excpetion is thrown
-                        DeleteRulesRequest.validateJsonObject(jsonObject.deepCopy());
+                        DeleteRulesRequest.validateJsonObject(jsonObject);
                         actualAdapter = adapterDeleteRulesRequest;
                         match++;
                         log.log(Level.FINER, "Input data matches schema 'DeleteRulesRequest'");
@@ -137,7 +137,7 @@ public class AddOrDeleteRulesRequest extends AbstractOpenApiSchema {
 
                     if (match == 1) {
                         AddOrDeleteRulesRequest ret = new AddOrDeleteRulesRequest();
-                        ret.setActualInstance(actualAdapter.fromJsonTree(jsonObject.deepCopy()));
+                        ret.setActualInstance(actualAdapter.fromJsonTree(jsonObject));
                         return ret;
                     }
 

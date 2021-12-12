@@ -362,7 +362,7 @@ public class URLFields {
         if (URLFields.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has reuqired fields
-          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", URLFields.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in URLFields is not found in the empty JSON string", URLFields.openapiRequiredFields.toString()));
         }
       }
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
@@ -401,7 +401,7 @@ public class URLFields {
 
            @Override
            public URLFields read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject().deepCopy();
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
            }

@@ -738,7 +738,7 @@ public class Tweet {
         if (Tweet.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has reuqired fields
-          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", Tweet.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in Tweet is not found in the empty JSON string", Tweet.openapiRequiredFields.toString()));
         }
       }
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
@@ -755,30 +755,38 @@ public class Tweet {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
-
-      // validate the field `attachments`
-      TweetAttachments.validateJsonObject(jsonObj.getAsJsonObject("attachments"));
-
-      // validate the field `withheld`
-      TweetWithheld.validateJsonObject(jsonObj.getAsJsonObject("withheld"));
-
-      // validate the field `geo`
-      TweetGeo.validateJsonObject(jsonObj.getAsJsonObject("geo"));
-
-      // validate the field `entities`
-      FullTextEntities.validateJsonObject(jsonObj.getAsJsonObject("entities"));
-
-      // validate the field `public_metrics`
-      TweetPublicMetrics.validateJsonObject(jsonObj.getAsJsonObject("public_metrics"));
-
-      // validate the field `non_public_metrics`
-      TweetNonPublicMetrics.validateJsonObject(jsonObj.getAsJsonObject("non_public_metrics"));
-
-      // validate the field `promoted_metrics`
-      TweetPromotedMetrics.validateJsonObject(jsonObj.getAsJsonObject("promoted_metrics"));
-
-      // validate the field `organic_metrics`
-      TweetOrganicMetrics.validateJsonObject(jsonObj.getAsJsonObject("organic_metrics"));
+      // validate the optional field `attachments`
+      if (jsonObj.getAsJsonObject("attachments") != null) {
+        TweetAttachments.validateJsonObject(jsonObj.getAsJsonObject("attachments"));
+      }
+      // validate the optional field `withheld`
+      if (jsonObj.getAsJsonObject("withheld") != null) {
+        TweetWithheld.validateJsonObject(jsonObj.getAsJsonObject("withheld"));
+      }
+      // validate the optional field `geo`
+      if (jsonObj.getAsJsonObject("geo") != null) {
+        TweetGeo.validateJsonObject(jsonObj.getAsJsonObject("geo"));
+      }
+      // validate the optional field `entities`
+      if (jsonObj.getAsJsonObject("entities") != null) {
+        FullTextEntities.validateJsonObject(jsonObj.getAsJsonObject("entities"));
+      }
+      // validate the optional field `public_metrics`
+      if (jsonObj.getAsJsonObject("public_metrics") != null) {
+        TweetPublicMetrics.validateJsonObject(jsonObj.getAsJsonObject("public_metrics"));
+      }
+      // validate the optional field `non_public_metrics`
+      if (jsonObj.getAsJsonObject("non_public_metrics") != null) {
+        TweetNonPublicMetrics.validateJsonObject(jsonObj.getAsJsonObject("non_public_metrics"));
+      }
+      // validate the optional field `promoted_metrics`
+      if (jsonObj.getAsJsonObject("promoted_metrics") != null) {
+        TweetPromotedMetrics.validateJsonObject(jsonObj.getAsJsonObject("promoted_metrics"));
+      }
+      // validate the optional field `organic_metrics`
+      if (jsonObj.getAsJsonObject("organic_metrics") != null) {
+        TweetOrganicMetrics.validateJsonObject(jsonObj.getAsJsonObject("organic_metrics"));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
@@ -801,7 +809,7 @@ public class Tweet {
 
            @Override
            public Tweet read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject().deepCopy();
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
            }

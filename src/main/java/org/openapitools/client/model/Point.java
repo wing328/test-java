@@ -222,7 +222,7 @@ public class Point {
         if (Point.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has reuqired fields
-          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", Point.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in Point is not found in the empty JSON string", Point.openapiRequiredFields.toString()));
         }
       }
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
@@ -261,7 +261,7 @@ public class Point {
 
            @Override
            public Point read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject().deepCopy();
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
            }

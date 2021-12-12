@@ -167,7 +167,7 @@ public class GenericProblem extends Problem {
         if (GenericProblem.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has reuqired fields
-          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", GenericProblem.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in GenericProblem is not found in the empty JSON string", GenericProblem.openapiRequiredFields.toString()));
         }
       }
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
@@ -206,7 +206,7 @@ public class GenericProblem extends Problem {
 
            @Override
            public GenericProblem read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject().deepCopy();
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
            }

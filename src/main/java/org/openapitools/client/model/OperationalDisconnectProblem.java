@@ -225,7 +225,7 @@ public class OperationalDisconnectProblem extends Problem {
         if (OperationalDisconnectProblem.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has reuqired fields
-          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", OperationalDisconnectProblem.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in OperationalDisconnectProblem is not found in the empty JSON string", OperationalDisconnectProblem.openapiRequiredFields.toString()));
         }
       }
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
@@ -264,7 +264,7 @@ public class OperationalDisconnectProblem extends Problem {
 
            @Override
            public OperationalDisconnectProblem read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject().deepCopy();
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
            }

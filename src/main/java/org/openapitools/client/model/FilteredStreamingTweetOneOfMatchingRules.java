@@ -167,7 +167,7 @@ public class FilteredStreamingTweetOneOfMatchingRules {
         if (FilteredStreamingTweetOneOfMatchingRules.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has reuqired fields
-          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", FilteredStreamingTweetOneOfMatchingRules.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in FilteredStreamingTweetOneOfMatchingRules is not found in the empty JSON string", FilteredStreamingTweetOneOfMatchingRules.openapiRequiredFields.toString()));
         }
       }
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
@@ -206,7 +206,7 @@ public class FilteredStreamingTweetOneOfMatchingRules {
 
            @Override
            public FilteredStreamingTweetOneOfMatchingRules read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject().deepCopy();
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
            }

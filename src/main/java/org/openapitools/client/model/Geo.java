@@ -282,7 +282,7 @@ public class Geo {
         if (Geo.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has reuqired fields
-          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", Geo.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in Geo is not found in the empty JSON string", Geo.openapiRequiredFields.toString()));
         }
       }
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
@@ -299,9 +299,10 @@ public class Geo {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
-
-      // validate the field `geometry`
-      Point.validateJsonObject(jsonObj.getAsJsonObject("geometry"));
+      // validate the optional field `geometry`
+      if (jsonObj.getAsJsonObject("geometry") != null) {
+        Point.validateJsonObject(jsonObj.getAsJsonObject("geometry"));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
@@ -324,7 +325,7 @@ public class Geo {
 
            @Override
            public Geo read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject().deepCopy();
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
            }

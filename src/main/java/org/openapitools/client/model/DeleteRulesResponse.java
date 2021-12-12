@@ -138,7 +138,7 @@ public class DeleteRulesResponse {
         if (DeleteRulesResponse.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has reuqired fields
-          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", DeleteRulesResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in DeleteRulesResponse is not found in the empty JSON string", DeleteRulesResponse.openapiRequiredFields.toString()));
         }
       }
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
@@ -155,9 +155,10 @@ public class DeleteRulesResponse {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
-
-      // validate the field `meta`
-      RulesResponseMetadata.validateJsonObject(jsonObj.getAsJsonObject("meta"));
+      // validate the optional field `meta`
+      if (jsonObj.getAsJsonObject("meta") != null) {
+        RulesResponseMetadata.validateJsonObject(jsonObj.getAsJsonObject("meta"));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
@@ -180,7 +181,7 @@ public class DeleteRulesResponse {
 
            @Override
            public DeleteRulesResponse read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject().deepCopy();
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
            }

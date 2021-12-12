@@ -290,7 +290,7 @@ public class UsageCapExceededProblem extends Problem {
         if (UsageCapExceededProblem.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has reuqired fields
-          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", UsageCapExceededProblem.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in UsageCapExceededProblem is not found in the empty JSON string", UsageCapExceededProblem.openapiRequiredFields.toString()));
         }
       }
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
@@ -329,7 +329,7 @@ public class UsageCapExceededProblem extends Problem {
 
            @Override
            public UsageCapExceededProblem read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject().deepCopy();
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
            }

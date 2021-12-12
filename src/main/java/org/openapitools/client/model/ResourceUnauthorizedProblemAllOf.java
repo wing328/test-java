@@ -357,7 +357,7 @@ public class ResourceUnauthorizedProblemAllOf {
         if (ResourceUnauthorizedProblemAllOf.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has reuqired fields
-          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", ResourceUnauthorizedProblemAllOf.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in ResourceUnauthorizedProblemAllOf is not found in the empty JSON string", ResourceUnauthorizedProblemAllOf.openapiRequiredFields.toString()));
         }
       }
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
@@ -396,7 +396,7 @@ public class ResourceUnauthorizedProblemAllOf {
 
            @Override
            public ResourceUnauthorizedProblemAllOf read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject().deepCopy();
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
            }

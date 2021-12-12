@@ -256,7 +256,7 @@ public class GenericTweetsTimelineResponseMeta {
         if (GenericTweetsTimelineResponseMeta.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has reuqired fields
-          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", GenericTweetsTimelineResponseMeta.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in GenericTweetsTimelineResponseMeta is not found in the empty JSON string", GenericTweetsTimelineResponseMeta.openapiRequiredFields.toString()));
         }
       }
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
@@ -288,7 +288,7 @@ public class GenericTweetsTimelineResponseMeta {
 
            @Override
            public GenericTweetsTimelineResponseMeta read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject().deepCopy();
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
            }

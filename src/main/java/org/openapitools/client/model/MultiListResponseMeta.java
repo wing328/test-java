@@ -196,7 +196,7 @@ public class MultiListResponseMeta {
         if (MultiListResponseMeta.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has reuqired fields
-          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", MultiListResponseMeta.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in MultiListResponseMeta is not found in the empty JSON string", MultiListResponseMeta.openapiRequiredFields.toString()));
         }
       }
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
@@ -228,7 +228,7 @@ public class MultiListResponseMeta {
 
            @Override
            public MultiListResponseMeta read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject().deepCopy();
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
            }

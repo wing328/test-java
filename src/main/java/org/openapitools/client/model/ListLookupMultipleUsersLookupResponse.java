@@ -248,7 +248,7 @@ public class ListLookupMultipleUsersLookupResponse {
         if (ListLookupMultipleUsersLookupResponse.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has reuqired fields
-          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", ListLookupMultipleUsersLookupResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in ListLookupMultipleUsersLookupResponse is not found in the empty JSON string", ListLookupMultipleUsersLookupResponse.openapiRequiredFields.toString()));
         }
       }
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
@@ -258,12 +258,14 @@ public class ListLookupMultipleUsersLookupResponse {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `ListLookupMultipleUsersLookupResponse` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
-
-      // validate the field `includes`
-      Expansions.validateJsonObject(jsonObj.getAsJsonObject("includes"));
-
-      // validate the field `meta`
-      ListLookupMultipleUsersLookupResponseMeta.validateJsonObject(jsonObj.getAsJsonObject("meta"));
+      // validate the optional field `includes`
+      if (jsonObj.getAsJsonObject("includes") != null) {
+        Expansions.validateJsonObject(jsonObj.getAsJsonObject("includes"));
+      }
+      // validate the optional field `meta`
+      if (jsonObj.getAsJsonObject("meta") != null) {
+        ListLookupMultipleUsersLookupResponseMeta.validateJsonObject(jsonObj.getAsJsonObject("meta"));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
@@ -286,7 +288,7 @@ public class ListLookupMultipleUsersLookupResponse {
 
            @Override
            public ListLookupMultipleUsersLookupResponse read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject().deepCopy();
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
            }

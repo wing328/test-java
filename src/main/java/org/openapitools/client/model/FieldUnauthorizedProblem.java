@@ -323,7 +323,7 @@ public class FieldUnauthorizedProblem extends Problem {
         if (FieldUnauthorizedProblem.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has reuqired fields
-          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", FieldUnauthorizedProblem.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in FieldUnauthorizedProblem is not found in the empty JSON string", FieldUnauthorizedProblem.openapiRequiredFields.toString()));
         }
       }
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
@@ -362,7 +362,7 @@ public class FieldUnauthorizedProblem extends Problem {
 
            @Override
            public FieldUnauthorizedProblem read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject().deepCopy();
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
            }

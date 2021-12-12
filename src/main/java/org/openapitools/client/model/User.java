@@ -535,7 +535,7 @@ public class User {
         if (User.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has reuqired fields
-          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", User.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in User is not found in the empty JSON string", User.openapiRequiredFields.toString()));
         }
       }
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
@@ -552,15 +552,18 @@ public class User {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
-
-      // validate the field `withheld`
-      UserWithheld.validateJsonObject(jsonObj.getAsJsonObject("withheld"));
-
-      // validate the field `entities`
-      UserEntities.validateJsonObject(jsonObj.getAsJsonObject("entities"));
-
-      // validate the field `public_metrics`
-      UserPublicMetrics.validateJsonObject(jsonObj.getAsJsonObject("public_metrics"));
+      // validate the optional field `withheld`
+      if (jsonObj.getAsJsonObject("withheld") != null) {
+        UserWithheld.validateJsonObject(jsonObj.getAsJsonObject("withheld"));
+      }
+      // validate the optional field `entities`
+      if (jsonObj.getAsJsonObject("entities") != null) {
+        UserEntities.validateJsonObject(jsonObj.getAsJsonObject("entities"));
+      }
+      // validate the optional field `public_metrics`
+      if (jsonObj.getAsJsonObject("public_metrics") != null) {
+        UserPublicMetrics.validateJsonObject(jsonObj.getAsJsonObject("public_metrics"));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
@@ -583,7 +586,7 @@ public class User {
 
            @Override
            public User read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject().deepCopy();
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
            }

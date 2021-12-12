@@ -278,7 +278,7 @@ public class ResourceUnavailableProblem extends Problem {
         if (ResourceUnavailableProblem.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has reuqired fields
-          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", ResourceUnavailableProblem.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in ResourceUnavailableProblem is not found in the empty JSON string", ResourceUnavailableProblem.openapiRequiredFields.toString()));
         }
       }
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
@@ -317,7 +317,7 @@ public class ResourceUnavailableProblem extends Problem {
 
            @Override
            public ResourceUnavailableProblem read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject().deepCopy();
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
            }

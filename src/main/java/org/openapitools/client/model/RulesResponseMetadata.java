@@ -228,7 +228,7 @@ public class RulesResponseMetadata {
         if (RulesResponseMetadata.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has reuqired fields
-          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", RulesResponseMetadata.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in RulesResponseMetadata is not found in the empty JSON string", RulesResponseMetadata.openapiRequiredFields.toString()));
         }
       }
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
@@ -245,9 +245,10 @@ public class RulesResponseMetadata {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
-
-      // validate the field `summary`
-      RulesRequestSummary.validateJsonObject(jsonObj.getAsJsonObject("summary"));
+      // validate the optional field `summary`
+      if (jsonObj.getAsJsonObject("summary") != null) {
+        RulesRequestSummary.validateJsonObject(jsonObj.getAsJsonObject("summary"));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
@@ -270,7 +271,7 @@ public class RulesResponseMetadata {
 
            @Override
            public RulesResponseMetadata read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject().deepCopy();
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
            }

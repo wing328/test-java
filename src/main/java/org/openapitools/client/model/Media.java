@@ -233,7 +233,7 @@ public class Media {
         if (Media.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has reuqired fields
-          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", Media.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in Media is not found in the empty JSON string", Media.openapiRequiredFields.toString()));
         }
       }
 

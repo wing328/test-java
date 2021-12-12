@@ -217,7 +217,7 @@ public class MultiListResponse {
         if (MultiListResponse.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has reuqired fields
-          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", MultiListResponse.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in MultiListResponse is not found in the empty JSON string", MultiListResponse.openapiRequiredFields.toString()));
         }
       }
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
@@ -227,9 +227,10 @@ public class MultiListResponse {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `MultiListResponse` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
-
-      // validate the field `meta`
-      MultiListResponseMeta.validateJsonObject(jsonObj.getAsJsonObject("meta"));
+      // validate the optional field `meta`
+      if (jsonObj.getAsJsonObject("meta") != null) {
+        MultiListResponseMeta.validateJsonObject(jsonObj.getAsJsonObject("meta"));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
@@ -252,7 +253,7 @@ public class MultiListResponse {
 
            @Override
            public MultiListResponse read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject().deepCopy();
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
            }

@@ -137,7 +137,7 @@ public class VideoAllOfPublicMetrics {
         if (VideoAllOfPublicMetrics.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has reuqired fields
-          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", VideoAllOfPublicMetrics.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in VideoAllOfPublicMetrics is not found in the empty JSON string", VideoAllOfPublicMetrics.openapiRequiredFields.toString()));
         }
       }
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
@@ -169,7 +169,7 @@ public class VideoAllOfPublicMetrics {
 
            @Override
            public VideoAllOfPublicMetrics read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject().deepCopy();
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
            }

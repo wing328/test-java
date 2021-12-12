@@ -169,7 +169,7 @@ public class UserEntities {
         if (UserEntities.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has reuqired fields
-          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", UserEntities.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in UserEntities is not found in the empty JSON string", UserEntities.openapiRequiredFields.toString()));
         }
       }
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
@@ -179,12 +179,14 @@ public class UserEntities {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `UserEntities` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
-
-      // validate the field `url`
-      UserEntitiesUrl.validateJsonObject(jsonObj.getAsJsonObject("url"));
-
-      // validate the field `description`
-      FullTextEntities.validateJsonObject(jsonObj.getAsJsonObject("description"));
+      // validate the optional field `url`
+      if (jsonObj.getAsJsonObject("url") != null) {
+        UserEntitiesUrl.validateJsonObject(jsonObj.getAsJsonObject("url"));
+      }
+      // validate the optional field `description`
+      if (jsonObj.getAsJsonObject("description") != null) {
+        FullTextEntities.validateJsonObject(jsonObj.getAsJsonObject("description"));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
@@ -207,7 +209,7 @@ public class UserEntities {
 
            @Override
            public UserEntities read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject().deepCopy();
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
            }

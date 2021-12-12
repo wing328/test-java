@@ -219,7 +219,7 @@ public class Problem {
         if (Problem.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has reuqired fields
-          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", Problem.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in Problem is not found in the empty JSON string", Problem.openapiRequiredFields.toString()));
         }
       }
 

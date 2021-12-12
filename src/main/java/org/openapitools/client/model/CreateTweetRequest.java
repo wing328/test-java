@@ -427,7 +427,7 @@ public class CreateTweetRequest {
         if (CreateTweetRequest.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has reuqired fields
-          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", CreateTweetRequest.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in CreateTweetRequest is not found in the empty JSON string", CreateTweetRequest.openapiRequiredFields.toString()));
         }
       }
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
@@ -437,18 +437,22 @@ public class CreateTweetRequest {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `CreateTweetRequest` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
-
-      // validate the field `reply`
-      CreateTweetRequestReply.validateJsonObject(jsonObj.getAsJsonObject("reply"));
-
-      // validate the field `media`
-      CreateTweetRequestMedia.validateJsonObject(jsonObj.getAsJsonObject("media"));
-
-      // validate the field `poll`
-      CreateTweetRequestPoll.validateJsonObject(jsonObj.getAsJsonObject("poll"));
-
-      // validate the field `geo`
-      CreateTweetRequestGeo.validateJsonObject(jsonObj.getAsJsonObject("geo"));
+      // validate the optional field `reply`
+      if (jsonObj.getAsJsonObject("reply") != null) {
+        CreateTweetRequestReply.validateJsonObject(jsonObj.getAsJsonObject("reply"));
+      }
+      // validate the optional field `media`
+      if (jsonObj.getAsJsonObject("media") != null) {
+        CreateTweetRequestMedia.validateJsonObject(jsonObj.getAsJsonObject("media"));
+      }
+      // validate the optional field `poll`
+      if (jsonObj.getAsJsonObject("poll") != null) {
+        CreateTweetRequestPoll.validateJsonObject(jsonObj.getAsJsonObject("poll"));
+      }
+      // validate the optional field `geo`
+      if (jsonObj.getAsJsonObject("geo") != null) {
+        CreateTweetRequestGeo.validateJsonObject(jsonObj.getAsJsonObject("geo"));
+      }
   }
 
   public static class CustomTypeAdapterFactory implements TypeAdapterFactory {
@@ -471,7 +475,7 @@ public class CreateTweetRequest {
 
            @Override
            public CreateTweetRequest read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject().deepCopy();
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
            }

@@ -231,7 +231,7 @@ public class RulesRequestSummaryOneOf {
         if (RulesRequestSummaryOneOf.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has reuqired fields
-          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", RulesRequestSummaryOneOf.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in RulesRequestSummaryOneOf is not found in the empty JSON string", RulesRequestSummaryOneOf.openapiRequiredFields.toString()));
         }
       }
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
@@ -270,7 +270,7 @@ public class RulesRequestSummaryOneOf {
 
            @Override
            public RulesRequestSummaryOneOf read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject().deepCopy();
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
            }

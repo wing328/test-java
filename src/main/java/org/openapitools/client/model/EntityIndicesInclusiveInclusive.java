@@ -171,7 +171,7 @@ public class EntityIndicesInclusiveInclusive {
         if (EntityIndicesInclusiveInclusive.openapiRequiredFields.isEmpty()) {
           return;
         } else { // has reuqired fields
-          throw new IllegalArgumentException(String.format("The required field(s) `%s` is not found in the empty JSON string", EntityIndicesInclusiveInclusive.openapiRequiredFields.toString()));
+          throw new IllegalArgumentException(String.format("The required field(s) %s in EntityIndicesInclusiveInclusive is not found in the empty JSON string", EntityIndicesInclusiveInclusive.openapiRequiredFields.toString()));
         }
       }
       Set<Entry<String, JsonElement>> entries = jsonObj.entrySet();
@@ -210,7 +210,7 @@ public class EntityIndicesInclusiveInclusive {
 
            @Override
            public EntityIndicesInclusiveInclusive read(JsonReader in) throws IOException {
-             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject().deepCopy();
+             JsonObject jsonObj = elementAdapter.read(in).getAsJsonObject();
              validateJsonObject(jsonObj);
              return thisAdapter.fromJsonTree(jsonObj);
            }
