@@ -30,6 +30,7 @@ import org.openapitools.client.model.RulesResponseMetadata;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
@@ -194,6 +195,13 @@ public class AddRulesResponse {
         if (jsonObj.get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
+      }
+      JsonArray jsonArraydata = jsonObj.getAsJsonArray("data");
+      // validate the optional field `data` (array)
+      if (jsonArraydata != null) {
+        for (int i = 0; i < jsonArraydata.size(); i++) {
+          Rule.validateJsonObject(jsonArraydata.get(i).getAsJsonObject());
+        };
       }
       // validate the optional field `meta`
       if (jsonObj.getAsJsonObject("meta") != null) {

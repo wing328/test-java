@@ -31,6 +31,7 @@ import org.openapitools.client.model.User;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
@@ -226,6 +227,13 @@ public class SingleUserLookupResponse {
       // validate the optional field `includes`
       if (jsonObj.getAsJsonObject("includes") != null) {
         Expansions.validateJsonObject(jsonObj.getAsJsonObject("includes"));
+      }
+      JsonArray jsonArrayerrors = jsonObj.getAsJsonArray("errors");
+      // validate the optional field `errors` (array)
+      if (jsonArrayerrors != null) {
+        for (int i = 0; i < jsonArrayerrors.size(); i++) {
+          Problem.validateJsonObject(jsonArrayerrors.get(i).getAsJsonObject());
+        };
       }
   }
 

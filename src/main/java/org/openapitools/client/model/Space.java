@@ -30,6 +30,7 @@ import org.threeten.bp.OffsetDateTime;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
@@ -719,6 +720,13 @@ public class Space {
         if (jsonObj.get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
+      }
+      JsonArray jsonArraytopics = jsonObj.getAsJsonArray("topics");
+      // validate the optional field `topics` (array)
+      if (jsonArraytopics != null) {
+        for (int i = 0; i < jsonArraytopics.size(); i++) {
+          SpaceTopics.validateJsonObject(jsonArraytopics.get(i).getAsJsonObject());
+        };
       }
   }
 

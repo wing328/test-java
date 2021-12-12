@@ -33,6 +33,7 @@ import org.openapitools.client.model.UrlEntity;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
@@ -312,6 +313,41 @@ public class FullTextEntities {
         if (!FullTextEntities.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `FullTextEntities` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
+      }
+      JsonArray jsonArrayurls = jsonObj.getAsJsonArray("urls");
+      // validate the optional field `urls` (array)
+      if (jsonArrayurls != null) {
+        for (int i = 0; i < jsonArrayurls.size(); i++) {
+          UrlEntity.validateJsonObject(jsonArrayurls.get(i).getAsJsonObject());
+        };
+      }
+      JsonArray jsonArrayhashtags = jsonObj.getAsJsonArray("hashtags");
+      // validate the optional field `hashtags` (array)
+      if (jsonArrayhashtags != null) {
+        for (int i = 0; i < jsonArrayhashtags.size(); i++) {
+          HashtagEntity.validateJsonObject(jsonArrayhashtags.get(i).getAsJsonObject());
+        };
+      }
+      JsonArray jsonArraymentions = jsonObj.getAsJsonArray("mentions");
+      // validate the optional field `mentions` (array)
+      if (jsonArraymentions != null) {
+        for (int i = 0; i < jsonArraymentions.size(); i++) {
+          MentionEntity.validateJsonObject(jsonArraymentions.get(i).getAsJsonObject());
+        };
+      }
+      JsonArray jsonArraycashtags = jsonObj.getAsJsonArray("cashtags");
+      // validate the optional field `cashtags` (array)
+      if (jsonArraycashtags != null) {
+        for (int i = 0; i < jsonArraycashtags.size(); i++) {
+          CashtagEntity.validateJsonObject(jsonArraycashtags.get(i).getAsJsonObject());
+        };
+      }
+      JsonArray jsonArrayannotations = jsonObj.getAsJsonArray("annotations");
+      // validate the optional field `annotations` (array)
+      if (jsonArrayannotations != null) {
+        for (int i = 0; i < jsonArrayannotations.size(); i++) {
+          EntityIndicesInclusiveInclusive.validateJsonObject(jsonArrayannotations.get(i).getAsJsonObject());
+        };
       }
   }
 

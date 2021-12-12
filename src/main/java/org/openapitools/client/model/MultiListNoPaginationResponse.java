@@ -31,6 +31,7 @@ import org.openapitools.client.model.Problem;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
@@ -227,9 +228,23 @@ public class MultiListNoPaginationResponse {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `MultiListNoPaginationResponse` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
       }
+      JsonArray jsonArraydata = jsonObj.getAsJsonArray("data");
+      // validate the optional field `data` (array)
+      if (jsonArraydata != null) {
+        for (int i = 0; i < jsonArraydata.size(); i++) {
+          ModelList.validateJsonObject(jsonArraydata.get(i).getAsJsonObject());
+        };
+      }
       // validate the optional field `meta`
       if (jsonObj.getAsJsonObject("meta") != null) {
         MultiListNoPaginationResponseMeta.validateJsonObject(jsonObj.getAsJsonObject("meta"));
+      }
+      JsonArray jsonArrayerrors = jsonObj.getAsJsonArray("errors");
+      // validate the optional field `errors` (array)
+      if (jsonArrayerrors != null) {
+        for (int i = 0; i < jsonArrayerrors.size(); i++) {
+          Problem.validateJsonObject(jsonArrayerrors.get(i).getAsJsonObject());
+        };
       }
   }
 

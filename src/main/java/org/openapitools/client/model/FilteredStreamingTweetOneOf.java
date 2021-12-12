@@ -31,6 +31,7 @@ import org.openapitools.client.model.Tweet;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
@@ -229,6 +230,13 @@ public class FilteredStreamingTweetOneOf {
       // validate the optional field `data`
       if (jsonObj.getAsJsonObject("data") != null) {
         Tweet.validateJsonObject(jsonObj.getAsJsonObject("data"));
+      }
+      JsonArray jsonArraymatchingRules = jsonObj.getAsJsonArray("matching_rules");
+      // validate the optional field `matching_rules` (array)
+      if (jsonArraymatchingRules != null) {
+        for (int i = 0; i < jsonArraymatchingRules.size(); i++) {
+          FilteredStreamingTweetOneOfMatchingRules.validateJsonObject(jsonArraymatchingRules.get(i).getAsJsonObject());
+        };
       }
       // validate the optional field `includes`
       if (jsonObj.getAsJsonObject("includes") != null) {

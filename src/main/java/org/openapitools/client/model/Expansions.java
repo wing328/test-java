@@ -33,6 +33,7 @@ import org.openapitools.client.model.User;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
@@ -312,6 +313,41 @@ public class Expansions {
         if (!Expansions.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `Expansions` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
+      }
+      JsonArray jsonArrayusers = jsonObj.getAsJsonArray("users");
+      // validate the optional field `users` (array)
+      if (jsonArrayusers != null) {
+        for (int i = 0; i < jsonArrayusers.size(); i++) {
+          User.validateJsonObject(jsonArrayusers.get(i).getAsJsonObject());
+        };
+      }
+      JsonArray jsonArraytweets = jsonObj.getAsJsonArray("tweets");
+      // validate the optional field `tweets` (array)
+      if (jsonArraytweets != null) {
+        for (int i = 0; i < jsonArraytweets.size(); i++) {
+          Tweet.validateJsonObject(jsonArraytweets.get(i).getAsJsonObject());
+        };
+      }
+      JsonArray jsonArrayplaces = jsonObj.getAsJsonArray("places");
+      // validate the optional field `places` (array)
+      if (jsonArrayplaces != null) {
+        for (int i = 0; i < jsonArrayplaces.size(); i++) {
+          Place.validateJsonObject(jsonArrayplaces.get(i).getAsJsonObject());
+        };
+      }
+      JsonArray jsonArraymedia = jsonObj.getAsJsonArray("media");
+      // validate the optional field `media` (array)
+      if (jsonArraymedia != null) {
+        for (int i = 0; i < jsonArraymedia.size(); i++) {
+          Media.validateJsonObject(jsonArraymedia.get(i).getAsJsonObject());
+        };
+      }
+      JsonArray jsonArraypolls = jsonObj.getAsJsonArray("polls");
+      // validate the optional field `polls` (array)
+      if (jsonArraypolls != null) {
+        for (int i = 0; i < jsonArraypolls.size(); i++) {
+          Poll.validateJsonObject(jsonArraypolls.get(i).getAsJsonObject());
+        };
       }
   }
 

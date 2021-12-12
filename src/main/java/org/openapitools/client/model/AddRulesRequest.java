@@ -29,6 +29,7 @@ import org.openapitools.client.model.RuleNoId;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
@@ -162,6 +163,13 @@ public class AddRulesRequest {
         if (jsonObj.get(requiredField) == null) {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
+      }
+      JsonArray jsonArrayadd = jsonObj.getAsJsonArray("add");
+      // validate the optional field `add` (array)
+      if (jsonArrayadd != null) {
+        for (int i = 0; i < jsonArrayadd.size(); i++) {
+          RuleNoId.validateJsonObject(jsonArrayadd.get(i).getAsJsonObject());
+        };
       }
   }
 

@@ -29,6 +29,7 @@ import org.openapitools.client.model.UrlEntity;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
@@ -157,6 +158,13 @@ public class UserEntitiesUrl {
         if (!UserEntitiesUrl.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `UserEntitiesUrl` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
+      }
+      JsonArray jsonArrayurls = jsonObj.getAsJsonArray("urls");
+      // validate the optional field `urls` (array)
+      if (jsonArrayurls != null) {
+        for (int i = 0; i < jsonArrayurls.size(); i++) {
+          UrlEntity.validateJsonObject(jsonArrayurls.get(i).getAsJsonObject());
+        };
       }
   }
 

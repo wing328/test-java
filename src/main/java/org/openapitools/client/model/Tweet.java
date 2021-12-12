@@ -40,6 +40,7 @@ import org.threeten.bp.OffsetDateTime;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
@@ -755,9 +756,23 @@ public class Tweet {
           throw new IllegalArgumentException(String.format("The required field `%s` is not found in the JSON string: %s", requiredField, jsonObj.toString()));
         }
       }
+      JsonArray jsonArrayreferencedTweets = jsonObj.getAsJsonArray("referenced_tweets");
+      // validate the optional field `referenced_tweets` (array)
+      if (jsonArrayreferencedTweets != null) {
+        for (int i = 0; i < jsonArrayreferencedTweets.size(); i++) {
+          TweetReferencedTweets.validateJsonObject(jsonArrayreferencedTweets.get(i).getAsJsonObject());
+        };
+      }
       // validate the optional field `attachments`
       if (jsonObj.getAsJsonObject("attachments") != null) {
         TweetAttachments.validateJsonObject(jsonObj.getAsJsonObject("attachments"));
+      }
+      JsonArray jsonArraycontextAnnotations = jsonObj.getAsJsonArray("context_annotations");
+      // validate the optional field `context_annotations` (array)
+      if (jsonArraycontextAnnotations != null) {
+        for (int i = 0; i < jsonArraycontextAnnotations.size(); i++) {
+          ContextAnnotation.validateJsonObject(jsonArraycontextAnnotations.get(i).getAsJsonObject());
+        };
       }
       // validate the optional field `withheld`
       if (jsonObj.getAsJsonObject("withheld") != null) {

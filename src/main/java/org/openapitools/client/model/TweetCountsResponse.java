@@ -31,6 +31,7 @@ import org.openapitools.client.model.TweetCountsResponseMeta;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
@@ -226,6 +227,20 @@ public class TweetCountsResponse {
         if (!TweetCountsResponse.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `TweetCountsResponse` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
+      }
+      JsonArray jsonArraydata = jsonObj.getAsJsonArray("data");
+      // validate the optional field `data` (array)
+      if (jsonArraydata != null) {
+        for (int i = 0; i < jsonArraydata.size(); i++) {
+          SearchCount.validateJsonObject(jsonArraydata.get(i).getAsJsonObject());
+        };
+      }
+      JsonArray jsonArrayerrors = jsonObj.getAsJsonArray("errors");
+      // validate the optional field `errors` (array)
+      if (jsonArrayerrors != null) {
+        for (int i = 0; i < jsonArrayerrors.size(); i++) {
+          Problem.validateJsonObject(jsonArrayerrors.get(i).getAsJsonObject());
+        };
       }
       // validate the optional field `meta`
       if (jsonObj.getAsJsonObject("meta") != null) {

@@ -29,6 +29,7 @@ import org.openapitools.client.model.InvalidRequestProblemAllOfErrors;
 
 import com.google.gson.Gson;
 import com.google.gson.GsonBuilder;
+import com.google.gson.JsonArray;
 import com.google.gson.JsonDeserializationContext;
 import com.google.gson.JsonDeserializer;
 import com.google.gson.JsonElement;
@@ -156,6 +157,13 @@ public class InvalidRequestProblemAllOf {
         if (!InvalidRequestProblemAllOf.openapiFields.contains(entry.getKey())) {
           throw new IllegalArgumentException(String.format("The field `%s` in the JSON string is not defined in the `InvalidRequestProblemAllOf` properties. JSON: %s", entry.getKey(), jsonObj.toString()));
         }
+      }
+      JsonArray jsonArrayerrors = jsonObj.getAsJsonArray("errors");
+      // validate the optional field `errors` (array)
+      if (jsonArrayerrors != null) {
+        for (int i = 0; i < jsonArrayerrors.size(); i++) {
+          InvalidRequestProblemAllOfErrors.validateJsonObject(jsonArrayerrors.get(i).getAsJsonObject());
+        };
       }
   }
 
