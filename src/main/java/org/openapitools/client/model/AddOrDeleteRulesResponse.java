@@ -260,5 +260,16 @@ public class AddOrDeleteRulesResponse extends AbstractOpenApiSchema {
       throw new IOException(String.format("The JSON string is invalid for AddOrDeleteRulesResponse with oneOf schemas: AddRulesResponse, DeleteRulesResponse. %d class(es) match the result, expected 1. JSON: %s", validCount, jsonObj.toString()));
     }
   }
+
+ /**
+  * Create an instance of AddOrDeleteRulesResponse given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of AddOrDeleteRulesResponse
+  * @throws IOException if the JSON string is invalid with respect to AddOrDeleteRulesResponse
+  */
+  public static AddOrDeleteRulesResponse fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, AddOrDeleteRulesResponse.class);
+  }
 }
 

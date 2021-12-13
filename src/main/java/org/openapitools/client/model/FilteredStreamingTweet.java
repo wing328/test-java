@@ -262,5 +262,16 @@ public class FilteredStreamingTweet extends AbstractOpenApiSchema {
       throw new IOException(String.format("The JSON string is invalid for FilteredStreamingTweet with oneOf schemas: FilteredStreamingTweetOneOf, StreamingTweetOneOf. %d class(es) match the result, expected 1. JSON: %s", validCount, jsonObj.toString()));
     }
   }
+
+ /**
+  * Create an instance of FilteredStreamingTweet given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of FilteredStreamingTweet
+  * @throws IOException if the JSON string is invalid with respect to FilteredStreamingTweet
+  */
+  public static FilteredStreamingTweet fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, FilteredStreamingTweet.class);
+  }
 }
 

@@ -256,5 +256,16 @@ public class ProblemOrError extends AbstractOpenApiSchema {
       throw new IOException(String.format("The JSON string is invalid for ProblemOrError with oneOf schemas: Error, Problem. %d class(es) match the result, expected 1. JSON: %s", validCount, jsonObj.toString()));
     }
   }
+
+ /**
+  * Create an instance of ProblemOrError given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of ProblemOrError
+  * @throws IOException if the JSON string is invalid with respect to ProblemOrError
+  */
+  public static ProblemOrError fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ProblemOrError.class);
+  }
 }
 

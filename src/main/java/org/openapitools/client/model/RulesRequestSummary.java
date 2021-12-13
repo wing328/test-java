@@ -256,5 +256,16 @@ public class RulesRequestSummary extends AbstractOpenApiSchema {
       throw new IOException(String.format("The JSON string is invalid for RulesRequestSummary with oneOf schemas: RulesRequestSummaryOneOf, RulesRequestSummaryOneOf1. %d class(es) match the result, expected 1. JSON: %s", validCount, jsonObj.toString()));
     }
   }
+
+ /**
+  * Create an instance of RulesRequestSummary given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of RulesRequestSummary
+  * @throws IOException if the JSON string is invalid with respect to RulesRequestSummary
+  */
+  public static RulesRequestSummary fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, RulesRequestSummary.class);
+  }
 }
 
