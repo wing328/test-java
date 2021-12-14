@@ -63,17 +63,32 @@ public class AddOrDeleteRulesResponseTest {
     @Test
     public void testAddOrDeleteRulesResponse() {
         String jsonString = "{\"data\":[{\"value\":\"Blue\",\"id\":\"1468410959987314694\"}],\"meta\":{\"sent\":\"2021-12-08T02:43:49.329Z\",\"summary\":{\"created\":1,\"not_created\":0,\"valid\":1,\"invalid\":0}}}";
-        // AddRulesResponse
+        // AddRulesResponse (successfully deserialized)
         AddRulesResponse theAddRulesResponse = apiClient.getJSON().getGson().fromJson(jsonString, AddRulesResponse.class);
 
-        // DeleteRulesResponse
-        Exception e2 = Assert.assertThrows(java.lang.IllegalArgumentException.class, () -> {
+        // DeleteRulesResponse (failed to deserialized)
+        Exception e = Assert.assertThrows(java.lang.IllegalArgumentException.class, () -> {
             DeleteRulesResponse theDeleteRulesResponse = apiClient.getJSON().getGson().fromJson(jsonString, DeleteRulesResponse.class);
         });
-        Assert.assertEquals(e2.getMessage(), "The field `data` in the JSON string is not defined in the `DeleteRulesResponse` properties. JSON: {\"data\":[{\"value\":\"Blue\",\"id\":\"1468410959987314694\"}],\"meta\":{\"sent\":\"2021-12-08T02:43:49.329Z\",\"summary\":{\"created\":1,\"not_created\":0,\"valid\":1,\"invalid\":0}}}");
+        Assert.assertEquals(e.getMessage(), "The field `data` in the JSON string is not defined in the `DeleteRulesResponse` properties. JSON: {\"data\":[{\"value\":\"Blue\",\"id\":\"1468410959987314694\"}],\"meta\":{\"sent\":\"2021-12-08T02:43:49.329Z\",\"summary\":{\"created\":1,\"not_created\":0,\"valid\":1,\"invalid\":0}}}");
 
         // successfully deserialization without exception
         AddOrDeleteRulesResponse r = apiClient.getJSON().getGson().fromJson(jsonString, AddOrDeleteRulesResponse.class);
+        Assert.assertTrue(r.getActualInstance() instanceof AddRulesResponse);
+
+        String jsonString2 = "{\"meta\":{\"sent\":\"2021-12-08T02:43:49.329Z\",\"summary\":{\"created\":1,\"not_created\":0,\"valid\":1,\"invalid\":0}}}";
+        // DeleteRulesResponse (successfully deserialized)
+        DeleteRulesResponse theDeleteRulesResponse = apiClient.getJSON().getGson().fromJson(jsonString2, DeleteRulesResponse.class);
+
+        Exception e2 = Assert.assertThrows(java.lang.IllegalArgumentException.class, () -> {
+           // AddRulesResponse (failed to deserialized)
+           AddRulesResponse theAddRulesResponse2 = apiClient.getJSON().getGson().fromJson(jsonString2, AddRulesResponse.class);
+        });
+        Assert.assertEquals(e2.getMessage(), "The required field `data` is not found in the JSON string: {\"meta\":{\"sent\":\"2021-12-08T02:43:49.329Z\",\"summary\":{\"created\":1,\"not_created\":0,\"valid\":1,\"invalid\":0}}}");
+
+        // successfully deserialization without exception
+        AddOrDeleteRulesResponse r2 = apiClient.getJSON().getGson().fromJson(jsonString2, AddOrDeleteRulesResponse.class);
+        Assert.assertTrue(r2.getActualInstance() instanceof DeleteRulesResponse);
     }
 
     /**
