@@ -61,6 +61,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * A problem that indicates something is wrong with the connection
  */
@@ -264,6 +266,26 @@ public class ConnectionExceptionProblem extends Problem {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of ConnectionExceptionProblem given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of ConnectionExceptionProblem
+  * @throws IOException if the JSON string is invalid with respect to ConnectionExceptionProblem
+  */
+  public static ConnectionExceptionProblem fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ConnectionExceptionProblem.class);
+  }
+
+ /**
+  * Convert an instance of ConnectionExceptionProblem to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

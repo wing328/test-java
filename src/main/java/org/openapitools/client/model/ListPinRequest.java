@@ -41,6 +41,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * ListPinRequest
  */
@@ -176,6 +178,26 @@ public class ListPinRequest {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of ListPinRequest given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of ListPinRequest
+  * @throws IOException if the JSON string is invalid with respect to ListPinRequest
+  */
+  public static ListPinRequest fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ListPinRequest.class);
+  }
+
+ /**
+  * Convert an instance of ListPinRequest to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

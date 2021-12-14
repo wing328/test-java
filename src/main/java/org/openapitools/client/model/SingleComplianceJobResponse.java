@@ -45,6 +45,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * SingleComplianceJobResponse
  */
@@ -229,6 +231,26 @@ public class SingleComplianceJobResponse {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of SingleComplianceJobResponse given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of SingleComplianceJobResponse
+  * @throws IOException if the JSON string is invalid with respect to SingleComplianceJobResponse
+  */
+  public static SingleComplianceJobResponse fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, SingleComplianceJobResponse.class);
+  }
+
+ /**
+  * Convert an instance of SingleComplianceJobResponse to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

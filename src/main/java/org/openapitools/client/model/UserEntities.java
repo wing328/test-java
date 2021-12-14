@@ -43,6 +43,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * A list of metadata found in the user&#39;s profile description.
  */
@@ -217,6 +219,26 @@ public class UserEntities {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of UserEntities given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of UserEntities
+  * @throws IOException if the JSON string is invalid with respect to UserEntities
+  */
+  public static UserEntities fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, UserEntities.class);
+  }
+
+ /**
+  * Convert an instance of UserEntities to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

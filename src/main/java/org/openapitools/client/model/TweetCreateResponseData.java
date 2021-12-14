@@ -41,6 +41,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * TweetCreateResponseData
  */
@@ -215,6 +217,26 @@ public class TweetCreateResponseData {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of TweetCreateResponseData given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of TweetCreateResponseData
+  * @throws IOException if the JSON string is invalid with respect to TweetCreateResponseData
+  */
+  public static TweetCreateResponseData fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, TweetCreateResponseData.class);
+  }
+
+ /**
+  * Convert an instance of TweetCreateResponseData to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

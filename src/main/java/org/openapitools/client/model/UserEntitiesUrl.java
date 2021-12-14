@@ -44,6 +44,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * Expanded details for the URL specified in the user&#39;s profile, with start and end indices.
  */
@@ -195,6 +197,26 @@ public class UserEntitiesUrl {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of UserEntitiesUrl given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of UserEntitiesUrl
+  * @throws IOException if the JSON string is invalid with respect to UserEntitiesUrl
+  */
+  public static UserEntitiesUrl fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, UserEntitiesUrl.class);
+  }
+
+ /**
+  * Convert an instance of UserEntitiesUrl to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

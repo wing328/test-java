@@ -41,6 +41,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * MultiListResponseMeta
  */
@@ -236,6 +238,26 @@ public class MultiListResponseMeta {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of MultiListResponseMeta given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of MultiListResponseMeta
+  * @throws IOException if the JSON string is invalid with respect to MultiListResponseMeta
+  */
+  public static MultiListResponseMeta fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, MultiListResponseMeta.class);
+  }
+
+ /**
+  * Convert an instance of MultiListResponseMeta to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

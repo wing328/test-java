@@ -41,6 +41,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * RulesRequestSummaryOneOf1
  */
@@ -215,6 +217,26 @@ public class RulesRequestSummaryOneOf1 {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of RulesRequestSummaryOneOf1 given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of RulesRequestSummaryOneOf1
+  * @throws IOException if the JSON string is invalid with respect to RulesRequestSummaryOneOf1
+  */
+  public static RulesRequestSummaryOneOf1 fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, RulesRequestSummaryOneOf1.class);
+  }
+
+ /**
+  * Convert an instance of RulesRequestSummaryOneOf1 to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

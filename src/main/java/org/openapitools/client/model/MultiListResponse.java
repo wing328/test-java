@@ -46,6 +46,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * MultiListResponse
  */
@@ -275,6 +277,26 @@ public class MultiListResponse {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of MultiListResponse given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of MultiListResponse
+  * @throws IOException if the JSON string is invalid with respect to MultiListResponse
+  */
+  public static MultiListResponse fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, MultiListResponse.class);
+  }
+
+ /**
+  * Convert an instance of MultiListResponse to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

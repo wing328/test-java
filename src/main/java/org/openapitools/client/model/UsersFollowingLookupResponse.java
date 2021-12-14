@@ -47,6 +47,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * UsersFollowingLookupResponse
  */
@@ -310,6 +312,26 @@ public class UsersFollowingLookupResponse {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of UsersFollowingLookupResponse given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of UsersFollowingLookupResponse
+  * @throws IOException if the JSON string is invalid with respect to UsersFollowingLookupResponse
+  */
+  public static UsersFollowingLookupResponse fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, UsersFollowingLookupResponse.class);
+  }
+
+ /**
+  * Convert an instance of UsersFollowingLookupResponse to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

@@ -45,6 +45,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * ListCreateResponse
  */
@@ -229,6 +231,26 @@ public class ListCreateResponse {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of ListCreateResponse given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of ListCreateResponse
+  * @throws IOException if the JSON string is invalid with respect to ListCreateResponse
+  */
+  public static ListCreateResponse fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ListCreateResponse.class);
+  }
+
+ /**
+  * Convert an instance of ListCreateResponse to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

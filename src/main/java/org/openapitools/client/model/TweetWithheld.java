@@ -44,6 +44,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * Indicates withholding details for [withheld content](https://help.twitter.com/en/rules-and-policies/tweet-withheld-by-country).
  */
@@ -301,6 +303,26 @@ public class TweetWithheld {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of TweetWithheld given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of TweetWithheld
+  * @throws IOException if the JSON string is invalid with respect to TweetWithheld
+  */
+  public static TweetWithheld fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, TweetWithheld.class);
+  }
+
+ /**
+  * Convert an instance of TweetWithheld to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

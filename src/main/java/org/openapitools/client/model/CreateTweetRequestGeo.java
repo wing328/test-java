@@ -41,6 +41,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * Place ID being attached to the Tweet for geo location.
  */
@@ -177,6 +179,26 @@ public class CreateTweetRequestGeo {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of CreateTweetRequestGeo given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of CreateTweetRequestGeo
+  * @throws IOException if the JSON string is invalid with respect to CreateTweetRequestGeo
+  */
+  public static CreateTweetRequestGeo fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, CreateTweetRequestGeo.class);
+  }
+
+ /**
+  * Convert an instance of CreateTweetRequestGeo to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

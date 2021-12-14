@@ -46,6 +46,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * MultiSpaceLookupResponse
  */
@@ -275,6 +277,26 @@ public class MultiSpaceLookupResponse {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of MultiSpaceLookupResponse given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of MultiSpaceLookupResponse
+  * @throws IOException if the JSON string is invalid with respect to MultiSpaceLookupResponse
+  */
+  public static MultiSpaceLookupResponse fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, MultiSpaceLookupResponse.class);
+  }
+
+ /**
+  * Convert an instance of MultiSpaceLookupResponse to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

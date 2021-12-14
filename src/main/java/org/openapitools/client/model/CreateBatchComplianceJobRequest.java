@@ -42,6 +42,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * A request to create a new batch compliance job.
  */
@@ -246,6 +248,26 @@ public class CreateBatchComplianceJobRequest {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of CreateBatchComplianceJobRequest given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of CreateBatchComplianceJobRequest
+  * @throws IOException if the JSON string is invalid with respect to CreateBatchComplianceJobRequest
+  */
+  public static CreateBatchComplianceJobRequest fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, CreateBatchComplianceJobRequest.class);
+  }
+
+ /**
+  * Convert an instance of CreateBatchComplianceJobRequest to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

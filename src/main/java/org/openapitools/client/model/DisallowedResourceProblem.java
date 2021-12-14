@@ -61,6 +61,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * A problem that indicates that the resource requested violates the precepts of this API.
  */
@@ -370,6 +372,26 @@ public class DisallowedResourceProblem extends Problem {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of DisallowedResourceProblem given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of DisallowedResourceProblem
+  * @throws IOException if the JSON string is invalid with respect to DisallowedResourceProblem
+  */
+  public static DisallowedResourceProblem fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, DisallowedResourceProblem.class);
+  }
+
+ /**
+  * Convert an instance of DisallowedResourceProblem to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

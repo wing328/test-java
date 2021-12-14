@@ -46,6 +46,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * The values returned with a successful streamed tweet. Includes the user provided rules that the tweet matched.
  */
@@ -271,6 +273,26 @@ public class FilteredStreamingTweetOneOf {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of FilteredStreamingTweetOneOf given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of FilteredStreamingTweetOneOf
+  * @throws IOException if the JSON string is invalid with respect to FilteredStreamingTweetOneOf
+  */
+  public static FilteredStreamingTweetOneOf fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, FilteredStreamingTweetOneOf.class);
+  }
+
+ /**
+  * Convert an instance of FilteredStreamingTweetOneOf to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

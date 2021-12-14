@@ -267,5 +267,14 @@ public class ProblemOrError extends AbstractOpenApiSchema {
   public static ProblemOrError fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, ProblemOrError.class);
   }
+
+ /**
+  * Convert an instance of ProblemOrError to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
+  }
 }
 

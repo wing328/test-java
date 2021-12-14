@@ -43,6 +43,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * IDs and values of all deleted user-specified stream filtering rules.
  */
@@ -225,6 +227,26 @@ public class DeleteRulesRequestDelete {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of DeleteRulesRequestDelete given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of DeleteRulesRequestDelete
+  * @throws IOException if the JSON string is invalid with respect to DeleteRulesRequestDelete
+  */
+  public static DeleteRulesRequestDelete fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, DeleteRulesRequestDelete.class);
+  }
+
+ /**
+  * Convert an instance of DeleteRulesRequestDelete to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

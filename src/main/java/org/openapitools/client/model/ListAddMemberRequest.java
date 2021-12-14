@@ -41,6 +41,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * ListAddMemberRequest
  */
@@ -176,6 +178,26 @@ public class ListAddMemberRequest {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of ListAddMemberRequest given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of ListAddMemberRequest
+  * @throws IOException if the JSON string is invalid with respect to ListAddMemberRequest
+  */
+  public static ListAddMemberRequest fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ListAddMemberRequest.class);
+  }
+
+ /**
+  * Convert an instance of ListAddMemberRequest to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

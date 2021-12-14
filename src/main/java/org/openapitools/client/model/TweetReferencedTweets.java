@@ -41,6 +41,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * TweetReferencedTweets
  */
@@ -264,6 +266,26 @@ public class TweetReferencedTweets {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of TweetReferencedTweets given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of TweetReferencedTweets
+  * @throws IOException if the JSON string is invalid with respect to TweetReferencedTweets
+  */
+  public static TweetReferencedTweets fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, TweetReferencedTweets.class);
+  }
+
+ /**
+  * Convert an instance of TweetReferencedTweets to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

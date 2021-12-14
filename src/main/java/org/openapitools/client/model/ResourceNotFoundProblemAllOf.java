@@ -41,6 +41,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * ResourceNotFoundProblemAllOf
  */
@@ -326,6 +328,26 @@ public class ResourceNotFoundProblemAllOf {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of ResourceNotFoundProblemAllOf given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of ResourceNotFoundProblemAllOf
+  * @throws IOException if the JSON string is invalid with respect to ResourceNotFoundProblemAllOf
+  */
+  public static ResourceNotFoundProblemAllOf fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ResourceNotFoundProblemAllOf.class);
+  }
+
+ /**
+  * Convert an instance of ResourceNotFoundProblemAllOf to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

@@ -272,5 +272,14 @@ public class StreamingTweet extends AbstractOpenApiSchema {
   public static StreamingTweet fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, StreamingTweet.class);
   }
+
+ /**
+  * Convert an instance of StreamingTweet to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
+  }
 }
 

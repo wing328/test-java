@@ -51,6 +51,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * Video
  */
@@ -351,6 +353,26 @@ public class Video extends Media {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of Video given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of Video
+  * @throws IOException if the JSON string is invalid with respect to Video
+  */
+  public static Video fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, Video.class);
+  }
+
+ /**
+  * Convert an instance of Video to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

@@ -41,6 +41,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * Organic nonpublic engagement metrics for the Tweet at the time of the request.
  */
@@ -278,6 +280,26 @@ public class TweetOrganicMetrics {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of TweetOrganicMetrics given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of TweetOrganicMetrics
+  * @throws IOException if the JSON string is invalid with respect to TweetOrganicMetrics
+  */
+  public static TweetOrganicMetrics fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, TweetOrganicMetrics.class);
+  }
+
+ /**
+  * Convert an instance of TweetOrganicMetrics to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

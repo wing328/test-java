@@ -41,6 +41,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * UsersFollowingCreateResponseData
  */
@@ -206,6 +208,26 @@ public class UsersFollowingCreateResponseData {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of UsersFollowingCreateResponseData given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of UsersFollowingCreateResponseData
+  * @throws IOException if the JSON string is invalid with respect to UsersFollowingCreateResponseData
+  */
+  public static UsersFollowingCreateResponseData fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, UsersFollowingCreateResponseData.class);
+  }
+
+ /**
+  * Convert an instance of UsersFollowingCreateResponseData to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

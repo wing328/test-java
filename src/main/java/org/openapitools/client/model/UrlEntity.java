@@ -47,6 +47,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * Represent the portion of text recognized as a URL, and its start and end position within the text.
  */
@@ -482,6 +484,26 @@ public class UrlEntity {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of UrlEntity given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of UrlEntity
+  * @throws IOException if the JSON string is invalid with respect to UrlEntity
+  */
+  public static UrlEntity fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, UrlEntity.class);
+  }
+
+ /**
+  * Convert an instance of UrlEntity to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

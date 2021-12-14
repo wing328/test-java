@@ -42,6 +42,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * AnimatedGifAllOf
  */
@@ -177,6 +179,26 @@ public class AnimatedGifAllOf {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of AnimatedGifAllOf given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of AnimatedGifAllOf
+  * @throws IOException if the JSON string is invalid with respect to AnimatedGifAllOf
+  */
+  public static AnimatedGifAllOf fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, AnimatedGifAllOf.class);
+  }
+
+ /**
+  * Convert an instance of AnimatedGifAllOf to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

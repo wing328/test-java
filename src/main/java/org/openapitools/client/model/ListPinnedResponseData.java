@@ -41,6 +41,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * ListPinnedResponseData
  */
@@ -176,6 +178,26 @@ public class ListPinnedResponseData {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of ListPinnedResponseData given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of ListPinnedResponseData
+  * @throws IOException if the JSON string is invalid with respect to ListPinnedResponseData
+  */
+  public static ListPinnedResponseData fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ListPinnedResponseData.class);
+  }
+
+ /**
+  * Convert an instance of ListPinnedResponseData to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

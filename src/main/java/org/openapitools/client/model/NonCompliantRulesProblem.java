@@ -60,6 +60,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * A problem that indicates the user&#39;s rule set is not compliant.
  */
@@ -181,6 +183,26 @@ public class NonCompliantRulesProblem extends Problem {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of NonCompliantRulesProblem given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of NonCompliantRulesProblem
+  * @throws IOException if the JSON string is invalid with respect to NonCompliantRulesProblem
+  */
+  public static NonCompliantRulesProblem fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, NonCompliantRulesProblem.class);
+  }
+
+ /**
+  * Convert an instance of NonCompliantRulesProblem to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

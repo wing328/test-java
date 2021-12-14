@@ -61,6 +61,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * A problem that indicates that a usage cap has been exceeded.
  */
@@ -337,6 +339,26 @@ public class UsageCapExceededProblem extends Problem {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of UsageCapExceededProblem given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of UsageCapExceededProblem
+  * @throws IOException if the JSON string is invalid with respect to UsageCapExceededProblem
+  */
+  public static UsageCapExceededProblem fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, UsageCapExceededProblem.class);
+  }
+
+ /**
+  * Convert an instance of UsageCapExceededProblem to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

@@ -41,6 +41,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * HideReplyByIdResponseData
  */
@@ -176,6 +178,26 @@ public class HideReplyByIdResponseData {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of HideReplyByIdResponseData given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of HideReplyByIdResponseData
+  * @throws IOException if the JSON string is invalid with respect to HideReplyByIdResponseData
+  */
+  public static HideReplyByIdResponseData fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, HideReplyByIdResponseData.class);
+  }
+
+ /**
+  * Convert an instance of HideReplyByIdResponseData to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

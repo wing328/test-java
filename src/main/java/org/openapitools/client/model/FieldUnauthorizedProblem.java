@@ -61,6 +61,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * A problem that indicates that you are not allowed to see a particular field on a Tweet, User, etc.
  */
@@ -370,6 +372,26 @@ public class FieldUnauthorizedProblem extends Problem {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of FieldUnauthorizedProblem given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of FieldUnauthorizedProblem
+  * @throws IOException if the JSON string is invalid with respect to FieldUnauthorizedProblem
+  */
+  public static FieldUnauthorizedProblem fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, FieldUnauthorizedProblem.class);
+  }
+
+ /**
+  * Convert an instance of FieldUnauthorizedProblem to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

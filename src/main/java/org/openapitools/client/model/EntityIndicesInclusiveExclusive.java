@@ -41,6 +41,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * Represent a boundary range (start and end index) for a recognized entity (for example a hashtag or a mention). &#x60;start&#x60; must be smaller than &#x60;end&#x60;.  The start index is inclusive, the end index is exclusive.
  */
@@ -218,6 +220,26 @@ public class EntityIndicesInclusiveExclusive {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of EntityIndicesInclusiveExclusive given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of EntityIndicesInclusiveExclusive
+  * @throws IOException if the JSON string is invalid with respect to EntityIndicesInclusiveExclusive
+  */
+  public static EntityIndicesInclusiveExclusive fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, EntityIndicesInclusiveExclusive.class);
+  }
+
+ /**
+  * Convert an instance of EntityIndicesInclusiveExclusive to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

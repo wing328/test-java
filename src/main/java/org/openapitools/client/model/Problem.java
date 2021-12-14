@@ -59,6 +59,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * An HTTP Problem Details object, as defined in IETF RFC 7807 (https://tools.ietf.org/html/rfc7807).
  */
@@ -339,5 +341,25 @@ public class Problem {
       }
   }
 
+
+ /**
+  * Create an instance of Problem given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of Problem
+  * @throws IOException if the JSON string is invalid with respect to Problem
+  */
+  public static Problem fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, Problem.class);
+  }
+
+ /**
+  * Convert an instance of Problem to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
+  }
 }
 

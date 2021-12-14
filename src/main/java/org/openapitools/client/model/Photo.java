@@ -47,6 +47,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * Photo
  */
@@ -227,6 +229,26 @@ public class Photo extends Media {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of Photo given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of Photo
+  * @throws IOException if the JSON string is invalid with respect to Photo
+  */
+  public static Photo fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, Photo.class);
+  }
+
+ /**
+  * Convert an instance of Photo to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

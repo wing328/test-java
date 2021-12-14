@@ -271,5 +271,14 @@ public class AddOrDeleteRulesResponse extends AbstractOpenApiSchema {
   public static AddOrDeleteRulesResponse fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, AddOrDeleteRulesResponse.class);
   }
+
+ /**
+  * Convert an instance of AddOrDeleteRulesResponse to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
+  }
 }
 

@@ -42,6 +42,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * Represent the information for the URL image
  */
@@ -240,6 +242,26 @@ public class URLImage {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of URLImage given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of URLImage
+  * @throws IOException if the JSON string is invalid with respect to URLImage
+  */
+  public static URLImage fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, URLImage.class);
+  }
+
+ /**
+  * Convert an instance of URLImage to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

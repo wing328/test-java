@@ -41,6 +41,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * A user-provided stream filtering rule.
  */
@@ -215,6 +217,26 @@ public class RuleNoId {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of RuleNoId given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of RuleNoId
+  * @throws IOException if the JSON string is invalid with respect to RuleNoId
+  */
+  public static RuleNoId fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, RuleNoId.class);
+  }
+
+ /**
+  * Convert an instance of RuleNoId to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

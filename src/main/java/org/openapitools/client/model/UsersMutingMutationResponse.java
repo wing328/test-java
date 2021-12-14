@@ -45,6 +45,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * UsersMutingMutationResponse
  */
@@ -229,6 +231,26 @@ public class UsersMutingMutationResponse {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of UsersMutingMutationResponse given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of UsersMutingMutationResponse
+  * @throws IOException if the JSON string is invalid with respect to UsersMutingMutationResponse
+  */
+  public static UsersMutingMutationResponse fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, UsersMutingMutationResponse.class);
+  }
+
+ /**
+  * Convert an instance of UsersMutingMutationResponse to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

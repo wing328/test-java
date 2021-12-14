@@ -41,6 +41,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * Engagement metrics for the Media at the time of the request.
  */
@@ -177,6 +179,26 @@ public class VideoAllOfPublicMetrics {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of VideoAllOfPublicMetrics given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of VideoAllOfPublicMetrics
+  * @throws IOException if the JSON string is invalid with respect to VideoAllOfPublicMetrics
+  */
+  public static VideoAllOfPublicMetrics fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, VideoAllOfPublicMetrics.class);
+  }
+
+ /**
+  * Convert an instance of VideoAllOfPublicMetrics to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

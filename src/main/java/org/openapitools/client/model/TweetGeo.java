@@ -42,6 +42,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * The location tagged on the Tweet, if the user provided one.
  */
@@ -212,6 +214,26 @@ public class TweetGeo {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of TweetGeo given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of TweetGeo
+  * @throws IOException if the JSON string is invalid with respect to TweetGeo
+  */
+  public static TweetGeo fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, TweetGeo.class);
+  }
+
+ /**
+  * Convert an instance of TweetGeo to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

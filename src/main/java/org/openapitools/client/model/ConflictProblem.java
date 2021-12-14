@@ -60,6 +60,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * You cannot create a new job if one is already in progress.
  */
@@ -181,6 +183,26 @@ public class ConflictProblem extends Problem {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of ConflictProblem given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of ConflictProblem
+  * @throws IOException if the JSON string is invalid with respect to ConflictProblem
+  */
+  public static ConflictProblem fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ConflictProblem.class);
+  }
+
+ /**
+  * Convert an instance of ConflictProblem to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

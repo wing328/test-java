@@ -41,6 +41,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * A summary of the results of the addition of user-specified stream filtering rules.
  */
@@ -278,6 +280,26 @@ public class RulesRequestSummaryOneOf {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of RulesRequestSummaryOneOf given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of RulesRequestSummaryOneOf
+  * @throws IOException if the JSON string is invalid with respect to RulesRequestSummaryOneOf
+  */
+  public static RulesRequestSummaryOneOf fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, RulesRequestSummaryOneOf.class);
+  }
+
+ /**
+  * Convert an instance of RulesRequestSummaryOneOf to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

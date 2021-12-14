@@ -46,6 +46,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * SingleSpaceLookupResponse
  */
@@ -264,6 +266,26 @@ public class SingleSpaceLookupResponse {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of SingleSpaceLookupResponse given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of SingleSpaceLookupResponse
+  * @throws IOException if the JSON string is invalid with respect to SingleSpaceLookupResponse
+  */
+  public static SingleSpaceLookupResponse fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, SingleSpaceLookupResponse.class);
+  }
+
+ /**
+  * Convert an instance of SingleSpaceLookupResponse to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

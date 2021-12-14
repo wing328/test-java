@@ -44,6 +44,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * InvalidRequestProblemAllOfErrors
  */
@@ -217,6 +219,26 @@ public class InvalidRequestProblemAllOfErrors {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of InvalidRequestProblemAllOfErrors given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of InvalidRequestProblemAllOfErrors
+  * @throws IOException if the JSON string is invalid with respect to InvalidRequestProblemAllOfErrors
+  */
+  public static InvalidRequestProblemAllOfErrors fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, InvalidRequestProblemAllOfErrors.class);
+  }
+
+ /**
+  * Convert an instance of InvalidRequestProblemAllOfErrors to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

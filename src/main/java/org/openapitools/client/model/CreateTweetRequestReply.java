@@ -43,6 +43,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * Tweet information of the Tweet being replied to.
  */
@@ -217,6 +219,26 @@ public class CreateTweetRequestReply {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of CreateTweetRequestReply given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of CreateTweetRequestReply
+  * @throws IOException if the JSON string is invalid with respect to CreateTweetRequestReply
+  */
+  public static CreateTweetRequestReply fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, CreateTweetRequestReply.class);
+  }
+
+ /**
+  * Convert an instance of CreateTweetRequestReply to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

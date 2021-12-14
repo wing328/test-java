@@ -45,6 +45,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * TweetDeleteResponse
  */
@@ -229,6 +231,26 @@ public class TweetDeleteResponse {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of TweetDeleteResponse given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of TweetDeleteResponse
+  * @throws IOException if the JSON string is invalid with respect to TweetDeleteResponse
+  */
+  public static TweetDeleteResponse fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, TweetDeleteResponse.class);
+  }
+
+ /**
+  * Convert an instance of TweetDeleteResponse to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

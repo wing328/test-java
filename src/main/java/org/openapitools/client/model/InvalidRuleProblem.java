@@ -60,6 +60,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * The rule you have submitted is invalid.
  */
@@ -181,6 +183,26 @@ public class InvalidRuleProblem extends Problem {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of InvalidRuleProblem given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of InvalidRuleProblem
+  * @throws IOException if the JSON string is invalid with respect to InvalidRuleProblem
+  */
+  public static InvalidRuleProblem fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, InvalidRuleProblem.class);
+  }
+
+ /**
+  * Convert an instance of InvalidRuleProblem to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

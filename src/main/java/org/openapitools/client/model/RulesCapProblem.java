@@ -60,6 +60,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * You have exceeded the maximum number of rules.
  */
@@ -181,6 +183,26 @@ public class RulesCapProblem extends Problem {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of RulesCapProblem given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of RulesCapProblem
+  * @throws IOException if the JSON string is invalid with respect to RulesCapProblem
+  */
+  public static RulesCapProblem fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, RulesCapProblem.class);
+  }
+
+ /**
+  * Convert an instance of RulesCapProblem to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

@@ -41,6 +41,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * Represent the portion of text recognized as a User mention, and its start and end position within the text.
  */
@@ -216,6 +218,26 @@ public class MentionFields {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of MentionFields given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of MentionFields
+  * @throws IOException if the JSON string is invalid with respect to MentionFields
+  */
+  public static MentionFields fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, MentionFields.class);
+  }
+
+ /**
+  * Convert an instance of MentionFields to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

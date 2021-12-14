@@ -41,6 +41,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * UsersIdLikedTweetsResponseMeta
  */
@@ -236,6 +238,26 @@ public class UsersIdLikedTweetsResponseMeta {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of UsersIdLikedTweetsResponseMeta given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of UsersIdLikedTweetsResponseMeta
+  * @throws IOException if the JSON string is invalid with respect to UsersIdLikedTweetsResponseMeta
+  */
+  public static UsersIdLikedTweetsResponseMeta fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, UsersIdLikedTweetsResponseMeta.class);
+  }
+
+ /**
+  * Convert an instance of UsersIdLikedTweetsResponseMeta to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

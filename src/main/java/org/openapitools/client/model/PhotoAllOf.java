@@ -42,6 +42,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * PhotoAllOf
  */
@@ -207,6 +209,26 @@ public class PhotoAllOf {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of PhotoAllOf given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of PhotoAllOf
+  * @throws IOException if the JSON string is invalid with respect to PhotoAllOf
+  */
+  public static PhotoAllOf fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, PhotoAllOf.class);
+  }
+
+ /**
+  * Convert an instance of PhotoAllOf to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

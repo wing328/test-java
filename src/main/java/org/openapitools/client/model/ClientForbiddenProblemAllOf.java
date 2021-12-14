@@ -42,6 +42,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * ClientForbiddenProblemAllOf
  */
@@ -314,6 +316,26 @@ public class ClientForbiddenProblemAllOf {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of ClientForbiddenProblemAllOf given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of ClientForbiddenProblemAllOf
+  * @throws IOException if the JSON string is invalid with respect to ClientForbiddenProblemAllOf
+  */
+  public static ClientForbiddenProblemAllOf fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ClientForbiddenProblemAllOf.class);
+  }
+
+ /**
+  * Convert an instance of ClientForbiddenProblemAllOf to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

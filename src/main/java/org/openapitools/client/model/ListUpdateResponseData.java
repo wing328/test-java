@@ -41,6 +41,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * ListUpdateResponseData
  */
@@ -176,6 +178,26 @@ public class ListUpdateResponseData {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of ListUpdateResponseData given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of ListUpdateResponseData
+  * @throws IOException if the JSON string is invalid with respect to ListUpdateResponseData
+  */
+  public static ListUpdateResponseData fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ListUpdateResponseData.class);
+  }
+
+ /**
+  * Convert an instance of ListUpdateResponseData to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

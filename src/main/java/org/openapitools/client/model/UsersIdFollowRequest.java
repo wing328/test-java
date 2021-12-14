@@ -41,6 +41,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * UsersIdFollowRequest
  */
@@ -184,6 +186,26 @@ public class UsersIdFollowRequest {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of UsersIdFollowRequest given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of UsersIdFollowRequest
+  * @throws IOException if the JSON string is invalid with respect to UsersIdFollowRequest
+  */
+  public static UsersIdFollowRequest fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, UsersIdFollowRequest.class);
+  }
+
+ /**
+  * Convert an instance of UsersIdFollowRequest to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

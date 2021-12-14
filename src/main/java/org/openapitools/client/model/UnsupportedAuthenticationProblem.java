@@ -60,6 +60,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * A problem that indicates that the authentication used is not supported.
  */
@@ -181,6 +183,26 @@ public class UnsupportedAuthenticationProblem extends Problem {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of UnsupportedAuthenticationProblem given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of UnsupportedAuthenticationProblem
+  * @throws IOException if the JSON string is invalid with respect to UnsupportedAuthenticationProblem
+  */
+  public static UnsupportedAuthenticationProblem fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, UnsupportedAuthenticationProblem.class);
+  }
+
+ /**
+  * Convert an instance of UnsupportedAuthenticationProblem to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

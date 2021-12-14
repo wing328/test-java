@@ -46,6 +46,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * SingleTweetLookupResponse
  */
@@ -264,6 +266,26 @@ public class SingleTweetLookupResponse {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of SingleTweetLookupResponse given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of SingleTweetLookupResponse
+  * @throws IOException if the JSON string is invalid with respect to SingleTweetLookupResponse
+  */
+  public static SingleTweetLookupResponse fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, SingleTweetLookupResponse.class);
+  }
+
+ /**
+  * Convert an instance of SingleTweetLookupResponse to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

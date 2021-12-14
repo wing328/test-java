@@ -45,6 +45,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * Represent the portion of text recognized as a URL.
  */
@@ -416,6 +418,26 @@ public class URLFields {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of URLFields given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of URLFields
+  * @throws IOException if the JSON string is invalid with respect to URLFields
+  */
+  public static URLFields fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, URLFields.class);
+  }
+
+ /**
+  * Convert an instance of URLFields to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

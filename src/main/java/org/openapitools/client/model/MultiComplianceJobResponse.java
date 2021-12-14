@@ -45,6 +45,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * MultiComplianceJobResponse
  */
@@ -240,6 +242,26 @@ public class MultiComplianceJobResponse {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of MultiComplianceJobResponse given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of MultiComplianceJobResponse
+  * @throws IOException if the JSON string is invalid with respect to MultiComplianceJobResponse
+  */
+  public static MultiComplianceJobResponse fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, MultiComplianceJobResponse.class);
+  }
+
+ /**
+  * Convert an instance of MultiComplianceJobResponse to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

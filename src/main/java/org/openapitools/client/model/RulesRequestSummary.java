@@ -267,5 +267,14 @@ public class RulesRequestSummary extends AbstractOpenApiSchema {
   public static RulesRequestSummary fromJson(String jsonString) throws IOException {
     return JSON.getGson().fromJson(jsonString, RulesRequestSummary.class);
   }
+
+ /**
+  * Convert an instance of RulesRequestSummary to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
+  }
 }
 

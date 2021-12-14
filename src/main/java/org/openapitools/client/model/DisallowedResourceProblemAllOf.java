@@ -41,6 +41,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * DisallowedResourceProblemAllOf
  */
@@ -340,6 +342,26 @@ public class DisallowedResourceProblemAllOf {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of DisallowedResourceProblemAllOf given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of DisallowedResourceProblemAllOf
+  * @throws IOException if the JSON string is invalid with respect to DisallowedResourceProblemAllOf
+  */
+  public static DisallowedResourceProblemAllOf fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, DisallowedResourceProblemAllOf.class);
+  }
+
+ /**
+  * Convert an instance of DisallowedResourceProblemAllOf to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

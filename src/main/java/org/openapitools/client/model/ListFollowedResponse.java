@@ -45,6 +45,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * ListFollowedResponse
  */
@@ -229,6 +231,26 @@ public class ListFollowedResponse {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of ListFollowedResponse given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of ListFollowedResponse
+  * @throws IOException if the JSON string is invalid with respect to ListFollowedResponse
+  */
+  public static ListFollowedResponse fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ListFollowedResponse.class);
+  }
+
+ /**
+  * Convert an instance of ListFollowedResponse to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

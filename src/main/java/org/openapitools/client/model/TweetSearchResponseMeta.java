@@ -41,6 +41,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * TweetSearchResponseMeta
  */
@@ -266,6 +268,26 @@ public class TweetSearchResponseMeta {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of TweetSearchResponseMeta given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of TweetSearchResponseMeta
+  * @throws IOException if the JSON string is invalid with respect to TweetSearchResponseMeta
+  */
+  public static TweetSearchResponseMeta fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, TweetSearchResponseMeta.class);
+  }
+
+ /**
+  * Convert an instance of TweetSearchResponseMeta to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

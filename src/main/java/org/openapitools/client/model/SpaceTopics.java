@@ -41,6 +41,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * The Twitter Topic object
  */
@@ -246,6 +248,26 @@ public class SpaceTopics {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of SpaceTopics given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of SpaceTopics
+  * @throws IOException if the JSON string is invalid with respect to SpaceTopics
+  */
+  public static SpaceTopics fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, SpaceTopics.class);
+  }
+
+ /**
+  * Convert an instance of SpaceTopics to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

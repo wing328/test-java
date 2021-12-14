@@ -46,6 +46,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * MultiTweetLookupResponse
  */
@@ -275,6 +277,26 @@ public class MultiTweetLookupResponse {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of MultiTweetLookupResponse given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of MultiTweetLookupResponse
+  * @throws IOException if the JSON string is invalid with respect to MultiTweetLookupResponse
+  */
+  public static MultiTweetLookupResponse fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, MultiTweetLookupResponse.class);
+  }
+
+ /**
+  * Convert an instance of MultiTweetLookupResponse to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

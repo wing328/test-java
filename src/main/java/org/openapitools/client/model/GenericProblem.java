@@ -61,6 +61,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * A generic problem with no additional information beyond that provided by the HTTP status code.
  */
@@ -214,6 +216,26 @@ public class GenericProblem extends Problem {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of GenericProblem given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of GenericProblem
+  * @throws IOException if the JSON string is invalid with respect to GenericProblem
+  */
+  public static GenericProblem fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, GenericProblem.class);
+  }
+
+ /**
+  * Convert an instance of GenericProblem to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

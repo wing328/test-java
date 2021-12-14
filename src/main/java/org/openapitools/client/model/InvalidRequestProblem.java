@@ -64,6 +64,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * A problem that indicates this request is invalid.
  */
@@ -224,6 +226,26 @@ public class InvalidRequestProblem extends Problem {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of InvalidRequestProblem given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of InvalidRequestProblem
+  * @throws IOException if the JSON string is invalid with respect to InvalidRequestProblem
+  */
+  public static InvalidRequestProblem fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, InvalidRequestProblem.class);
+  }
+
+ /**
+  * Convert an instance of InvalidRequestProblem to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

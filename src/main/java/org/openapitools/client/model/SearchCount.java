@@ -42,6 +42,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * Represent a Search Count Result
  */
@@ -248,6 +250,26 @@ public class SearchCount {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of SearchCount given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of SearchCount
+  * @throws IOException if the JSON string is invalid with respect to SearchCount
+  */
+  public static SearchCount fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, SearchCount.class);
+  }
+
+ /**
+  * Convert an instance of SearchCount to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

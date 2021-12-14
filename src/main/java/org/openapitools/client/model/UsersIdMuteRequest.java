@@ -41,6 +41,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * UsersIdMuteRequest
  */
@@ -184,6 +186,26 @@ public class UsersIdMuteRequest {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of UsersIdMuteRequest given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of UsersIdMuteRequest
+  * @throws IOException if the JSON string is invalid with respect to UsersIdMuteRequest
+  */
+  public static UsersIdMuteRequest fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, UsersIdMuteRequest.class);
+  }
+
+ /**
+  * Convert an instance of UsersIdMuteRequest to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

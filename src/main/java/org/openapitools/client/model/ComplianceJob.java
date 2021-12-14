@@ -45,6 +45,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * ComplianceJob
  */
@@ -435,6 +437,26 @@ public class ComplianceJob {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of ComplianceJob given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of ComplianceJob
+  * @throws IOException if the JSON string is invalid with respect to ComplianceJob
+  */
+  public static ComplianceJob fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ComplianceJob.class);
+  }
+
+ /**
+  * Convert an instance of ComplianceJob to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

@@ -42,6 +42,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * RulesResponseMetadata
  */
@@ -279,6 +281,26 @@ public class RulesResponseMetadata {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of RulesResponseMetadata given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of RulesResponseMetadata
+  * @throws IOException if the JSON string is invalid with respect to RulesResponseMetadata
+  */
+  public static RulesResponseMetadata fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, RulesResponseMetadata.class);
+  }
+
+ /**
+  * Convert an instance of RulesResponseMetadata to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

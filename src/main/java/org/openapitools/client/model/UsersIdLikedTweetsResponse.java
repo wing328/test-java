@@ -47,6 +47,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * UsersIdLikedTweetsResponse
  */
@@ -310,6 +312,26 @@ public class UsersIdLikedTweetsResponse {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of UsersIdLikedTweetsResponse given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of UsersIdLikedTweetsResponse
+  * @throws IOException if the JSON string is invalid with respect to UsersIdLikedTweetsResponse
+  */
+  public static UsersIdLikedTweetsResponse fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, UsersIdLikedTweetsResponse.class);
+  }
+
+ /**
+  * Convert an instance of UsersIdLikedTweetsResponse to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

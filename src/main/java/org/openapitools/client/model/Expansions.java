@@ -48,6 +48,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * Expansions
  */
@@ -378,6 +380,26 @@ public class Expansions {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of Expansions given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of Expansions
+  * @throws IOException if the JSON string is invalid with respect to Expansions
+  */
+  public static Expansions fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, Expansions.class);
+  }
+
+ /**
+  * Convert an instance of Expansions to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

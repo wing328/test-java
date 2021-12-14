@@ -41,6 +41,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * MultiListNoPaginationResponseMeta
  */
@@ -176,6 +178,26 @@ public class MultiListNoPaginationResponseMeta {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of MultiListNoPaginationResponseMeta given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of MultiListNoPaginationResponseMeta
+  * @throws IOException if the JSON string is invalid with respect to MultiListNoPaginationResponseMeta
+  */
+  public static MultiListNoPaginationResponseMeta fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, MultiListNoPaginationResponseMeta.class);
+  }
+
+ /**
+  * Convert an instance of MultiListNoPaginationResponseMeta to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

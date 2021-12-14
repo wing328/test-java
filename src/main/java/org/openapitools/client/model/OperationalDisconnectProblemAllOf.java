@@ -41,6 +41,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * OperationalDisconnectProblemAllOf
  */
@@ -235,6 +237,26 @@ public class OperationalDisconnectProblemAllOf {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of OperationalDisconnectProblemAllOf given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of OperationalDisconnectProblemAllOf
+  * @throws IOException if the JSON string is invalid with respect to OperationalDisconnectProblemAllOf
+  */
+  public static OperationalDisconnectProblemAllOf fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, OperationalDisconnectProblemAllOf.class);
+  }
+
+ /**
+  * Convert an instance of OperationalDisconnectProblemAllOf to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

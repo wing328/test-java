@@ -44,6 +44,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * A [GeoJson Point](https://tools.ietf.org/html/rfc7946#section-3.1.2) geometry object.
  */
@@ -269,6 +271,26 @@ public class Point {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of Point given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of Point
+  * @throws IOException if the JSON string is invalid with respect to Point
+  */
+  public static Point fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, Point.class);
+  }
+
+ /**
+  * Convert an instance of Point to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

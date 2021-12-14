@@ -41,6 +41,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * Represents the data for the context annotation domain.
  */
@@ -245,6 +247,26 @@ public class ContextAnnotationDomainFields {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of ContextAnnotationDomainFields given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of ContextAnnotationDomainFields
+  * @throws IOException if the JSON string is invalid with respect to ContextAnnotationDomainFields
+  */
+  public static ContextAnnotationDomainFields fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ContextAnnotationDomainFields.class);
+  }
+
+ /**
+  * Convert an instance of ContextAnnotationDomainFields to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

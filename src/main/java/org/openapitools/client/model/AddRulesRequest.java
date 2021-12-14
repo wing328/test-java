@@ -44,6 +44,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * A request to add a user-specified stream filtering rule.
  */
@@ -200,6 +202,26 @@ public class AddRulesRequest {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of AddRulesRequest given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of AddRulesRequest
+  * @throws IOException if the JSON string is invalid with respect to AddRulesRequest
+  */
+  public static AddRulesRequest fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, AddRulesRequest.class);
+  }
+
+ /**
+  * Convert an instance of AddRulesRequest to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

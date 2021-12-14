@@ -41,6 +41,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * FilteredStreamingTweetOneOfMatchingRules
  */
@@ -214,6 +216,26 @@ public class FilteredStreamingTweetOneOfMatchingRules {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of FilteredStreamingTweetOneOfMatchingRules given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of FilteredStreamingTweetOneOfMatchingRules
+  * @throws IOException if the JSON string is invalid with respect to FilteredStreamingTweetOneOfMatchingRules
+  */
+  public static FilteredStreamingTweetOneOfMatchingRules fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, FilteredStreamingTweetOneOfMatchingRules.class);
+  }
+
+ /**
+  * Convert an instance of FilteredStreamingTweetOneOfMatchingRules to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

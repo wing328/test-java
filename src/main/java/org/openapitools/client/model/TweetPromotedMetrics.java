@@ -41,6 +41,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * Promoted nonpublic engagement metrics for the Tweet at the time of the request.
  */
@@ -267,6 +269,26 @@ public class TweetPromotedMetrics {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of TweetPromotedMetrics given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of TweetPromotedMetrics
+  * @throws IOException if the JSON string is invalid with respect to TweetPromotedMetrics
+  */
+  public static TweetPromotedMetrics fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, TweetPromotedMetrics.class);
+  }
+
+ /**
+  * Convert an instance of TweetPromotedMetrics to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

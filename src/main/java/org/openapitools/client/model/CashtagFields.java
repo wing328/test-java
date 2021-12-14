@@ -41,6 +41,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * Represent the portion of text recognized as a Cashtag, and its start and end position within the text.
  */
@@ -185,6 +187,26 @@ public class CashtagFields {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of CashtagFields given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of CashtagFields
+  * @throws IOException if the JSON string is invalid with respect to CashtagFields
+  */
+  public static CashtagFields fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, CashtagFields.class);
+  }
+
+ /**
+  * Convert an instance of CashtagFields to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

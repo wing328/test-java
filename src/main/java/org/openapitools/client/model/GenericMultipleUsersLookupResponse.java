@@ -47,6 +47,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * GenericMultipleUsersLookupResponse
  */
@@ -310,6 +312,26 @@ public class GenericMultipleUsersLookupResponse {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of GenericMultipleUsersLookupResponse given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of GenericMultipleUsersLookupResponse
+  * @throws IOException if the JSON string is invalid with respect to GenericMultipleUsersLookupResponse
+  */
+  public static GenericMultipleUsersLookupResponse fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, GenericMultipleUsersLookupResponse.class);
+  }
+
+ /**
+  * Convert an instance of GenericMultipleUsersLookupResponse to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

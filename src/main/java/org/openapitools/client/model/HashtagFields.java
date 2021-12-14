@@ -41,6 +41,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * Represent the portion of text recognized as a Hashtag, and its start and end position within the text.
  */
@@ -185,6 +187,26 @@ public class HashtagFields {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of HashtagFields given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of HashtagFields
+  * @throws IOException if the JSON string is invalid with respect to HashtagFields
+  */
+  public static HashtagFields fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, HashtagFields.class);
+  }
+
+ /**
+  * Convert an instance of HashtagFields to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

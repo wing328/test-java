@@ -61,6 +61,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * You have been disconnected for operational reasons.
  */
@@ -272,6 +274,26 @@ public class OperationalDisconnectProblem extends Problem {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of OperationalDisconnectProblem given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of OperationalDisconnectProblem
+  * @throws IOException if the JSON string is invalid with respect to OperationalDisconnectProblem
+  */
+  public static OperationalDisconnectProblem fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, OperationalDisconnectProblem.class);
+  }
+
+ /**
+  * Convert an instance of OperationalDisconnectProblem to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

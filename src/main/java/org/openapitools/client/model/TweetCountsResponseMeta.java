@@ -41,6 +41,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * TweetCountsResponseMeta
  */
@@ -206,6 +208,26 @@ public class TweetCountsResponseMeta {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of TweetCountsResponseMeta given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of TweetCountsResponseMeta
+  * @throws IOException if the JSON string is invalid with respect to TweetCountsResponseMeta
+  */
+  public static TweetCountsResponseMeta fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, TweetCountsResponseMeta.class);
+  }
+
+ /**
+  * Convert an instance of TweetCountsResponseMeta to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

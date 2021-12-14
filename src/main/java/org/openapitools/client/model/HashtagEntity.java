@@ -43,6 +43,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * HashtagEntity
  */
@@ -250,6 +252,26 @@ public class HashtagEntity {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of HashtagEntity given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of HashtagEntity
+  * @throws IOException if the JSON string is invalid with respect to HashtagEntity
+  */
+  public static HashtagEntity fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, HashtagEntity.class);
+  }
+
+ /**
+  * Convert an instance of HashtagEntity to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

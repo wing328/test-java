@@ -47,6 +47,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * AnimatedGif
  */
@@ -197,6 +199,26 @@ public class AnimatedGif extends Media {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of AnimatedGif given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of AnimatedGif
+  * @throws IOException if the JSON string is invalid with respect to AnimatedGif
+  */
+  public static AnimatedGif fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, AnimatedGif.class);
+  }
+
+ /**
+  * Convert an instance of AnimatedGif to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

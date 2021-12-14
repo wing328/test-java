@@ -45,6 +45,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * Place
  */
@@ -411,6 +413,26 @@ public class Place {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of Place given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of Place
+  * @throws IOException if the JSON string is invalid with respect to Place
+  */
+  public static Place fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, Place.class);
+  }
+
+ /**
+  * Convert an instance of Place to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

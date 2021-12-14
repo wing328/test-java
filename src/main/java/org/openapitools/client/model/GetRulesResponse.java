@@ -45,6 +45,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * GetRulesResponse
  */
@@ -235,6 +237,26 @@ public class GetRulesResponse {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of GetRulesResponse given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of GetRulesResponse
+  * @throws IOException if the JSON string is invalid with respect to GetRulesResponse
+  */
+  public static GetRulesResponse fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, GetRulesResponse.class);
+  }
+
+ /**
+  * Convert an instance of GetRulesResponse to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

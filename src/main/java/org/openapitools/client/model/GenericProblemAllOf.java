@@ -41,6 +41,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * GenericProblemAllOf
  */
@@ -184,6 +186,26 @@ public class GenericProblemAllOf {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of GenericProblemAllOf given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of GenericProblemAllOf
+  * @throws IOException if the JSON string is invalid with respect to GenericProblemAllOf
+  */
+  public static GenericProblemAllOf fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, GenericProblemAllOf.class);
+  }
+
+ /**
+  * Convert an instance of GenericProblemAllOf to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

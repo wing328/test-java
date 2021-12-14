@@ -43,6 +43,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * Poll options for a Tweet with a poll. This is mutually exclusive from Media and Quote Tweet Id.
  */
@@ -219,6 +221,26 @@ public class CreateTweetRequestPoll {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of CreateTweetRequestPoll given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of CreateTweetRequestPoll
+  * @throws IOException if the JSON string is invalid with respect to CreateTweetRequestPoll
+  */
+  public static CreateTweetRequestPoll fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, CreateTweetRequestPoll.class);
+  }
+
+ /**
+  * Convert an instance of CreateTweetRequestPoll to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

@@ -62,6 +62,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * A problem that indicates your client is forbidden from making this request.
  */
@@ -351,6 +353,26 @@ public class ClientForbiddenProblem extends Problem {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of ClientForbiddenProblem given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of ClientForbiddenProblem
+  * @throws IOException if the JSON string is invalid with respect to ClientForbiddenProblem
+  */
+  public static ClientForbiddenProblem fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, ClientForbiddenProblem.class);
+  }
+
+ /**
+  * Convert an instance of ClientForbiddenProblem to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

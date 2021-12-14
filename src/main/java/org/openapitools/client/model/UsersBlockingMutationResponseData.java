@@ -41,6 +41,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * UsersBlockingMutationResponseData
  */
@@ -176,6 +178,26 @@ public class UsersBlockingMutationResponseData {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of UsersBlockingMutationResponseData given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of UsersBlockingMutationResponseData
+  * @throws IOException if the JSON string is invalid with respect to UsersBlockingMutationResponseData
+  */
+  public static UsersBlockingMutationResponseData fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, UsersBlockingMutationResponseData.class);
+  }
+
+ /**
+  * Convert an instance of UsersBlockingMutationResponseData to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

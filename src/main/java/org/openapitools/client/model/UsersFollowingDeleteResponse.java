@@ -45,6 +45,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * UsersFollowingDeleteResponse
  */
@@ -229,6 +231,26 @@ public class UsersFollowingDeleteResponse {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of UsersFollowingDeleteResponse given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of UsersFollowingDeleteResponse
+  * @throws IOException if the JSON string is invalid with respect to UsersFollowingDeleteResponse
+  */
+  public static UsersFollowingDeleteResponse fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, UsersFollowingDeleteResponse.class);
+  }
+
+ /**
+  * Convert an instance of UsersFollowingDeleteResponse to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

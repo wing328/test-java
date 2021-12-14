@@ -43,6 +43,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * Media information being attached to created Tweet. This is mutually exclusive from Quote Tweet Id and Poll.
  */
@@ -225,6 +227,26 @@ public class CreateTweetRequestMedia {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of CreateTweetRequestMedia given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of CreateTweetRequestMedia
+  * @throws IOException if the JSON string is invalid with respect to CreateTweetRequestMedia
+  */
+  public static CreateTweetRequestMedia fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, CreateTweetRequestMedia.class);
+  }
+
+ /**
+  * Convert an instance of CreateTweetRequestMedia to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 

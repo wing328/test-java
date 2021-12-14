@@ -41,6 +41,8 @@ import java.util.Map;
 import java.util.Map.Entry;
 import java.util.Set;
 
+import org.openapitools.client.JSON;
+
 /**
  * UsageCapExceededProblemAllOf
  */
@@ -300,6 +302,26 @@ public class UsageCapExceededProblemAllOf {
 
        }.nullSafe();
     }
+  }
+
+ /**
+  * Create an instance of UsageCapExceededProblemAllOf given an JSON string
+  *
+  * @param jsonString JSON string
+  * @return An instance of UsageCapExceededProblemAllOf
+  * @throws IOException if the JSON string is invalid with respect to UsageCapExceededProblemAllOf
+  */
+  public static UsageCapExceededProblemAllOf fromJson(String jsonString) throws IOException {
+    return JSON.getGson().fromJson(jsonString, UsageCapExceededProblemAllOf.class);
+  }
+
+ /**
+  * Convert an instance of UsageCapExceededProblemAllOf to an JSON string
+  *
+  * @return JSON string
+  */
+  public String toJson() {
+    return JSON.getGson().toJson(this);
   }
 }
 
