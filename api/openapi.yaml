@@ -174,7 +174,10 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - tweet.read
+        - users.read
       summary: User lookup by IDs
       tags:
       - Twitter
@@ -303,7 +306,10 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - tweet.read
+        - users.read
       summary: User lookup by ID
       tags:
       - Twitter
@@ -437,7 +443,10 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - tweet.read
+        - users.read
       summary: User lookup by usernames
       tags:
       - Twitter
@@ -556,6 +565,9 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - tweet.read
+        - users.read
       summary: User lookup me
       tags:
       - Twitter
@@ -684,7 +696,10 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - tweet.read
+        - users.read
       summary: User lookup by username
       tags:
       - Twitter
@@ -742,6 +757,10 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - tweet.read
+        - users.read
+        - block.read
       summary: Returns user objects that are blocked by provided user ID
       tags:
       - Twitter
@@ -793,6 +812,10 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - tweet.read
+        - users.read
+        - block.write
       summary: Block User by User ID
       tags:
       - Twitter
@@ -838,6 +861,10 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - tweet.read
+        - users.read
+        - block.write
       summary: Unblock User by User ID
       tags:
       - Twitter
@@ -882,6 +909,10 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - tweet.read
+        - users.read
+        - mute.write
       summary: Unmute User by User ID
       tags:
       - Twitter
@@ -938,6 +969,10 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - tweet.read
+        - users.read
+        - mute.read
       summary: Returns user objects that are muted by the provided user ID
       tags:
       - Twitter
@@ -989,6 +1024,10 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - tweet.read
+        - users.read
+        - mute.write
       summary: Mute User by User ID
       tags:
       - Twitter
@@ -1047,7 +1086,11 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - follows.read
       summary: Returns user objects that follow the provided user ID
       tags:
       - Twitter
@@ -1105,7 +1148,7 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
       summary: Returns user objects that follow the provided username
       tags:
       - Twitter
@@ -1164,7 +1207,11 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - follows.read
       summary: Following by User ID
       tags:
       - Twitter
@@ -1217,6 +1264,10 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - follows.write
       summary: Follow User
       tags:
       - Twitter
@@ -1275,7 +1326,7 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
       summary: Following by username
       tags:
       - Twitter
@@ -1321,6 +1372,10 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - follows.write
       summary: Unfollow User
       tags:
       - Twitter
@@ -1456,7 +1511,11 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - list.read
       summary: Get User's Followed Lists
       tags:
       - Twitter
@@ -1497,6 +1556,10 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - list.write
       summary: Follow a List
       tags:
       - Twitter
@@ -1542,6 +1605,10 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - list.write
       summary: Unfollow a List
       tags:
       - Twitter
@@ -1677,7 +1744,11 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - list.read
       summary: Get a User's List Memberships
       tags:
       - Twitter
@@ -1813,7 +1884,11 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - list.read
       summary: Get a User's Owned Lists
       tags:
       - Twitter
@@ -1928,6 +2003,10 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - list.read
       summary: Get a User's Pinned Lists
       tags:
       - Twitter
@@ -1967,6 +2046,10 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - list.write
       summary: Pin a List
       tags:
       - Twitter
@@ -2012,6 +2095,10 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - list.write
       summary: Unpin a List
       tags:
       - Twitter
@@ -2248,7 +2335,10 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - tweet.read
+        - users.read
       summary: Tweet lookup by Tweet IDs
       tags:
       - Twitter
@@ -2346,6 +2436,10 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - tweet.write
       summary: Creation of a Tweet
       tags:
       - Twitter
@@ -2382,6 +2476,10 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - tweet.write
       summary: Tweet delete by Tweet ID
       tags:
       - Twitter
@@ -2612,7 +2710,10 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - tweet.read
+        - users.read
       summary: Tweet lookup by Tweet ID
       tags:
       - Twitter
@@ -2661,6 +2762,10 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - tweet.moderate.write
       summary: Hide replies
       tags:
       - Twitter
@@ -2958,7 +3063,10 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - tweet.read
+        - users.read
       summary: Recent search
       tags:
       - Twitter
@@ -4162,7 +4270,10 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - tweet.read
+        - users.read
       summary: User Tweets timeline by User ID
       tags:
       - Twitter
@@ -4476,7 +4587,7 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
       summary: User Tweets timeline by username
       tags:
       - Twitter
@@ -4772,7 +4883,10 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - tweet.read
+        - users.read
       summary: User mention timeline by User ID
       tags:
       - Twitter
@@ -5067,7 +5181,7 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
       summary: User mention timeline by username
       tags:
       - Twitter
@@ -5109,6 +5223,10 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - like.write
       summary: Causes the user (in the path) to like the specified tweet
       tags:
       - Twitter
@@ -5154,6 +5272,10 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - like.write
       summary: Causes the user (in the path) to unlike the specified tweet
       tags:
       - Twitter
@@ -5404,7 +5526,11 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - like.read
       summary: Returns Tweet objects liked by the provided User ID
       tags:
       - Twitter
@@ -5428,9 +5554,10 @@ paths:
         name: max_results
         required: false
         schema:
+          default: 100
           format: int32
           maximum: 100
-          minimum: 5
+          minimum: 1
           type: integer
         style: form
       - description: This parameter is used to get the next 'page' of results.
@@ -5460,7 +5587,11 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - like.read
       summary: Returns user objects that have liked the provided Tweet ID
       tags:
       - Twitter
@@ -5485,9 +5616,10 @@ paths:
         name: max_results
         required: false
         schema:
+          default: 100
           format: int32
           maximum: 100
-          minimum: 5
+          minimum: 1
           type: integer
         style: form
       - description: This parameter is used to get the next 'page' of results.
@@ -5517,7 +5649,10 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - tweet.read
+        - users.read
       summary: Returns user objects that have retweeted the provided Tweet ID
       tags:
       - Twitter
@@ -5559,6 +5694,10 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - tweet.write
       summary: Causes the user (in the path) to retweet the specified tweet
       tags:
       - Twitter
@@ -5604,6 +5743,10 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - tweet.write
       summary: Causes the user (in the path) to unretweet the specified tweet
       tags:
       - Twitter
@@ -5701,7 +5844,6 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
       summary: Recent search counts
       tags:
       - Twitter
@@ -5799,7 +5941,6 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
       summary: Full archive search counts
       tags:
       - Twitter
@@ -5965,6 +6106,11 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - list.write
+        - list.read
       summary: Create List
       tags:
       - Twitter
@@ -6001,6 +6147,10 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - list.write
       summary: Delete List
       tags:
       - Twitter
@@ -6114,7 +6264,11 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - list.read
       summary: List lookup by List ID
       tags:
       - Twitter
@@ -6154,6 +6308,10 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - list.write
       summary: Update List
       tags:
       - Twitter
@@ -6303,7 +6461,11 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - list.read
       summary: Returns user objects that follow a List by the provided List ID
       tags:
       - Twitter
@@ -6452,7 +6614,11 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - list.read
       summary: Returns user objects that are members of a List by the provided List
         ID
       tags:
@@ -6493,6 +6659,10 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - list.write
       summary: Add a List member
       tags:
       - Twitter
@@ -6537,6 +6707,10 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - list.write
       summary: Remove a List member
       tags:
       - Twitter
@@ -6788,7 +6962,11 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - list.read
       summary: List Tweets timeline by List ID
       tags:
       - Twitter
@@ -6888,7 +7066,10 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - space.read
       summary: Space lookup by Space ID
       tags:
       - Twitter
@@ -6991,7 +7172,10 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - space.read
       summary: Space lookup up Space IDs
       tags:
       - Twitter
@@ -7094,7 +7278,10 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - space.read
       summary: Space lookup by their creators
       tags:
       - Twitter
@@ -7220,7 +7407,10 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - space.read
       summary: Search for Spaces
       tags:
       - Twitter
@@ -7307,7 +7497,10 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - space.read
       summary: Retrieve tweets from a Space
       tags:
       - Twitter
@@ -7377,7 +7570,11 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - space.read
       summary: Retrieve the list of users who purchased a ticket to the given space
       tags:
       - Twitter
@@ -7770,6 +7967,19 @@ components:
         format: int32
         maximum: 100
         minimum: 5
+        type: integer
+      style: form
+    DefaultMaxResultsRequestParameter:
+      description: The maximum number of results
+      explode: true
+      in: query
+      name: max_results
+      required: false
+      schema:
+        default: 100
+        format: int32
+        maximum: 100
+        minimum: 1
         type: integer
       style: form
     StartTimeRequestParameter:
@@ -9878,6 +10088,7 @@ components:
     DuplicateRuleProblem:
       allOf:
       - $ref: '#/components/schemas/Problem'
+      - $ref: '#/components/schemas/DuplicateRuleProblem_allOf'
       description: The rule you have submitted is a duplicate.
       type: object
     ConflictProblem:
@@ -9889,11 +10100,6 @@ components:
       allOf:
       - $ref: '#/components/schemas/Problem'
       description: A problem that indicates the user's rule set is not compliant.
-    ProblemOrError:
-      description: Problem or Error
-      oneOf:
-      - $ref: '#/components/schemas/Problem'
-      - $ref: '#/components/schemas/Error'
     Problem:
       description: An HTTP Problem Details object, as defined in IETF RFC 7807 (https://tools.ietf.org/html/rfc7807).
       discriminator:
@@ -9929,9 +10135,15 @@ components:
         detail:
           type: string
       required:
-      - detail
       - title
       - type
+      type: object
+    ProblemOrError:
+      description: Represents the response in case of throwing an exception. Mainly
+        for the openapi-generator
+      oneOf:
+      - $ref: '#/components/schemas/Error'
+      - $ref: '#/components/schemas/Problem'
       type: object
     TweetSearchResponse:
       example:
@@ -10206,8 +10418,11 @@ components:
           type: array
         meta:
           $ref: '#/components/schemas/RulesResponseMetadata'
+        errors:
+          items:
+            $ref: '#/components/schemas/Problem'
+          type: array
       required:
-      - data
       - meta
       type: object
     DeleteRulesRequest:
@@ -10222,6 +10437,10 @@ components:
       properties:
         meta:
           $ref: '#/components/schemas/RulesResponseMetadata'
+        errors:
+          items:
+            $ref: '#/components/schemas/Problem'
+          type: array
       required:
       - meta
       type: object
@@ -12797,10 +13016,6 @@ components:
         registration_url:
           format: uri
           type: string
-        client_id:
-          type: string
-        required_enrollment:
-          type: string
       type: object
     DisallowedResourceProblem_allOf:
       properties:
@@ -12855,6 +13070,12 @@ components:
           - InternalError
           - ClientApplicationStateDegraded
           - InvalidRules
+          type: string
+    DuplicateRuleProblem_allOf:
+      properties:
+        value:
+          type: string
+        id:
           type: string
     TweetSearchResponse_meta:
       example:
@@ -13129,4 +13350,42 @@ components:
     UserToken:
       scheme: OAuth
       type: http
+    OAuth2UserToken:
+      flows:
+        authorizationCode:
+          authorizationUrl: https://api.twitter.com/2/oauth2/authorize
+          scopes:
+            tweet.read: Allows the app to view any Tweets the authenticated user can
+              see, including Tweets from protected accounts.
+            tweet.write: Allows the app to tweet and retweet for the authenticated
+              user.
+            users.read: Allows the app to view any account the authenticated user
+              can see, including protected accounts.
+            list.write: Allows the app to create and manage lists for the authenticated
+              user.
+            list.read: Allows the app to view any lists the authenticated user has
+              created and lists they are a member of, including private lists.
+            like.read: Allows the app to read Tweets that the authenticated user has
+              liked.
+            like.write: Allows the app to like and un-likes Tweets for the authenticated
+              user.
+            mute.read: Allows the app to read the users the authenticated user has
+              muted.
+            mute.write: Allows the app to mute and unmute users for the authenticated
+              user.
+            block.read: Allows the app to read the users the authenticated user has
+              blocked.
+            block.write: Allows the app to block and unblock users for the authenticated
+              user.
+            tweet.moderate.write: Allows the app to hide and unhide replies to the
+              authenticated user's Tweets.
+            follows.read: Allows the app to read the users who follow the authenticated
+              user and users that they follow.
+            follows.write: Allows the app to follow and unfollow users for the authenticated
+              user.
+            space.read: Allows the app to read the Spaces the authenticated user can
+              see.
+            offline.access: Allows the app to request a refresh token.
+          tokenUrl: https://api.twitter.com/2/oauth2/token
+      type: oauth2
 

@@ -29,6 +29,7 @@ import org.openapitools.client.model.ConflictProblem;
 import org.openapitools.client.model.ConnectionExceptionProblem;
 import org.openapitools.client.model.DisallowedResourceProblem;
 import org.openapitools.client.model.DuplicateRuleProblem;
+import org.openapitools.client.model.DuplicateRuleProblemAllOf;
 import org.openapitools.client.model.FieldUnauthorizedProblem;
 import org.openapitools.client.model.GenericProblem;
 import org.openapitools.client.model.InvalidRequestProblem;
@@ -68,9 +69,63 @@ import org.openapitools.client.JSON;
 @ApiModel(description = "The rule you have submitted is a duplicate.")
 @javax.annotation.Generated(value = "org.openapitools.codegen.languages.JavaClientCodegen")
 public class DuplicateRuleProblem extends Problem {
+  public static final String SERIALIZED_NAME_VALUE = "value";
+  @SerializedName(SERIALIZED_NAME_VALUE)
+  private String value;
+
+  public static final String SERIALIZED_NAME_ID = "id";
+  @SerializedName(SERIALIZED_NAME_ID)
+  private String id;
+
   public DuplicateRuleProblem() { 
     this.type = this.getClass().getSimpleName();
   }
+
+  public DuplicateRuleProblem value(String value) {
+    
+    this.value = value;
+    return this;
+  }
+
+   /**
+   * Get value
+   * @return value
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getValue() {
+    return value;
+  }
+
+
+  public void setValue(String value) {
+    this.value = value;
+  }
+
+
+  public DuplicateRuleProblem id(String id) {
+    
+    this.id = id;
+    return this;
+  }
+
+   /**
+   * Get id
+   * @return id
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public String getId() {
+    return id;
+  }
+
+
+  public void setId(String id) {
+    this.id = id;
+  }
+
 
   @Override
   public boolean equals(Object o) {
@@ -80,12 +135,15 @@ public class DuplicateRuleProblem extends Problem {
     if (o == null || getClass() != o.getClass()) {
       return false;
     }
-    return super.equals(o);
+    DuplicateRuleProblem duplicateRuleProblem = (DuplicateRuleProblem) o;
+    return Objects.equals(this.value, duplicateRuleProblem.value) &&
+        Objects.equals(this.id, duplicateRuleProblem.id) &&
+        super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(super.hashCode());
+    return Objects.hash(value, id, super.hashCode());
   }
 
   @Override
@@ -93,6 +151,8 @@ public class DuplicateRuleProblem extends Problem {
     StringBuilder sb = new StringBuilder();
     sb.append("class DuplicateRuleProblem {\n");
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
+    sb.append("    value: ").append(toIndentedString(value)).append("\n");
+    sb.append("    id: ").append(toIndentedString(id)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -118,12 +178,13 @@ public class DuplicateRuleProblem extends Problem {
     openapiFields.add("type");
     openapiFields.add("title");
     openapiFields.add("detail");
+    openapiFields.add("value");
+    openapiFields.add("id");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("type");
     openapiRequiredFields.add("title");
-    openapiRequiredFields.add("detail");
   }
 
  /**

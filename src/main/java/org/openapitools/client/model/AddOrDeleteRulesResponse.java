@@ -27,6 +27,7 @@ import java.util.ArrayList;
 import java.util.List;
 import org.openapitools.client.model.AddRulesResponse;
 import org.openapitools.client.model.DeleteRulesResponse;
+import org.openapitools.client.model.Problem;
 import org.openapitools.client.model.Rule;
 import org.openapitools.client.model.RulesResponseMetadata;
 

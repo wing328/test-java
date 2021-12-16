@@ -23,6 +23,9 @@ import com.google.gson.stream.JsonWriter;
 import io.swagger.annotations.ApiModel;
 import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
+import java.util.ArrayList;
+import java.util.List;
+import org.openapitools.client.model.Problem;
 import org.openapitools.client.model.RulesResponseMetadata;
 
 import com.google.gson.Gson;
@@ -53,6 +56,10 @@ public class DeleteRulesResponse {
   @SerializedName(SERIALIZED_NAME_META)
   private RulesResponseMetadata meta;
 
+  public static final String SERIALIZED_NAME_ERRORS = "errors";
+  @SerializedName(SERIALIZED_NAME_ERRORS)
+  private List<Problem> errors = null;
+
   public DeleteRulesResponse() { 
   }
 
@@ -79,6 +86,37 @@ public class DeleteRulesResponse {
   }
 
 
+  public DeleteRulesResponse errors(List<Problem> errors) {
+    
+    this.errors = errors;
+    return this;
+  }
+
+  public DeleteRulesResponse addErrorsItem(Problem errorsItem) {
+    if (this.errors == null) {
+      this.errors = new ArrayList<Problem>();
+    }
+    this.errors.add(errorsItem);
+    return this;
+  }
+
+   /**
+   * Get errors
+   * @return errors
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Problem> getErrors() {
+    return errors;
+  }
+
+
+  public void setErrors(List<Problem> errors) {
+    this.errors = errors;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -88,12 +126,13 @@ public class DeleteRulesResponse {
       return false;
     }
     DeleteRulesResponse deleteRulesResponse = (DeleteRulesResponse) o;
-    return Objects.equals(this.meta, deleteRulesResponse.meta);
+    return Objects.equals(this.meta, deleteRulesResponse.meta) &&
+        Objects.equals(this.errors, deleteRulesResponse.errors);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(meta);
+    return Objects.hash(meta, errors);
   }
 
   @Override
@@ -101,6 +140,7 @@ public class DeleteRulesResponse {
     StringBuilder sb = new StringBuilder();
     sb.append("class DeleteRulesResponse {\n");
     sb.append("    meta: ").append(toIndentedString(meta)).append("\n");
+    sb.append("    errors: ").append(toIndentedString(errors)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -124,6 +164,7 @@ public class DeleteRulesResponse {
     // a set of all properties/fields (JSON key names)
     openapiFields = new HashSet<String>();
     openapiFields.add("meta");
+    openapiFields.add("errors");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
@@ -161,6 +202,13 @@ public class DeleteRulesResponse {
       // validate the optional field `meta`
       if (jsonObj.getAsJsonObject("meta") != null) {
         RulesResponseMetadata.validateJsonObject(jsonObj.getAsJsonObject("meta"));
+      }
+      JsonArray jsonArrayerrors = jsonObj.getAsJsonArray("errors");
+      // validate the optional field `errors` (array)
+      if (jsonArrayerrors != null) {
+        for (int i = 0; i < jsonArrayerrors.size(); i++) {
+          Problem.validateJsonObject(jsonArrayerrors.get(i).getAsJsonObject());
+        };
       }
   }
 

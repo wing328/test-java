@@ -409,7 +409,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "UserToken" };
+        String[] localVarAuthNames = new String[] { "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -528,7 +528,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "UserToken" };
+        String[] localVarAuthNames = new String[] { "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -665,7 +665,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "UserToken" };
+        String[] localVarAuthNames = new String[] { "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -800,7 +800,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "BearerToken", "UserToken" };
+        String[] localVarAuthNames = new String[] { "BearerToken", "OAuth2UserToken" };
         return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -943,7 +943,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "BearerToken", "UserToken" };
+        String[] localVarAuthNames = new String[] { "BearerToken", "OAuth2UserToken" };
         return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -1086,7 +1086,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "BearerToken", "UserToken" };
+        String[] localVarAuthNames = new String[] { "BearerToken", "OAuth2UserToken" };
         return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -1246,7 +1246,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "BearerToken", "UserToken" };
+        String[] localVarAuthNames = new String[] { "BearerToken", "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -1421,7 +1421,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "BearerToken", "UserToken" };
+        String[] localVarAuthNames = new String[] { "BearerToken", "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -1578,7 +1578,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "BearerToken", "UserToken" };
+        String[] localVarAuthNames = new String[] { "BearerToken", "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -1726,7 +1726,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "BearerToken", "UserToken" };
+        String[] localVarAuthNames = new String[] { "BearerToken", "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -1877,7 +1877,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "BearerToken", "UserToken" };
+        String[] localVarAuthNames = new String[] { "BearerToken", "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -2028,7 +2028,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "BearerToken", "UserToken" };
+        String[] localVarAuthNames = new String[] { "BearerToken", "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -2558,7 +2558,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "BearerToken", "UserToken" };
+        String[] localVarAuthNames = new String[] { "BearerToken", "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -2698,7 +2698,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "UserToken" };
+        String[] localVarAuthNames = new String[] { "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -2826,7 +2826,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "UserToken" };
+        String[] localVarAuthNames = new String[] { "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -3113,7 +3113,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "BearerToken", "UserToken" };
+        String[] localVarAuthNames = new String[] { "BearerToken", "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -3277,7 +3277,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "BearerToken", "UserToken" };
+        String[] localVarAuthNames = new String[] { "BearerToken", "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -3415,7 +3415,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "UserToken" };
+        String[] localVarAuthNames = new String[] { "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -3534,7 +3534,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "UserToken" };
+        String[] localVarAuthNames = new String[] { "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -3673,7 +3673,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "BearerToken", "UserToken" };
+        String[] localVarAuthNames = new String[] { "BearerToken", "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -3807,7 +3807,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "UserToken" };
+        String[] localVarAuthNames = new String[] { "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "PUT", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -3936,7 +3936,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "UserToken" };
+        String[] localVarAuthNames = new String[] { "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -4069,7 +4069,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "UserToken" };
+        String[] localVarAuthNames = new String[] { "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -4221,7 +4221,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "BearerToken", "UserToken" };
+        String[] localVarAuthNames = new String[] { "BearerToken", "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -4361,7 +4361,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "UserToken" };
+        String[] localVarAuthNames = new String[] { "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -4503,7 +4503,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "UserToken" };
+        String[] localVarAuthNames = new String[] { "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -4638,7 +4638,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "UserToken" };
+        String[] localVarAuthNames = new String[] { "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -4772,7 +4772,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "UserToken" };
+        String[] localVarAuthNames = new String[] { "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -4944,7 +4944,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "BearerToken", "UserToken" };
+        String[] localVarAuthNames = new String[] { "BearerToken", "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -5285,7 +5285,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "BearerToken", "UserToken" };
+        String[] localVarAuthNames = new String[] { "BearerToken", "OAuth2UserToken" };
         return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -5596,7 +5596,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "BearerToken", "UserToken" };
+        String[] localVarAuthNames = new String[] { "BearerToken", "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -5733,7 +5733,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "BearerToken", "UserToken" };
+        String[] localVarAuthNames = new String[] { "BearerToken", "OAuth2UserToken" };
         return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -5896,7 +5896,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "BearerToken", "UserToken" };
+        String[] localVarAuthNames = new String[] { "BearerToken" };
         return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -6071,7 +6071,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "BearerToken", "UserToken" };
+        String[] localVarAuthNames = new String[] { "BearerToken" };
         return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -6397,7 +6397,7 @@ public class TwitterApi {
     /**
      * Build call for tweetsIdLikingUsers
      * @param id The ID of the Tweet for which to return results (required)
-     * @param maxResults The maximum number of results (optional)
+     * @param maxResults The maximum number of results (optional, default to 100)
      * @param paginationToken This parameter is used to get the next &#39;page&#39; of results. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -6446,7 +6446,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "BearerToken", "UserToken" };
+        String[] localVarAuthNames = new String[] { "BearerToken", "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -6468,7 +6468,7 @@ public class TwitterApi {
      * Returns user objects that have liked the provided Tweet ID
      * Returns a list of users that have liked the provided Tweet ID
      * @param id The ID of the Tweet for which to return results (required)
-     * @param maxResults The maximum number of results (optional)
+     * @param maxResults The maximum number of results (optional, default to 100)
      * @param paginationToken This parameter is used to get the next &#39;page&#39; of results. (optional)
      * @return GenericMultipleUsersLookupResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -6488,7 +6488,7 @@ public class TwitterApi {
      * Returns user objects that have liked the provided Tweet ID
      * Returns a list of users that have liked the provided Tweet ID
      * @param id The ID of the Tweet for which to return results (required)
-     * @param maxResults The maximum number of results (optional)
+     * @param maxResults The maximum number of results (optional, default to 100)
      * @param paginationToken This parameter is used to get the next &#39;page&#39; of results. (optional)
      * @return ApiResponse&lt;GenericMultipleUsersLookupResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -6515,7 +6515,7 @@ public class TwitterApi {
      * Returns user objects that have liked the provided Tweet ID (asynchronously)
      * Returns a list of users that have liked the provided Tweet ID
      * @param id The ID of the Tweet for which to return results (required)
-     * @param maxResults The maximum number of results (optional)
+     * @param maxResults The maximum number of results (optional, default to 100)
      * @param paginationToken This parameter is used to get the next &#39;page&#39; of results. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
@@ -6537,7 +6537,7 @@ public class TwitterApi {
     /**
      * Build call for tweetsIdRetweetingUsers
      * @param id The ID of the Tweet for which to return results (required)
-     * @param maxResults The maximum number of results (optional)
+     * @param maxResults The maximum number of results (optional, default to 100)
      * @param paginationToken This parameter is used to get the next &#39;page&#39; of results. (optional)
      * @param _callback Callback for upload/download progress
      * @return Call to execute
@@ -6586,7 +6586,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "BearerToken", "UserToken" };
+        String[] localVarAuthNames = new String[] { "BearerToken", "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -6608,7 +6608,7 @@ public class TwitterApi {
      * Returns user objects that have retweeted the provided Tweet ID
      * Returns a list of users that have retweeted the provided Tweet ID
      * @param id The ID of the Tweet for which to return results (required)
-     * @param maxResults The maximum number of results (optional)
+     * @param maxResults The maximum number of results (optional, default to 100)
      * @param paginationToken This parameter is used to get the next &#39;page&#39; of results. (optional)
      * @return GenericMultipleUsersLookupResponse
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -6628,7 +6628,7 @@ public class TwitterApi {
      * Returns user objects that have retweeted the provided Tweet ID
      * Returns a list of users that have retweeted the provided Tweet ID
      * @param id The ID of the Tweet for which to return results (required)
-     * @param maxResults The maximum number of results (optional)
+     * @param maxResults The maximum number of results (optional, default to 100)
      * @param paginationToken This parameter is used to get the next &#39;page&#39; of results. (optional)
      * @return ApiResponse&lt;GenericMultipleUsersLookupResponse&gt;
      * @throws ApiException If fail to call the API, e.g. server error or cannot deserialize the response body
@@ -6655,7 +6655,7 @@ public class TwitterApi {
      * Returns user objects that have retweeted the provided Tweet ID (asynchronously)
      * Returns a list of users that have retweeted the provided Tweet ID
      * @param id The ID of the Tweet for which to return results (required)
-     * @param maxResults The maximum number of results (optional)
+     * @param maxResults The maximum number of results (optional, default to 100)
      * @param paginationToken This parameter is used to get the next &#39;page&#39; of results. (optional)
      * @param _callback The callback to be executed when the API call finishes
      * @return The request call
@@ -6779,7 +6779,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "BearerToken", "UserToken" };
+        String[] localVarAuthNames = new String[] { "BearerToken", "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -6964,7 +6964,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "BearerToken", "UserToken" };
+        String[] localVarAuthNames = new String[] { "BearerToken", "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -7832,7 +7832,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "UserToken" };
+        String[] localVarAuthNames = new String[] { "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -7969,7 +7969,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "UserToken" };
+        String[] localVarAuthNames = new String[] { "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -8100,7 +8100,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "UserToken" };
+        String[] localVarAuthNames = new String[] { "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -8237,7 +8237,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "BearerToken", "UserToken" };
+        String[] localVarAuthNames = new String[] { "BearerToken", "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -8377,7 +8377,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "BearerToken", "UserToken" };
+        String[] localVarAuthNames = new String[] { "BearerToken", "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -8508,7 +8508,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "UserToken" };
+        String[] localVarAuthNames = new String[] { "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -8675,7 +8675,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "BearerToken", "UserToken" };
+        String[] localVarAuthNames = new String[] { "BearerToken", "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -8883,7 +8883,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "BearerToken", "UserToken" };
+        String[] localVarAuthNames = new String[] { "BearerToken", "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -9044,7 +9044,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "UserToken" };
+        String[] localVarAuthNames = new String[] { "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -9181,7 +9181,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "UserToken" };
+        String[] localVarAuthNames = new String[] { "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -9312,7 +9312,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "UserToken" };
+        String[] localVarAuthNames = new String[] { "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "POST", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -9504,7 +9504,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "BearerToken", "UserToken" };
+        String[] localVarAuthNames = new String[] { "BearerToken", "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "GET", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -9669,7 +9669,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "UserToken" };
+        String[] localVarAuthNames = new String[] { "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -9803,7 +9803,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "UserToken" };
+        String[] localVarAuthNames = new String[] { "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -9937,7 +9937,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "UserToken" };
+        String[] localVarAuthNames = new String[] { "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -10071,7 +10071,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "UserToken" };
+        String[] localVarAuthNames = new String[] { "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 
@@ -10205,7 +10205,7 @@ public class TwitterApi {
             localVarHeaderParams.put("Content-Type", localVarContentType);
         }
 
-        String[] localVarAuthNames = new String[] { "UserToken" };
+        String[] localVarAuthNames = new String[] { "OAuth2UserToken", "UserToken" };
         return localVarApiClient.buildCall(localVarPath, "DELETE", localVarQueryParams, localVarCollectionQueryParams, localVarPostBody, localVarHeaderParams, localVarCookieParams, localVarFormParams, localVarAuthNames, _callback);
     }
 

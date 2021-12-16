@@ -10,7 +10,7 @@ Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
 **type** | **String** |  | 
 **title** | **String** |  | 
-**detail** | **String** |  | 
+**detail** | **String** |  |  [optional]
 
 
 

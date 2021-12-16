@@ -323,6 +323,10 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.twitter.com");
     
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
+
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
     CreateTweetRequest createTweetRequest = new CreateTweetRequest(); // CreateTweetRequest | 
@@ -396,7 +400,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[UserToken](../README.md#UserToken)
+[OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -432,6 +436,10 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.twitter.com");
     
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
+
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
     String id = "id_example"; // String | The ID of the Tweet to be deleted.
@@ -505,7 +513,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[UserToken](../README.md#UserToken)
+[OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -541,6 +549,10 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.twitter.com");
     
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
+
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
     Set<String> expansions = Arrays.asList(); // Set<String> | A comma separated list of fields to expand.
@@ -618,7 +630,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[UserToken](../README.md#UserToken)
+[OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -658,6 +670,9 @@ public class Example {
     HttpBearerAuth BearerToken = (HttpBearerAuth) defaultClient.getAuthentication("BearerToken");
     BearerToken.setBearerToken("BEARER TOKEN");
 
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
     String id = "id_example"; // String | The space id to be retrieved
@@ -735,7 +750,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerToken](../README.md#BearerToken), [UserToken](../README.md#UserToken)
+[BearerToken](../README.md#BearerToken), [OAuth2UserToken](../README.md#OAuth2UserToken)
 
 ### HTTP request headers
 
@@ -775,6 +790,9 @@ public class Example {
     HttpBearerAuth BearerToken = (HttpBearerAuth) defaultClient.getAuthentication("BearerToken");
     BearerToken.setBearerToken("BEARER TOKEN");
 
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
     List<String> userIds = Arrays.asList(); // List<String> | The users to search through
@@ -852,7 +870,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerToken](../README.md#BearerToken), [UserToken](../README.md#UserToken)
+[BearerToken](../README.md#BearerToken), [OAuth2UserToken](../README.md#OAuth2UserToken)
 
 ### HTTP request headers
 
@@ -892,6 +910,9 @@ public class Example {
     HttpBearerAuth BearerToken = (HttpBearerAuth) defaultClient.getAuthentication("BearerToken");
     BearerToken.setBearerToken("BEARER TOKEN");
 
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
     List<String> ids = Arrays.asList(); // List<String> | A list of space ids
@@ -969,7 +990,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerToken](../README.md#BearerToken), [UserToken](../README.md#UserToken)
+[BearerToken](../README.md#BearerToken), [OAuth2UserToken](../README.md#OAuth2UserToken)
 
 ### HTTP request headers
 
@@ -1008,6 +1029,10 @@ public class Example {
     // Configure HTTP bearer authorization: BearerToken
     HttpBearerAuth BearerToken = (HttpBearerAuth) defaultClient.getAuthentication("BearerToken");
     BearerToken.setBearerToken("BEARER TOKEN");
+
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
 
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
@@ -1094,7 +1119,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerToken](../README.md#BearerToken), [UserToken](../README.md#UserToken)
+[BearerToken](../README.md#BearerToken), [OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -1133,6 +1158,10 @@ public class Example {
     // Configure HTTP bearer authorization: BearerToken
     HttpBearerAuth BearerToken = (HttpBearerAuth) defaultClient.getAuthentication("BearerToken");
     BearerToken.setBearerToken("BEARER TOKEN");
+
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
 
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
@@ -1219,7 +1248,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerToken](../README.md#BearerToken), [UserToken](../README.md#UserToken)
+[BearerToken](../README.md#BearerToken), [OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -1258,6 +1287,10 @@ public class Example {
     // Configure HTTP bearer authorization: BearerToken
     HttpBearerAuth BearerToken = (HttpBearerAuth) defaultClient.getAuthentication("BearerToken");
     BearerToken.setBearerToken("BEARER TOKEN");
+
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
 
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
@@ -1338,7 +1371,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerToken](../README.md#BearerToken), [UserToken](../README.md#UserToken)
+[BearerToken](../README.md#BearerToken), [OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -1377,6 +1410,10 @@ public class Example {
     // Configure HTTP bearer authorization: BearerToken
     HttpBearerAuth BearerToken = (HttpBearerAuth) defaultClient.getAuthentication("BearerToken");
     BearerToken.setBearerToken("BEARER TOKEN");
+
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
 
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
@@ -1457,7 +1494,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerToken](../README.md#BearerToken), [UserToken](../README.md#UserToken)
+[BearerToken](../README.md#BearerToken), [OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -1496,6 +1533,10 @@ public class Example {
     // Configure HTTP bearer authorization: BearerToken
     HttpBearerAuth BearerToken = (HttpBearerAuth) defaultClient.getAuthentication("BearerToken");
     BearerToken.setBearerToken("BEARER TOKEN");
+
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
 
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
@@ -1576,7 +1617,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerToken](../README.md#BearerToken), [UserToken](../README.md#UserToken)
+[BearerToken](../README.md#BearerToken), [OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -1615,6 +1656,10 @@ public class Example {
     // Configure HTTP bearer authorization: BearerToken
     HttpBearerAuth BearerToken = (HttpBearerAuth) defaultClient.getAuthentication("BearerToken");
     BearerToken.setBearerToken("BEARER TOKEN");
+
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
 
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
@@ -1695,7 +1740,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerToken](../README.md#BearerToken), [UserToken](../README.md#UserToken)
+[BearerToken](../README.md#BearerToken), [OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -2065,6 +2110,10 @@ public class Example {
     HttpBearerAuth BearerToken = (HttpBearerAuth) defaultClient.getAuthentication("BearerToken");
     BearerToken.setBearerToken("BEARER TOKEN");
 
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
+
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
     String id = "id_example"; // String | The ID of the user for whom to return results
@@ -2148,7 +2197,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerToken](../README.md#BearerToken), [UserToken](../README.md#UserToken)
+[BearerToken](../README.md#BearerToken), [OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -2184,6 +2233,10 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.twitter.com");
     
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
+
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
     String id = "id_example"; // String | The ID of the reply that you want to hide or unhide.
@@ -2259,7 +2312,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[UserToken](../README.md#UserToken)
+[OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -2295,6 +2348,10 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.twitter.com");
     
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
+
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
     String id = "id_example"; // String | The ID of the List to add a member
@@ -2370,7 +2427,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[UserToken](../README.md#UserToken)
+[OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -2524,6 +2581,10 @@ public class Example {
     HttpBearerAuth BearerToken = (HttpBearerAuth) defaultClient.getAuthentication("BearerToken");
     BearerToken.setBearerToken("BEARER TOKEN");
 
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
+
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
     String id = "id_example"; // String | The ID of the List for which to return followers
@@ -2607,7 +2668,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerToken](../README.md#BearerToken), [UserToken](../README.md#UserToken)
+[BearerToken](../README.md#BearerToken), [OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -2646,6 +2707,10 @@ public class Example {
     // Configure HTTP bearer authorization: BearerToken
     HttpBearerAuth BearerToken = (HttpBearerAuth) defaultClient.getAuthentication("BearerToken");
     BearerToken.setBearerToken("BEARER TOKEN");
+
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
 
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
@@ -2730,7 +2795,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerToken](../README.md#BearerToken), [UserToken](../README.md#UserToken)
+[BearerToken](../README.md#BearerToken), [OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -2766,6 +2831,10 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.twitter.com");
     
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
+
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
     ListCreateRequest listCreateRequest = new ListCreateRequest(); // ListCreateRequest | 
@@ -2839,7 +2908,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[UserToken](../README.md#UserToken)
+[OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -2875,6 +2944,10 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.twitter.com");
     
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
+
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
     String id = "id_example"; // String | The ID of the List to delete
@@ -2948,7 +3021,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[UserToken](../README.md#UserToken)
+[OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -2987,6 +3060,10 @@ public class Example {
     // Configure HTTP bearer authorization: BearerToken
     HttpBearerAuth BearerToken = (HttpBearerAuth) defaultClient.getAuthentication("BearerToken");
     BearerToken.setBearerToken("BEARER TOKEN");
+
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
 
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
@@ -3067,7 +3144,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerToken](../README.md#BearerToken), [UserToken](../README.md#UserToken)
+[BearerToken](../README.md#BearerToken), [OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -3103,6 +3180,10 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.twitter.com");
     
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
+
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
     String id = "id_example"; // String | The ID of the List to modify
@@ -3178,7 +3259,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[UserToken](../README.md#UserToken)
+[OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -3214,6 +3295,10 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.twitter.com");
     
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
+
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
     String id = "id_example"; // String | The ID of the List to remove a member
@@ -3289,7 +3374,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[UserToken](../README.md#UserToken)
+[OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -3325,6 +3410,10 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.twitter.com");
     
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
+
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
     String id = "id_example"; // String | The ID of the authenticated source user that will follow the List
@@ -3400,7 +3489,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[UserToken](../README.md#UserToken)
+[OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -3439,6 +3528,10 @@ public class Example {
     // Configure HTTP bearer authorization: BearerToken
     HttpBearerAuth BearerToken = (HttpBearerAuth) defaultClient.getAuthentication("BearerToken");
     BearerToken.setBearerToken("BEARER TOKEN");
+
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
 
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
@@ -3523,7 +3616,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerToken](../README.md#BearerToken), [UserToken](../README.md#UserToken)
+[BearerToken](../README.md#BearerToken), [OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -3559,6 +3652,10 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.twitter.com");
     
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
+
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
     String id = "id_example"; // String | The ID of the authenticated source user that will pin the List
@@ -3634,7 +3731,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[UserToken](../README.md#UserToken)
+[OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -3670,6 +3767,10 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.twitter.com");
     
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
+
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
     String id = "id_example"; // String | The ID of the user for whom to return results
@@ -3749,7 +3850,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[UserToken](../README.md#UserToken)
+[OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -3785,6 +3886,10 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.twitter.com");
     
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
+
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
     String id = "id_example"; // String | The ID of the authenticated source user that will unfollow the List
@@ -3860,7 +3965,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[UserToken](../README.md#UserToken)
+[OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -3896,6 +4001,10 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.twitter.com");
     
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
+
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
     String id = "id_example"; // String | The ID of the authenticated source user that will remove the pinned List
@@ -3971,7 +4080,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[UserToken](../README.md#UserToken)
+[OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -4010,6 +4119,10 @@ public class Example {
     // Configure HTTP bearer authorization: BearerToken
     HttpBearerAuth BearerToken = (HttpBearerAuth) defaultClient.getAuthentication("BearerToken");
     BearerToken.setBearerToken("BEARER TOKEN");
+
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
 
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
@@ -4100,7 +4213,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerToken](../README.md#BearerToken), [UserToken](../README.md#UserToken)
+[BearerToken](../README.md#BearerToken), [OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -4264,6 +4377,9 @@ public class Example {
     HttpBearerAuth BearerToken = (HttpBearerAuth) defaultClient.getAuthentication("BearerToken");
     BearerToken.setBearerToken("BEARER TOKEN");
 
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
     String query = "crypto"; // String | The search query
@@ -4345,7 +4461,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerToken](../README.md#BearerToken), [UserToken](../README.md#UserToken)
+[BearerToken](../README.md#BearerToken), [OAuth2UserToken](../README.md#OAuth2UserToken)
 
 ### HTTP request headers
 
@@ -4509,6 +4625,10 @@ public class Example {
     HttpBearerAuth BearerToken = (HttpBearerAuth) defaultClient.getAuthentication("BearerToken");
     BearerToken.setBearerToken("BEARER TOKEN");
 
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
+
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
     String id = "1YqKDqWqdPLsV"; // String | The space id from which tweets will be retrieved
@@ -4584,7 +4704,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerToken](../README.md#BearerToken), [UserToken](../README.md#UserToken)
+[BearerToken](../README.md#BearerToken), [OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -4624,6 +4744,9 @@ public class Example {
     HttpBearerAuth BearerToken = (HttpBearerAuth) defaultClient.getAuthentication("BearerToken");
     BearerToken.setBearerToken("BEARER TOKEN");
 
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
     String id = "1YqKDqWqdPLsV"; // String | The space id from which tweets will be retrieved
@@ -4701,7 +4824,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerToken](../README.md#BearerToken), [UserToken](../README.md#UserToken)
+[BearerToken](../README.md#BearerToken), [OAuth2UserToken](../README.md#OAuth2UserToken)
 
 ### HTTP request headers
 
@@ -4740,7 +4863,6 @@ public class Example {
     // Configure HTTP bearer authorization: BearerToken
     HttpBearerAuth BearerToken = (HttpBearerAuth) defaultClient.getAuthentication("BearerToken");
     BearerToken.setBearerToken("BEARER TOKEN");
-
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
     String query = "(from:TwitterDev OR from:TwitterAPI) has:media -is:retweet"; // String | One query/rule/filter for matching Tweets. Up to 2048 characters.
@@ -4826,7 +4948,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerToken](../README.md#BearerToken), [UserToken](../README.md#UserToken)
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -4865,7 +4987,6 @@ public class Example {
     // Configure HTTP bearer authorization: BearerToken
     HttpBearerAuth BearerToken = (HttpBearerAuth) defaultClient.getAuthentication("BearerToken");
     BearerToken.setBearerToken("BEARER TOKEN");
-
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
     String query = "(from:TwitterDev OR from:TwitterAPI) has:media -is:retweet"; // String | One query/rule/filter for matching Tweets. Up to 2048 characters.
@@ -4951,7 +5072,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerToken](../README.md#BearerToken), [UserToken](../README.md#UserToken)
+[BearerToken](../README.md#BearerToken)
 
 ### HTTP request headers
 
@@ -5127,10 +5248,14 @@ public class Example {
     HttpBearerAuth BearerToken = (HttpBearerAuth) defaultClient.getAuthentication("BearerToken");
     BearerToken.setBearerToken("BEARER TOKEN");
 
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
+
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
     String id = "id_example"; // String | The ID of the Tweet for which to return results
-    Integer maxResults = 56; // Integer | The maximum number of results
+    Integer maxResults = 100; // Integer | The maximum number of results
     String paginationToken = "paginationToken_example"; // String | This parameter is used to get the next 'page' of results.
     try {
       GenericMultipleUsersLookupResponse result = apiInstance.tweetsIdLikingUsers(id, maxResults, paginationToken);
@@ -5195,7 +5320,7 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| The ID of the Tweet for which to return results |
- **maxResults** | **Integer**| The maximum number of results | [optional]
+ **maxResults** | **Integer**| The maximum number of results | [optional] [default to 100]
  **paginationToken** | **String**| This parameter is used to get the next &#39;page&#39; of results. | [optional]
 
 ### Return type
@@ -5204,7 +5329,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerToken](../README.md#BearerToken), [UserToken](../README.md#UserToken)
+[BearerToken](../README.md#BearerToken), [OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -5244,10 +5369,14 @@ public class Example {
     HttpBearerAuth BearerToken = (HttpBearerAuth) defaultClient.getAuthentication("BearerToken");
     BearerToken.setBearerToken("BEARER TOKEN");
 
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
+
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
     String id = "id_example"; // String | The ID of the Tweet for which to return results
-    Integer maxResults = 56; // Integer | The maximum number of results
+    Integer maxResults = 100; // Integer | The maximum number of results
     String paginationToken = "paginationToken_example"; // String | This parameter is used to get the next 'page' of results.
     try {
       GenericMultipleUsersLookupResponse result = apiInstance.tweetsIdRetweetingUsers(id, maxResults, paginationToken);
@@ -5312,7 +5441,7 @@ public class Example {
 Name | Type | Description  | Notes
 ------------- | ------------- | ------------- | -------------
  **id** | **String**| The ID of the Tweet for which to return results |
- **maxResults** | **Integer**| The maximum number of results | [optional]
+ **maxResults** | **Integer**| The maximum number of results | [optional] [default to 100]
  **paginationToken** | **String**| This parameter is used to get the next &#39;page&#39; of results. | [optional]
 
 ### Return type
@@ -5321,7 +5450,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerToken](../README.md#BearerToken), [UserToken](../README.md#UserToken)
+[BearerToken](../README.md#BearerToken), [OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -5360,6 +5489,10 @@ public class Example {
     // Configure HTTP bearer authorization: BearerToken
     HttpBearerAuth BearerToken = (HttpBearerAuth) defaultClient.getAuthentication("BearerToken");
     BearerToken.setBearerToken("BEARER TOKEN");
+
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
 
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
@@ -5458,7 +5591,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerToken](../README.md#BearerToken), [UserToken](../README.md#UserToken)
+[BearerToken](../README.md#BearerToken), [OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -5497,6 +5630,10 @@ public class Example {
     // Configure HTTP bearer authorization: BearerToken
     HttpBearerAuth BearerToken = (HttpBearerAuth) defaultClient.getAuthentication("BearerToken");
     BearerToken.setBearerToken("BEARER TOKEN");
+
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
 
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
@@ -5581,7 +5718,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerToken](../README.md#BearerToken), [UserToken](../README.md#UserToken)
+[BearerToken](../README.md#BearerToken), [OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -6127,6 +6264,10 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.twitter.com");
     
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
+
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
     String id = "id_example"; // String | The ID of the user that is requesting to block the target user
@@ -6202,7 +6343,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[UserToken](../README.md#UserToken)
+[OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -6238,6 +6379,10 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.twitter.com");
     
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
+
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
     String id = "id_example"; // String | The ID of the user for whom to return results
@@ -6315,7 +6460,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[UserToken](../README.md#UserToken)
+[OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -6351,6 +6496,10 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.twitter.com");
     
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
+
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
     String id = "id_example"; // String | The ID of the user that is requesting to follow the target user
@@ -6426,7 +6575,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[UserToken](../README.md#UserToken)
+[OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -6465,6 +6614,10 @@ public class Example {
     // Configure HTTP bearer authorization: BearerToken
     HttpBearerAuth BearerToken = (HttpBearerAuth) defaultClient.getAuthentication("BearerToken");
     BearerToken.setBearerToken("BEARER TOKEN");
+
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
 
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
@@ -6543,7 +6696,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerToken](../README.md#BearerToken), [UserToken](../README.md#UserToken)
+[BearerToken](../README.md#BearerToken), [OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -6582,6 +6735,10 @@ public class Example {
     // Configure HTTP bearer authorization: BearerToken
     HttpBearerAuth BearerToken = (HttpBearerAuth) defaultClient.getAuthentication("BearerToken");
     BearerToken.setBearerToken("BEARER TOKEN");
+
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
 
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
@@ -6660,7 +6817,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerToken](../README.md#BearerToken), [UserToken](../README.md#UserToken)
+[BearerToken](../README.md#BearerToken), [OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -6696,6 +6853,10 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.twitter.com");
     
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
+
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
     String id = "id_example"; // String | The ID of the user that is requesting to like the tweet
@@ -6771,7 +6932,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[UserToken](../README.md#UserToken)
+[OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -6810,6 +6971,10 @@ public class Example {
     // Configure HTTP bearer authorization: BearerToken
     HttpBearerAuth BearerToken = (HttpBearerAuth) defaultClient.getAuthentication("BearerToken");
     BearerToken.setBearerToken("BEARER TOKEN");
+
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
 
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
@@ -6900,7 +7065,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerToken](../README.md#BearerToken), [UserToken](../README.md#UserToken)
+[BearerToken](../README.md#BearerToken), [OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -6939,6 +7104,10 @@ public class Example {
     // Configure HTTP bearer authorization: BearerToken
     HttpBearerAuth BearerToken = (HttpBearerAuth) defaultClient.getAuthentication("BearerToken");
     BearerToken.setBearerToken("BEARER TOKEN");
+
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
 
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
@@ -7037,7 +7206,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerToken](../README.md#BearerToken), [UserToken](../README.md#UserToken)
+[BearerToken](../README.md#BearerToken), [OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -7073,6 +7242,10 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.twitter.com");
     
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
+
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
     String id = "id_example"; // String | The ID of the user that is requesting to mute the target user
@@ -7148,7 +7321,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[UserToken](../README.md#UserToken)
+[OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -7184,6 +7357,10 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.twitter.com");
     
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
+
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
     String id = "id_example"; // String | The ID of the user for whom to return results
@@ -7261,7 +7438,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[UserToken](../README.md#UserToken)
+[OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -7297,6 +7474,10 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.twitter.com");
     
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
+
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
     String id = "id_example"; // String | The ID of the user that is requesting to retweet the tweet
@@ -7372,7 +7553,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[UserToken](../README.md#UserToken)
+[OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -7411,6 +7592,10 @@ public class Example {
     // Configure HTTP bearer authorization: BearerToken
     HttpBearerAuth BearerToken = (HttpBearerAuth) defaultClient.getAuthentication("BearerToken");
     BearerToken.setBearerToken("BEARER TOKEN");
+
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
 
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
@@ -7511,7 +7696,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[BearerToken](../README.md#BearerToken), [UserToken](../README.md#UserToken)
+[BearerToken](../README.md#BearerToken), [OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -7547,6 +7732,10 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.twitter.com");
     
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
+
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
     String sourceUserId = "sourceUserId_example"; // String | The ID of the user that is requesting to unblock the target user
@@ -7622,7 +7811,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[UserToken](../README.md#UserToken)
+[OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -7658,6 +7847,10 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.twitter.com");
     
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
+
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
     String sourceUserId = "sourceUserId_example"; // String | The ID of the user that is requesting to unfollow the target user
@@ -7733,7 +7926,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[UserToken](../README.md#UserToken)
+[OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -7769,6 +7962,10 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.twitter.com");
     
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
+
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
     String id = "id_example"; // String | The ID of the user that is requesting to unlike the tweet
@@ -7844,7 +8041,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[UserToken](../README.md#UserToken)
+[OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -7880,6 +8077,10 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.twitter.com");
     
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
+
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
     String sourceUserId = "sourceUserId_example"; // String | The ID of the user that is requesting to unmute the target user
@@ -7955,7 +8156,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[UserToken](../README.md#UserToken)
+[OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 
@@ -7991,6 +8192,10 @@ public class Example {
     ApiClient defaultClient = Configuration.getDefaultApiClient();
     defaultClient.setBasePath("https://api.twitter.com");
     
+    // Configure OAuth2 access token for authorization: OAuth2UserToken
+    OAuth OAuth2UserToken = (OAuth) defaultClient.getAuthentication("OAuth2UserToken");
+    OAuth2UserToken.setAccessToken("YOUR ACCESS TOKEN");
+
 
     TwitterApi apiInstance = new TwitterApi(defaultClient);
     String id = "id_example"; // String | The ID of the user that is requesting to unretweet the tweet
@@ -8066,7 +8271,7 @@ Name | Type | Description  | Notes
 
 ### Authorization
 
-[UserToken](../README.md#UserToken)
+[OAuth2UserToken](../README.md#OAuth2UserToken), [UserToken](../README.md#UserToken)
 
 ### HTTP request headers
 

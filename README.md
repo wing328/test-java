@@ -224,6 +224,7 @@ Class | Method | HTTP request | Description
  - [DisallowedResourceProblem](docs/DisallowedResourceProblem.md)
  - [DisallowedResourceProblemAllOf](docs/DisallowedResourceProblemAllOf.md)
  - [DuplicateRuleProblem](docs/DuplicateRuleProblem.md)
+ - [DuplicateRuleProblemAllOf](docs/DuplicateRuleProblemAllOf.md)
  - [EntityIndicesInclusiveExclusive](docs/EntityIndicesInclusiveExclusive.md)
  - [EntityIndicesInclusiveInclusive](docs/EntityIndicesInclusiveInclusive.md)
  - [Error](docs/Error.md)
@@ -382,6 +383,29 @@ Authentication schemes defined for the API:
 ### BearerToken
 
 - **Type**: HTTP basic authentication
+
+### OAuth2UserToken
+
+- **Type**: OAuth
+- **Flow**: accessCode
+- **Authorization URL**: https://api.twitter.com/2/oauth2/authorize
+- **Scopes**: 
+  - tweet.read: Allows the app to view any Tweets the authenticated user can see, including Tweets from protected accounts.
+  - tweet.write: Allows the app to tweet and retweet for the authenticated user.
+  - users.read: Allows the app to view any account the authenticated user can see, including protected accounts.
+  - list.write: Allows the app to create and manage lists for the authenticated user.
+  - list.read: Allows the app to view any lists the authenticated user has created and lists they are a member of, including private lists.
+  - like.read: Allows the app to read Tweets that the authenticated user has liked.
+  - like.write: Allows the app to like and un-likes Tweets for the authenticated user.
+  - mute.read: Allows the app to read the users the authenticated user has muted.
+  - mute.write: Allows the app to mute and unmute users for the authenticated user.
+  - block.read: Allows the app to read the users the authenticated user has blocked.
+  - block.write: Allows the app to block and unblock users for the authenticated user.
+  - tweet.moderate.write: Allows the app to hide and unhide replies to the authenticated user&#39;s Tweets.
+  - follows.read: Allows the app to read the users who follow the authenticated user and users that they follow.
+  - follows.write: Allows the app to follow and unfollow users for the authenticated user.
+  - space.read: Allows the app to read the Spaces the authenticated user can see.
+  - offline.access: Allows the app to request a refresh token.
 
 ### UserToken
 

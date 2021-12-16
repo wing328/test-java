@@ -25,6 +25,7 @@ import io.swagger.annotations.ApiModelProperty;
 import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
+import org.openapitools.client.model.Problem;
 import org.openapitools.client.model.Rule;
 import org.openapitools.client.model.RulesResponseMetadata;
 
@@ -55,11 +56,15 @@ import org.openapitools.client.JSON;
 public class AddRulesResponse {
   public static final String SERIALIZED_NAME_DATA = "data";
   @SerializedName(SERIALIZED_NAME_DATA)
-  private List<Rule> data = new ArrayList<Rule>();
+  private List<Rule> data = null;
 
   public static final String SERIALIZED_NAME_META = "meta";
   @SerializedName(SERIALIZED_NAME_META)
   private RulesResponseMetadata meta;
+
+  public static final String SERIALIZED_NAME_ERRORS = "errors";
+  @SerializedName(SERIALIZED_NAME_ERRORS)
+  private List<Problem> errors = null;
 
   public AddRulesResponse() { 
   }
@@ -71,6 +76,9 @@ public class AddRulesResponse {
   }
 
   public AddRulesResponse addDataItem(Rule dataItem) {
+    if (this.data == null) {
+      this.data = new ArrayList<Rule>();
+    }
     this.data.add(dataItem);
     return this;
   }
@@ -79,8 +87,8 @@ public class AddRulesResponse {
    * All user-specified stream filtering rules that were created.
    * @return data
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "All user-specified stream filtering rules that were created.")
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "All user-specified stream filtering rules that were created.")
 
   public List<Rule> getData() {
     return data;
@@ -115,6 +123,37 @@ public class AddRulesResponse {
   }
 
 
+  public AddRulesResponse errors(List<Problem> errors) {
+    
+    this.errors = errors;
+    return this;
+  }
+
+  public AddRulesResponse addErrorsItem(Problem errorsItem) {
+    if (this.errors == null) {
+      this.errors = new ArrayList<Problem>();
+    }
+    this.errors.add(errorsItem);
+    return this;
+  }
+
+   /**
+   * Get errors
+   * @return errors
+  **/
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
+
+  public List<Problem> getErrors() {
+    return errors;
+  }
+
+
+  public void setErrors(List<Problem> errors) {
+    this.errors = errors;
+  }
+
+
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -125,12 +164,13 @@ public class AddRulesResponse {
     }
     AddRulesResponse addRulesResponse = (AddRulesResponse) o;
     return Objects.equals(this.data, addRulesResponse.data) &&
-        Objects.equals(this.meta, addRulesResponse.meta);
+        Objects.equals(this.meta, addRulesResponse.meta) &&
+        Objects.equals(this.errors, addRulesResponse.errors);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(data, meta);
+    return Objects.hash(data, meta, errors);
   }
 
   @Override
@@ -139,6 +179,7 @@ public class AddRulesResponse {
     sb.append("class AddRulesResponse {\n");
     sb.append("    data: ").append(toIndentedString(data)).append("\n");
     sb.append("    meta: ").append(toIndentedString(meta)).append("\n");
+    sb.append("    errors: ").append(toIndentedString(errors)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -163,10 +204,10 @@ public class AddRulesResponse {
     openapiFields = new HashSet<String>();
     openapiFields.add("data");
     openapiFields.add("meta");
+    openapiFields.add("errors");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
-    openapiRequiredFields.add("data");
     openapiRequiredFields.add("meta");
   }
 
@@ -208,6 +249,13 @@ public class AddRulesResponse {
       // validate the optional field `meta`
       if (jsonObj.getAsJsonObject("meta") != null) {
         RulesResponseMetadata.validateJsonObject(jsonObj.getAsJsonObject("meta"));
+      }
+      JsonArray jsonArrayerrors = jsonObj.getAsJsonArray("errors");
+      // validate the optional field `errors` (array)
+      if (jsonArrayerrors != null) {
+        for (int i = 0; i < jsonArrayerrors.size(); i++) {
+          Problem.validateJsonObject(jsonArrayerrors.get(i).getAsJsonObject());
+        };
       }
   }
 

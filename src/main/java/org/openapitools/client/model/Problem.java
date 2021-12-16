@@ -139,8 +139,8 @@ public class Problem {
    * Get detail
    * @return detail
   **/
-  @javax.annotation.Nonnull
-  @ApiModelProperty(required = true, value = "")
+  @javax.annotation.Nullable
+  @ApiModelProperty(value = "")
 
   public String getDetail() {
     return detail;
@@ -208,7 +208,6 @@ public class Problem {
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("type");
     openapiRequiredFields.add("title");
-    openapiRequiredFields.add("detail");
   }
 
  /**

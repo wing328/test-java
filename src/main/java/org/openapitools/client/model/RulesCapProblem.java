@@ -123,7 +123,6 @@ public class RulesCapProblem extends Problem {
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("type");
     openapiRequiredFields.add("title");
-    openapiRequiredFields.add("detail");
   }
 
  /**

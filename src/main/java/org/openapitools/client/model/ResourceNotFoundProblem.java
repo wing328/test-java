@@ -298,7 +298,6 @@ public class ResourceNotFoundProblem extends Problem {
     openapiRequiredFields.add("resource_type");
     openapiRequiredFields.add("type");
     openapiRequiredFields.add("title");
-    openapiRequiredFields.add("detail");
   }
 
  /**

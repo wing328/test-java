@@ -705,6 +705,7 @@ public class JSON {
             .registerTypeAdapterFactory(new org.openapitools.client.model.DisallowedResourceProblem.CustomTypeAdapterFactory())
             .registerTypeAdapterFactory(new org.openapitools.client.model.DisallowedResourceProblemAllOf.CustomTypeAdapterFactory())
             .registerTypeAdapterFactory(new org.openapitools.client.model.DuplicateRuleProblem.CustomTypeAdapterFactory())
+            .registerTypeAdapterFactory(new org.openapitools.client.model.DuplicateRuleProblemAllOf.CustomTypeAdapterFactory())
             .registerTypeAdapterFactory(new org.openapitools.client.model.EntityIndicesInclusiveExclusive.CustomTypeAdapterFactory())
             .registerTypeAdapterFactory(new org.openapitools.client.model.EntityIndicesInclusiveInclusive.CustomTypeAdapterFactory())
             .registerTypeAdapterFactory(new org.openapitools.client.model.Error.CustomTypeAdapterFactory())

@@ -312,7 +312,6 @@ public class DisallowedResourceProblem extends Problem {
     openapiRequiredFields.add("section");
     openapiRequiredFields.add("type");
     openapiRequiredFields.add("title");
-    openapiRequiredFields.add("detail");
   }
 
  /**

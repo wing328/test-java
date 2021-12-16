@@ -125,14 +125,6 @@ public class ClientForbiddenProblem extends Problem {
   @SerializedName(SERIALIZED_NAME_REGISTRATION_URL)
   private URI registrationUrl;
 
-  public static final String SERIALIZED_NAME_CLIENT_ID = "client_id";
-  @SerializedName(SERIALIZED_NAME_CLIENT_ID)
-  private String clientId;
-
-  public static final String SERIALIZED_NAME_REQUIRED_ENROLLMENT = "required_enrollment";
-  @SerializedName(SERIALIZED_NAME_REQUIRED_ENROLLMENT)
-  private String requiredEnrollment;
-
   public ClientForbiddenProblem() { 
     this.type = this.getClass().getSimpleName();
   }
@@ -183,52 +175,6 @@ public class ClientForbiddenProblem extends Problem {
   }
 
 
-  public ClientForbiddenProblem clientId(String clientId) {
-    
-    this.clientId = clientId;
-    return this;
-  }
-
-   /**
-   * Get clientId
-   * @return clientId
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getClientId() {
-    return clientId;
-  }
-
-
-  public void setClientId(String clientId) {
-    this.clientId = clientId;
-  }
-
-
-  public ClientForbiddenProblem requiredEnrollment(String requiredEnrollment) {
-    
-    this.requiredEnrollment = requiredEnrollment;
-    return this;
-  }
-
-   /**
-   * Get requiredEnrollment
-   * @return requiredEnrollment
-  **/
-  @javax.annotation.Nullable
-  @ApiModelProperty(value = "")
-
-  public String getRequiredEnrollment() {
-    return requiredEnrollment;
-  }
-
-
-  public void setRequiredEnrollment(String requiredEnrollment) {
-    this.requiredEnrollment = requiredEnrollment;
-  }
-
-
   @Override
   public boolean equals(Object o) {
     if (this == o) {
@@ -240,14 +186,12 @@ public class ClientForbiddenProblem extends Problem {
     ClientForbiddenProblem clientForbiddenProblem = (ClientForbiddenProblem) o;
     return Objects.equals(this.reason, clientForbiddenProblem.reason) &&
         Objects.equals(this.registrationUrl, clientForbiddenProblem.registrationUrl) &&
-        Objects.equals(this.clientId, clientForbiddenProblem.clientId) &&
-        Objects.equals(this.requiredEnrollment, clientForbiddenProblem.requiredEnrollment) &&
         super.equals(o);
   }
 
   @Override
   public int hashCode() {
-    return Objects.hash(reason, registrationUrl, clientId, requiredEnrollment, super.hashCode());
+    return Objects.hash(reason, registrationUrl, super.hashCode());
   }
 
   @Override
@@ -257,8 +201,6 @@ public class ClientForbiddenProblem extends Problem {
     sb.append("    ").append(toIndentedString(super.toString())).append("\n");
     sb.append("    reason: ").append(toIndentedString(reason)).append("\n");
     sb.append("    registrationUrl: ").append(toIndentedString(registrationUrl)).append("\n");
-    sb.append("    clientId: ").append(toIndentedString(clientId)).append("\n");
-    sb.append("    requiredEnrollment: ").append(toIndentedString(requiredEnrollment)).append("\n");
     sb.append("}");
     return sb.toString();
   }
@@ -286,14 +228,11 @@ public class ClientForbiddenProblem extends Problem {
     openapiFields.add("detail");
     openapiFields.add("reason");
     openapiFields.add("registration_url");
-    openapiFields.add("client_id");
-    openapiFields.add("required_enrollment");
 
     // a set of required properties/fields (JSON key names)
     openapiRequiredFields = new HashSet<String>();
     openapiRequiredFields.add("type");
     openapiRequiredFields.add("title");
-    openapiRequiredFields.add("detail");
   }
 
  /**

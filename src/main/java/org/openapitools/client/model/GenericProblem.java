@@ -156,7 +156,6 @@ public class GenericProblem extends Problem {
     openapiRequiredFields.add("status");
     openapiRequiredFields.add("type");
     openapiRequiredFields.add("title");
-    openapiRequiredFields.add("detail");
   }
 
  /**

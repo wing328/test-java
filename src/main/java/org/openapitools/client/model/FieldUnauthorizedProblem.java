@@ -312,7 +312,6 @@ public class FieldUnauthorizedProblem extends Problem {
     openapiRequiredFields.add("field");
     openapiRequiredFields.add("type");
     openapiRequiredFields.add("title");
-    openapiRequiredFields.add("detail");
   }
 
  /**
