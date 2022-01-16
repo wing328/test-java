@@ -8,6 +8,8 @@ The rule you have submitted is a duplicate.
 
 Name | Type | Description | Notes
 ------------ | ------------- | ------------- | -------------
+**value** | **String** |  |  [optional]
+**id** | **String** |  |  [optional]
 
 
 

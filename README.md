@@ -1,7 +1,7 @@
-# petstore-okhttp-gson-nextgen
+# openapi-java-client
 
 Twitter API v2
-- API version: latest
+- API version: 2.34
 
 Twitter API v2 available endpoints
 
@@ -39,8 +39,8 @@ Add this dependency to your project's POM:
 ```xml
 <dependency>
   <groupId>org.openapitools</groupId>
-  <artifactId>petstore-okhttp-gson-nextgen</artifactId>
-  <version>latest</version>
+  <artifactId>openapi-java-client</artifactId>
+  <version>2.34</version>
   <scope>compile</scope>
 </dependency>
 ```
@@ -51,12 +51,12 @@ Add this dependency to your project's build file:
 
 ```groovy
   repositories {
-    mavenCentral()     // Needed if the 'petstore-okhttp-gson-nextgen' jar has been published to maven central.
-    mavenLocal()       // Needed if the 'petstore-okhttp-gson-nextgen' jar has been published to the local maven repo.
+    mavenCentral()     // Needed if the 'openapi-java-client' jar has been published to maven central.
+    mavenLocal()       // Needed if the 'openapi-java-client' jar has been published to the local maven repo.
   }
 
   dependencies {
-     implementation "org.openapitools:petstore-okhttp-gson-nextgen:latest"
+     implementation "org.openapitools:openapi-java-client:2.34"
   }
 ```
 
@@ -70,7 +70,7 @@ mvn clean package
 
 Then manually install the following JARs:
 
-* `target/petstore-okhttp-gson-nextgen-latest.jar`
+* `target/openapi-java-client-2.34.jar`
 * `target/lib/*.jar`
 
 ## Getting Started
@@ -85,7 +85,7 @@ import org.openapitools.client.ApiException;
 import org.openapitools.client.Configuration;
 import org.openapitools.client.auth.*;
 import org.openapitools.client.models.*;
-import org.openapitools.client.api.TwitterApi;
+import org.openapitools.client.api.ComplianceApi;
 
 public class Example {
   public static void main(String[] args) {
@@ -96,14 +96,13 @@ public class Example {
     HttpBearerAuth BearerToken = (HttpBearerAuth) defaultClient.getAuthentication("BearerToken");
     BearerToken.setBearerToken("BEARER TOKEN");
 
-    TwitterApi apiInstance = new TwitterApi(defaultClient);
-    AddOrDeleteRulesRequest addOrDeleteRulesRequest = new AddOrDeleteRulesRequest(); // AddOrDeleteRulesRequest | 
-    Boolean dryRun = true; // Boolean | Dry Run can be used with both the add and delete action, with the expected result given, but without actually taking any action in the system (meaning the end state will always be as it was when the request was submitted). This is particularly useful to validate rule changes.
+    ComplianceApi apiInstance = new ComplianceApi(defaultClient);
+    InlineObject5 inlineObject5 = new InlineObject5(); // InlineObject5 | 
     try {
-      AddOrDeleteRulesResponse result = apiInstance.addOrDeleteRules(addOrDeleteRulesRequest, dryRun);
+      SingleComplianceJobResponse result = apiInstance.createBatchComplianceJob(inlineObject5);
       System.out.println(result);
     } catch (ApiException e) {
-      System.err.println("Exception when calling TwitterApi#addOrDeleteRules");
+      System.err.println("Exception when calling ComplianceApi#createBatchComplianceJob");
       System.err.println("Status code: " + e.getCode());
       System.err.println("Reason: " + e.getResponseBody());
       System.err.println("Response headers: " + e.getResponseHeaders());
@@ -120,74 +119,72 @@ All URIs are relative to *https://api.twitter.com*
 
 Class | Method | HTTP request | Description
 ------------ | ------------- | ------------- | -------------
-*TwitterApi* | [**addOrDeleteRules**](docs/TwitterApi.md#addOrDeleteRules) | **POST** /2/tweets/search/stream/rules | Add/Delete rules
-*TwitterApi* | [**createBatchComplianceJob**](docs/TwitterApi.md#createBatchComplianceJob) | **POST** /2/compliance/jobs | Create compliance job
-*TwitterApi* | [**createTweet**](docs/TwitterApi.md#createTweet) | **POST** /2/tweets | Creation of a Tweet
-*TwitterApi* | [**deleteTweetById**](docs/TwitterApi.md#deleteTweetById) | **DELETE** /2/tweets/{id} | Tweet delete by Tweet ID
-*TwitterApi* | [**findMyUser**](docs/TwitterApi.md#findMyUser) | **GET** /2/users/me | User lookup me
-*TwitterApi* | [**findSpaceById**](docs/TwitterApi.md#findSpaceById) | **GET** /2/spaces/{id} | Space lookup by Space ID
-*TwitterApi* | [**findSpacesByCreatorIds**](docs/TwitterApi.md#findSpacesByCreatorIds) | **GET** /2/spaces/by/creator_ids | Space lookup by their creators
-*TwitterApi* | [**findSpacesByIds**](docs/TwitterApi.md#findSpacesByIds) | **GET** /2/spaces | Space lookup up Space IDs
-*TwitterApi* | [**findTweetById**](docs/TwitterApi.md#findTweetById) | **GET** /2/tweets/{id} | Tweet lookup by Tweet ID
-*TwitterApi* | [**findTweetsById**](docs/TwitterApi.md#findTweetsById) | **GET** /2/tweets | Tweet lookup by Tweet IDs
-*TwitterApi* | [**findUserById**](docs/TwitterApi.md#findUserById) | **GET** /2/users/{id} | User lookup by ID
-*TwitterApi* | [**findUserByUsername**](docs/TwitterApi.md#findUserByUsername) | **GET** /2/users/by/username/{username} | User lookup by username
-*TwitterApi* | [**findUsersById**](docs/TwitterApi.md#findUsersById) | **GET** /2/users | User lookup by IDs
-*TwitterApi* | [**findUsersByUsername**](docs/TwitterApi.md#findUsersByUsername) | **GET** /2/users/by | User lookup by usernames
-*TwitterApi* | [**getBatchComplianceJob**](docs/TwitterApi.md#getBatchComplianceJob) | **GET** /2/compliance/jobs/{id} | Get compliance job
-*TwitterApi* | [**getOpenApiSpec**](docs/TwitterApi.md#getOpenApiSpec) | **GET** /2/openapi.json | Returns the open api spec document.
-*TwitterApi* | [**getRules**](docs/TwitterApi.md#getRules) | **GET** /2/tweets/search/stream/rules | Rules lookup
-*TwitterApi* | [**getUserListMemberships**](docs/TwitterApi.md#getUserListMemberships) | **GET** /2/users/{id}/list_memberships | Get a User&#39;s List Memberships
-*TwitterApi* | [**hideReplyById**](docs/TwitterApi.md#hideReplyById) | **PUT** /2/tweets/{id}/hidden | Hide replies
-*TwitterApi* | [**listAddMember**](docs/TwitterApi.md#listAddMember) | **POST** /2/lists/{id}/members | Add a List member
-*TwitterApi* | [**listBatchComplianceJobs**](docs/TwitterApi.md#listBatchComplianceJobs) | **GET** /2/compliance/jobs | List compliance jobs
-*TwitterApi* | [**listGetFollowers**](docs/TwitterApi.md#listGetFollowers) | **GET** /2/lists/{id}/followers | Returns user objects that follow a List by the provided List ID
-*TwitterApi* | [**listGetMembers**](docs/TwitterApi.md#listGetMembers) | **GET** /2/lists/{id}/members | Returns user objects that are members of a List by the provided List ID
-*TwitterApi* | [**listIdCreate**](docs/TwitterApi.md#listIdCreate) | **POST** /2/lists | Create List
-*TwitterApi* | [**listIdDelete**](docs/TwitterApi.md#listIdDelete) | **DELETE** /2/lists/{id} | Delete List
-*TwitterApi* | [**listIdGet**](docs/TwitterApi.md#listIdGet) | **GET** /2/lists/{id} | List lookup by List ID
-*TwitterApi* | [**listIdUpdate**](docs/TwitterApi.md#listIdUpdate) | **PUT** /2/lists/{id} | Update List
-*TwitterApi* | [**listRemoveMember**](docs/TwitterApi.md#listRemoveMember) | **DELETE** /2/lists/{id}/members/{user_id} | Remove a List member
-*TwitterApi* | [**listUserFollow**](docs/TwitterApi.md#listUserFollow) | **POST** /2/users/{id}/followed_lists | Follow a List
-*TwitterApi* | [**listUserOwnedLists**](docs/TwitterApi.md#listUserOwnedLists) | **GET** /2/users/{id}/owned_lists | Get a User&#39;s Owned Lists
-*TwitterApi* | [**listUserPin**](docs/TwitterApi.md#listUserPin) | **POST** /2/users/{id}/pinned_lists | Pin a List
-*TwitterApi* | [**listUserPinnedLists**](docs/TwitterApi.md#listUserPinnedLists) | **GET** /2/users/{id}/pinned_lists | Get a User&#39;s Pinned Lists
-*TwitterApi* | [**listUserUnfollow**](docs/TwitterApi.md#listUserUnfollow) | **DELETE** /2/users/{id}/followed_lists/{list_id} | Unfollow a List
-*TwitterApi* | [**listUserUnpin**](docs/TwitterApi.md#listUserUnpin) | **DELETE** /2/users/{id}/pinned_lists/{list_id} | Unpin a List
-*TwitterApi* | [**listsIdTweets**](docs/TwitterApi.md#listsIdTweets) | **GET** /2/lists/{id}/tweets | List Tweets timeline by List ID
-*TwitterApi* | [**sampleStream**](docs/TwitterApi.md#sampleStream) | **GET** /2/tweets/sample/stream | Sample stream
-*TwitterApi* | [**searchSpaces**](docs/TwitterApi.md#searchSpaces) | **GET** /2/spaces/search | Search for Spaces
-*TwitterApi* | [**searchStream**](docs/TwitterApi.md#searchStream) | **GET** /2/tweets/search/stream | Filtered stream
-*TwitterApi* | [**spaceBuyers**](docs/TwitterApi.md#spaceBuyers) | **GET** /2/spaces/{id}/buyers | Retrieve the list of users who purchased a ticket to the given space
-*TwitterApi* | [**spaceTweets**](docs/TwitterApi.md#spaceTweets) | **GET** /2/spaces/{id}/tweets | Retrieve tweets from a Space
-*TwitterApi* | [**tweetCountsFullArchiveSearch**](docs/TwitterApi.md#tweetCountsFullArchiveSearch) | **GET** /2/tweets/counts/all | Full archive search counts
-*TwitterApi* | [**tweetCountsRecentSearch**](docs/TwitterApi.md#tweetCountsRecentSearch) | **GET** /2/tweets/counts/recent | Recent search counts
-*TwitterApi* | [**tweetsFullarchiveSearch**](docs/TwitterApi.md#tweetsFullarchiveSearch) | **GET** /2/tweets/search/all | Full-archive search
-*TwitterApi* | [**tweetsIdLikingUsers**](docs/TwitterApi.md#tweetsIdLikingUsers) | **GET** /2/tweets/{id}/liking_users | Returns user objects that have liked the provided Tweet ID
-*TwitterApi* | [**tweetsIdRetweetingUsers**](docs/TwitterApi.md#tweetsIdRetweetingUsers) | **GET** /2/tweets/{id}/retweeted_by | Returns user objects that have retweeted the provided Tweet ID
-*TwitterApi* | [**tweetsRecentSearch**](docs/TwitterApi.md#tweetsRecentSearch) | **GET** /2/tweets/search/recent | Recent search
-*TwitterApi* | [**userFollowedLists**](docs/TwitterApi.md#userFollowedLists) | **GET** /2/users/{id}/followed_lists | Get User&#39;s Followed Lists
-*TwitterApi* | [**usernameFollowers**](docs/TwitterApi.md#usernameFollowers) | **GET** /2/users/by/username/{username}/followers | Returns user objects that follow the provided username
-*TwitterApi* | [**usernameFollowing**](docs/TwitterApi.md#usernameFollowing) | **GET** /2/users/by/username/{username}/following | Following by username
-*TwitterApi* | [**usersByUsernameMentions**](docs/TwitterApi.md#usersByUsernameMentions) | **GET** /2/users/by/username/{username}/mentions | User mention timeline by username
-*TwitterApi* | [**usersByUsernameTweets**](docs/TwitterApi.md#usersByUsernameTweets) | **GET** /2/users/by/username/{username}/tweets | User Tweets timeline by username
-*TwitterApi* | [**usersIdBlock**](docs/TwitterApi.md#usersIdBlock) | **POST** /2/users/{id}/blocking | Block User by User ID
-*TwitterApi* | [**usersIdBlocking**](docs/TwitterApi.md#usersIdBlocking) | **GET** /2/users/{id}/blocking | Returns user objects that are blocked by provided user ID
-*TwitterApi* | [**usersIdFollow**](docs/TwitterApi.md#usersIdFollow) | **POST** /2/users/{id}/following | Follow User
-*TwitterApi* | [**usersIdFollowers**](docs/TwitterApi.md#usersIdFollowers) | **GET** /2/users/{id}/followers | Returns user objects that follow the provided user ID
-*TwitterApi* | [**usersIdFollowing**](docs/TwitterApi.md#usersIdFollowing) | **GET** /2/users/{id}/following | Following by User ID
-*TwitterApi* | [**usersIdLike**](docs/TwitterApi.md#usersIdLike) | **POST** /2/users/{id}/likes | Causes the user (in the path) to like the specified tweet
-*TwitterApi* | [**usersIdLikedTweets**](docs/TwitterApi.md#usersIdLikedTweets) | **GET** /2/users/{id}/liked_tweets | Returns Tweet objects liked by the provided User ID
-*TwitterApi* | [**usersIdMentions**](docs/TwitterApi.md#usersIdMentions) | **GET** /2/users/{id}/mentions | User mention timeline by User ID
-*TwitterApi* | [**usersIdMute**](docs/TwitterApi.md#usersIdMute) | **POST** /2/users/{id}/muting | Mute User by User ID
-*TwitterApi* | [**usersIdMuting**](docs/TwitterApi.md#usersIdMuting) | **GET** /2/users/{id}/muting | Returns user objects that are muted by the provided user ID
-*TwitterApi* | [**usersIdRetweets**](docs/TwitterApi.md#usersIdRetweets) | **POST** /2/users/{id}/retweets | Causes the user (in the path) to retweet the specified tweet
-*TwitterApi* | [**usersIdTweets**](docs/TwitterApi.md#usersIdTweets) | **GET** /2/users/{id}/tweets | User Tweets timeline by User ID
-*TwitterApi* | [**usersIdUnblock**](docs/TwitterApi.md#usersIdUnblock) | **DELETE** /2/users/{source_user_id}/blocking/{target_user_id} | Unblock User by User ID
-*TwitterApi* | [**usersIdUnfollow**](docs/TwitterApi.md#usersIdUnfollow) | **DELETE** /2/users/{source_user_id}/following/{target_user_id} | Unfollow User
-*TwitterApi* | [**usersIdUnlike**](docs/TwitterApi.md#usersIdUnlike) | **DELETE** /2/users/{id}/likes/{tweet_id} | Causes the user (in the path) to unlike the specified tweet
-*TwitterApi* | [**usersIdUnmute**](docs/TwitterApi.md#usersIdUnmute) | **DELETE** /2/users/{source_user_id}/muting/{target_user_id} | Unmute User by User ID
-*TwitterApi* | [**usersIdUnretweets**](docs/TwitterApi.md#usersIdUnretweets) | **DELETE** /2/users/{id}/retweets/{source_tweet_id} | Causes the user (in the path) to unretweet the specified tweet
+*ComplianceApi* | [**createBatchComplianceJob**](docs/ComplianceApi.md#createBatchComplianceJob) | **POST** /2/compliance/jobs | Create compliance job
+*ComplianceApi* | [**getBatchComplianceJob**](docs/ComplianceApi.md#getBatchComplianceJob) | **GET** /2/compliance/jobs/{id} | Get compliance job
+*ComplianceApi* | [**listBatchComplianceJobs**](docs/ComplianceApi.md#listBatchComplianceJobs) | **GET** /2/compliance/jobs | List compliance jobs
+*GeneralApi* | [**getOpenApiSpec**](docs/GeneralApi.md#getOpenApiSpec) | **GET** /2/openapi.json | Returns the open api spec document.
+*ListsApi* | [**getUserListMemberships**](docs/ListsApi.md#getUserListMemberships) | **GET** /2/users/{id}/list_memberships | Get a User&#39;s List Memberships
+*ListsApi* | [**listAddMember**](docs/ListsApi.md#listAddMember) | **POST** /2/lists/{id}/members | Add a List member
+*ListsApi* | [**listIdCreate**](docs/ListsApi.md#listIdCreate) | **POST** /2/lists | Create List
+*ListsApi* | [**listIdDelete**](docs/ListsApi.md#listIdDelete) | **DELETE** /2/lists/{id} | Delete List
+*ListsApi* | [**listIdGet**](docs/ListsApi.md#listIdGet) | **GET** /2/lists/{id} | List lookup by List ID
+*ListsApi* | [**listIdUpdate**](docs/ListsApi.md#listIdUpdate) | **PUT** /2/lists/{id} | Update List
+*ListsApi* | [**listRemoveMember**](docs/ListsApi.md#listRemoveMember) | **DELETE** /2/lists/{id}/members/{user_id} | Remove a List member
+*ListsApi* | [**listUserFollow**](docs/ListsApi.md#listUserFollow) | **POST** /2/users/{id}/followed_lists | Follow a List
+*ListsApi* | [**listUserOwnedLists**](docs/ListsApi.md#listUserOwnedLists) | **GET** /2/users/{id}/owned_lists | Get a User&#39;s Owned Lists
+*ListsApi* | [**listUserPin**](docs/ListsApi.md#listUserPin) | **POST** /2/users/{id}/pinned_lists | Pin a List
+*ListsApi* | [**listUserPinnedLists**](docs/ListsApi.md#listUserPinnedLists) | **GET** /2/users/{id}/pinned_lists | Get a User&#39;s Pinned Lists
+*ListsApi* | [**listUserUnfollow**](docs/ListsApi.md#listUserUnfollow) | **DELETE** /2/users/{id}/followed_lists/{list_id} | Unfollow a List
+*ListsApi* | [**listUserUnpin**](docs/ListsApi.md#listUserUnpin) | **DELETE** /2/users/{id}/pinned_lists/{list_id} | Unpin a List
+*ListsApi* | [**userFollowedLists**](docs/ListsApi.md#userFollowedLists) | **GET** /2/users/{id}/followed_lists | Get User&#39;s Followed Lists
+*SpacesApi* | [**findSpaceById**](docs/SpacesApi.md#findSpaceById) | **GET** /2/spaces/{id} | Space lookup by Space ID
+*SpacesApi* | [**findSpacesByCreatorIds**](docs/SpacesApi.md#findSpacesByCreatorIds) | **GET** /2/spaces/by/creator_ids | Space lookup by their creators
+*SpacesApi* | [**findSpacesByIds**](docs/SpacesApi.md#findSpacesByIds) | **GET** /2/spaces | Space lookup up Space IDs
+*SpacesApi* | [**searchSpaces**](docs/SpacesApi.md#searchSpaces) | **GET** /2/spaces/search | Search for Spaces
+*SpacesApi* | [**spaceBuyers**](docs/SpacesApi.md#spaceBuyers) | **GET** /2/spaces/{id}/buyers | Retrieve the list of users who purchased a ticket to the given space
+*SpacesApi* | [**spaceTweets**](docs/SpacesApi.md#spaceTweets) | **GET** /2/spaces/{id}/tweets | Retrieve tweets from a Space
+*TweetsApi* | [**addOrDeleteRules**](docs/TweetsApi.md#addOrDeleteRules) | **POST** /2/tweets/search/stream/rules | Add/Delete rules
+*TweetsApi* | [**createTweet**](docs/TweetsApi.md#createTweet) | **POST** /2/tweets | Creation of a Tweet
+*TweetsApi* | [**deleteTweetById**](docs/TweetsApi.md#deleteTweetById) | **DELETE** /2/tweets/{id} | Tweet delete by Tweet ID
+*TweetsApi* | [**findTweetById**](docs/TweetsApi.md#findTweetById) | **GET** /2/tweets/{id} | Tweet lookup by Tweet ID
+*TweetsApi* | [**findTweetsById**](docs/TweetsApi.md#findTweetsById) | **GET** /2/tweets | Tweet lookup by Tweet IDs
+*TweetsApi* | [**getRules**](docs/TweetsApi.md#getRules) | **GET** /2/tweets/search/stream/rules | Rules lookup
+*TweetsApi* | [**hideReplyById**](docs/TweetsApi.md#hideReplyById) | **PUT** /2/tweets/{id}/hidden | Hide replies
+*TweetsApi* | [**listsIdTweets**](docs/TweetsApi.md#listsIdTweets) | **GET** /2/lists/{id}/tweets | List Tweets timeline by List ID
+*TweetsApi* | [**sampleStream**](docs/TweetsApi.md#sampleStream) | **GET** /2/tweets/sample/stream | Sample stream
+*TweetsApi* | [**searchStream**](docs/TweetsApi.md#searchStream) | **GET** /2/tweets/search/stream | Filtered stream
+*TweetsApi* | [**spaceBuyers**](docs/TweetsApi.md#spaceBuyers) | **GET** /2/spaces/{id}/buyers | Retrieve the list of users who purchased a ticket to the given space
+*TweetsApi* | [**spaceTweets**](docs/TweetsApi.md#spaceTweets) | **GET** /2/spaces/{id}/tweets | Retrieve tweets from a Space
+*TweetsApi* | [**tweetCountsFullArchiveSearch**](docs/TweetsApi.md#tweetCountsFullArchiveSearch) | **GET** /2/tweets/counts/all | Full archive search counts
+*TweetsApi* | [**tweetCountsRecentSearch**](docs/TweetsApi.md#tweetCountsRecentSearch) | **GET** /2/tweets/counts/recent | Recent search counts
+*TweetsApi* | [**tweetsFullarchiveSearch**](docs/TweetsApi.md#tweetsFullarchiveSearch) | **GET** /2/tweets/search/all | Full-archive search
+*TweetsApi* | [**tweetsRecentSearch**](docs/TweetsApi.md#tweetsRecentSearch) | **GET** /2/tweets/search/recent | Recent search
+*TweetsApi* | [**usersIdLike**](docs/TweetsApi.md#usersIdLike) | **POST** /2/users/{id}/likes | Causes the user (in the path) to like the specified tweet
+*TweetsApi* | [**usersIdLikedTweets**](docs/TweetsApi.md#usersIdLikedTweets) | **GET** /2/users/{id}/liked_tweets | Returns Tweet objects liked by the provided User ID
+*TweetsApi* | [**usersIdMentions**](docs/TweetsApi.md#usersIdMentions) | **GET** /2/users/{id}/mentions | User mention timeline by User ID
+*TweetsApi* | [**usersIdRetweets**](docs/TweetsApi.md#usersIdRetweets) | **POST** /2/users/{id}/retweets | Causes the user (in the path) to retweet the specified tweet
+*TweetsApi* | [**usersIdTweets**](docs/TweetsApi.md#usersIdTweets) | **GET** /2/users/{id}/tweets | User Tweets timeline by User ID
+*TweetsApi* | [**usersIdUnlike**](docs/TweetsApi.md#usersIdUnlike) | **DELETE** /2/users/{id}/likes/{tweet_id} | Causes the user (in the path) to unlike the specified tweet
+*TweetsApi* | [**usersIdUnretweets**](docs/TweetsApi.md#usersIdUnretweets) | **DELETE** /2/users/{id}/retweets/{source_tweet_id} | Causes the user (in the path) to unretweet the specified tweet
+*UsersApi* | [**findMyUser**](docs/UsersApi.md#findMyUser) | **GET** /2/users/me | User lookup me
+*UsersApi* | [**findUserById**](docs/UsersApi.md#findUserById) | **GET** /2/users/{id} | User lookup by ID
+*UsersApi* | [**findUserByUsername**](docs/UsersApi.md#findUserByUsername) | **GET** /2/users/by/username/{username} | User lookup by username
+*UsersApi* | [**findUsersById**](docs/UsersApi.md#findUsersById) | **GET** /2/users | User lookup by IDs
+*UsersApi* | [**findUsersByUsername**](docs/UsersApi.md#findUsersByUsername) | **GET** /2/users/by | User lookup by usernames
+*UsersApi* | [**listGetFollowers**](docs/UsersApi.md#listGetFollowers) | **GET** /2/lists/{id}/followers | Returns user objects that follow a List by the provided List ID
+*UsersApi* | [**listGetMembers**](docs/UsersApi.md#listGetMembers) | **GET** /2/lists/{id}/members | Returns user objects that are members of a List by the provided List ID
+*UsersApi* | [**tweetsIdLikingUsers**](docs/UsersApi.md#tweetsIdLikingUsers) | **GET** /2/tweets/{id}/liking_users | Returns user objects that have liked the provided Tweet ID
+*UsersApi* | [**tweetsIdRetweetingUsers**](docs/UsersApi.md#tweetsIdRetweetingUsers) | **GET** /2/tweets/{id}/retweeted_by | Returns user objects that have retweeted the provided Tweet ID
+*UsersApi* | [**usersIdBlock**](docs/UsersApi.md#usersIdBlock) | **POST** /2/users/{id}/blocking | Block User by User ID
+*UsersApi* | [**usersIdBlocking**](docs/UsersApi.md#usersIdBlocking) | **GET** /2/users/{id}/blocking | Returns user objects that are blocked by provided user ID
+*UsersApi* | [**usersIdFollow**](docs/UsersApi.md#usersIdFollow) | **POST** /2/users/{id}/following | Follow User
+*UsersApi* | [**usersIdFollowers**](docs/UsersApi.md#usersIdFollowers) | **GET** /2/users/{id}/followers | Returns user objects that follow the provided user ID
+*UsersApi* | [**usersIdFollowing**](docs/UsersApi.md#usersIdFollowing) | **GET** /2/users/{id}/following | Following by User ID
+*UsersApi* | [**usersIdMute**](docs/UsersApi.md#usersIdMute) | **POST** /2/users/{id}/muting | Mute User by User ID
+*UsersApi* | [**usersIdMuting**](docs/UsersApi.md#usersIdMuting) | **GET** /2/users/{id}/muting | Returns user objects that are muted by the provided user ID
+*UsersApi* | [**usersIdUnblock**](docs/UsersApi.md#usersIdUnblock) | **DELETE** /2/users/{source_user_id}/blocking/{target_user_id} | Unblock User by User ID
+*UsersApi* | [**usersIdUnfollow**](docs/UsersApi.md#usersIdUnfollow) | **DELETE** /2/users/{source_user_id}/following/{target_user_id} | Unfollow User
+*UsersApi* | [**usersIdUnmute**](docs/UsersApi.md#usersIdUnmute) | **DELETE** /2/users/{source_user_id}/muting/{target_user_id} | Unmute User by User ID
 
 
 ## Documentation for Models
@@ -212,18 +209,13 @@ Class | Method | HTTP request | Description
  - [ContextAnnotation](docs/ContextAnnotation.md)
  - [ContextAnnotationDomainFields](docs/ContextAnnotationDomainFields.md)
  - [ContextAnnotationEntityFields](docs/ContextAnnotationEntityFields.md)
- - [CreateBatchComplianceJobRequest](docs/CreateBatchComplianceJobRequest.md)
- - [CreateTweetRequest](docs/CreateTweetRequest.md)
- - [CreateTweetRequestGeo](docs/CreateTweetRequestGeo.md)
- - [CreateTweetRequestMedia](docs/CreateTweetRequestMedia.md)
- - [CreateTweetRequestPoll](docs/CreateTweetRequestPoll.md)
- - [CreateTweetRequestReply](docs/CreateTweetRequestReply.md)
  - [DeleteRulesRequest](docs/DeleteRulesRequest.md)
  - [DeleteRulesRequestDelete](docs/DeleteRulesRequestDelete.md)
  - [DeleteRulesResponse](docs/DeleteRulesResponse.md)
  - [DisallowedResourceProblem](docs/DisallowedResourceProblem.md)
  - [DisallowedResourceProblemAllOf](docs/DisallowedResourceProblemAllOf.md)
  - [DuplicateRuleProblem](docs/DuplicateRuleProblem.md)
+ - [DuplicateRuleProblemAllOf](docs/DuplicateRuleProblemAllOf.md)
  - [EntityIndicesInclusiveExclusive](docs/EntityIndicesInclusiveExclusive.md)
  - [EntityIndicesInclusiveInclusive](docs/EntityIndicesInclusiveInclusive.md)
  - [Error](docs/Error.md)
@@ -241,13 +233,19 @@ Class | Method | HTTP request | Description
  - [GenericTweetsTimelineResponse](docs/GenericTweetsTimelineResponse.md)
  - [GenericTweetsTimelineResponseMeta](docs/GenericTweetsTimelineResponseMeta.md)
  - [Geo](docs/Geo.md)
- - [GetRulesResponse](docs/GetRulesResponse.md)
  - [Granularity](docs/Granularity.md)
  - [HashtagEntity](docs/HashtagEntity.md)
  - [HashtagFields](docs/HashtagFields.md)
- - [HideReplyByIdRequest](docs/HideReplyByIdRequest.md)
- - [HideReplyByIdResponse](docs/HideReplyByIdResponse.md)
- - [HideReplyByIdResponseData](docs/HideReplyByIdResponseData.md)
+ - [InlineObject](docs/InlineObject.md)
+ - [InlineObject1](docs/InlineObject1.md)
+ - [InlineObject2](docs/InlineObject2.md)
+ - [InlineObject3](docs/InlineObject3.md)
+ - [InlineObject4](docs/InlineObject4.md)
+ - [InlineObject5](docs/InlineObject5.md)
+ - [InlineResponse200](docs/InlineResponse200.md)
+ - [InlineResponse2001](docs/InlineResponse2001.md)
+ - [InlineResponse2002](docs/InlineResponse2002.md)
+ - [InlineResponse2002Meta](docs/InlineResponse2002Meta.md)
  - [InvalidRequestProblem](docs/InvalidRequestProblem.md)
  - [InvalidRequestProblemAllOf](docs/InvalidRequestProblemAllOf.md)
  - [InvalidRequestProblemAllOfErrors](docs/InvalidRequestProblemAllOfErrors.md)
@@ -270,10 +268,13 @@ Class | Method | HTTP request | Description
  - [ListUpdateRequest](docs/ListUpdateRequest.md)
  - [ListUpdateResponse](docs/ListUpdateResponse.md)
  - [ListUpdateResponseData](docs/ListUpdateResponseData.md)
- - [ListsIdTweetsResponse](docs/ListsIdTweetsResponse.md)
  - [Media](docs/Media.md)
  - [MentionEntity](docs/MentionEntity.md)
  - [MentionFields](docs/MentionFields.md)
+ - [Model2TweetsGeo](docs/Model2TweetsGeo.md)
+ - [Model2TweetsMedia](docs/Model2TweetsMedia.md)
+ - [Model2TweetsPoll](docs/Model2TweetsPoll.md)
+ - [Model2TweetsReply](docs/Model2TweetsReply.md)
  - [ModelList](docs/ModelList.md)
  - [MultiComplianceJobResponse](docs/MultiComplianceJobResponse.md)
  - [MultiListNoPaginationResponse](docs/MultiListNoPaginationResponse.md)
@@ -353,11 +354,6 @@ Class | Method | HTTP request | Description
  - [UsersFollowingCreateResponseData](docs/UsersFollowingCreateResponseData.md)
  - [UsersFollowingDeleteResponse](docs/UsersFollowingDeleteResponse.md)
  - [UsersFollowingLookupResponse](docs/UsersFollowingLookupResponse.md)
- - [UsersIdBlockRequest](docs/UsersIdBlockRequest.md)
- - [UsersIdFollowRequest](docs/UsersIdFollowRequest.md)
- - [UsersIdLikedTweetsResponse](docs/UsersIdLikedTweetsResponse.md)
- - [UsersIdLikedTweetsResponseMeta](docs/UsersIdLikedTweetsResponseMeta.md)
- - [UsersIdMuteRequest](docs/UsersIdMuteRequest.md)
  - [UsersLikesCreateRequest](docs/UsersLikesCreateRequest.md)
  - [UsersLikesCreateResponse](docs/UsersLikesCreateResponse.md)
  - [UsersLikesCreateResponseData](docs/UsersLikesCreateResponseData.md)
@@ -382,6 +378,29 @@ Authentication schemes defined for the API:
 ### BearerToken
 
 - **Type**: HTTP basic authentication
+
+### OAuth2UserToken
+
+- **Type**: OAuth
+- **Flow**: accessCode
+- **Authorization URL**: https://api.twitter.com/2/oauth2/authorize
+- **Scopes**: 
+  - tweet.read: Allows the app to view any Tweets the authenticated user can see, including Tweets from protected accounts.
+  - tweet.write: Allows the app to tweet and retweet for the authenticated user.
+  - users.read: Allows the app to view any account the authenticated user can see, including protected accounts.
+  - list.write: Allows the app to create and manage lists for the authenticated user.
+  - list.read: Allows the app to view any lists the authenticated user has created and lists they are a member of, including private lists.
+  - like.read: Allows the app to read Tweets that the authenticated user has liked.
+  - like.write: Allows the app to like and un-likes Tweets for the authenticated user.
+  - mute.read: Allows the app to read the users the authenticated user has muted.
+  - mute.write: Allows the app to mute and unmute users for the authenticated user.
+  - block.read: Allows the app to read the users the authenticated user has blocked.
+  - block.write: Allows the app to block and unblock users for the authenticated user.
+  - tweet.moderate.write: Allows the app to hide and unhide replies to the authenticated user&#39;s Tweets.
+  - follows.read: Allows the app to read the users who follow the authenticated user and users that they follow.
+  - follows.write: Allows the app to follow and unfollow users for the authenticated user.
+  - space.read: Allows the app to read the Spaces the authenticated user can see.
+  - offline.access: Allows the app to request a refresh token.
 
 ### UserToken
 

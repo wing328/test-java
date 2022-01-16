@@ -9,7 +9,7 @@ info:
     url: https://developer.twitter.com/en/developer-terms/agreement-and-policy.html
   termsOfService: https://developer.twitter.com/en/developer-terms/agreement-and-policy.html
   title: Twitter API v2
-  version: latest
+  version: "2.34"
 servers:
 - description: Twitter API
   url: https://api.twitter.com
@@ -174,10 +174,13 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - tweet.read
+        - users.read
       summary: User lookup by IDs
       tags:
-      - Twitter
+      - Users
       x-accepts: application/json
   /2/users/{id}:
     get:
@@ -303,10 +306,13 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - tweet.read
+        - users.read
       summary: User lookup by ID
       tags:
-      - Twitter
+      - Users
       x-accepts: application/json
   /2/users/by:
     get:
@@ -437,10 +443,13 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - tweet.read
+        - users.read
       summary: User lookup by usernames
       tags:
-      - Twitter
+      - Users
       x-accepts: application/json
   /2/users/me:
     get:
@@ -556,9 +565,12 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - tweet.read
+        - users.read
       summary: User lookup me
       tags:
-      - Twitter
+      - Users
       x-accepts: application/json
   /2/users/by/username/{username}:
     get:
@@ -684,10 +696,13 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - tweet.read
+        - users.read
       summary: User lookup by username
       tags:
-      - Twitter
+      - Users
       x-accepts: application/json
   /2/users/{id}/blocking:
     get:
@@ -742,9 +757,13 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - tweet.read
+        - users.read
+        - block.read
       summary: Returns user objects that are blocked by provided user ID
       tags:
-      - Twitter
+      - Users
       x-accepts: application/json
     post:
       description: Causes the user (in the path) to block the target user. The user
@@ -760,20 +779,16 @@ paths:
           $ref: '#/components/schemas/UserID'
         style: simple
       requestBody:
-        $ref: '#/components/requestBodies/UsersIdBlockRequest'
+        $ref: '#/components/requestBodies/inline_object'
         content:
           application/json:
             schema:
-              example:
-                target_user_id: target_user_id
               properties:
                 target_user_id:
                   pattern: ^[0-9]{1,19}$
-                  title: UsersIdBlockRequestTargetUserId
                   type: string
               required:
               - target_user_id
-              title: UsersIdBlockRequest
               type: object
       responses:
         "200":
@@ -793,9 +808,13 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - tweet.read
+        - users.read
+        - block.write
       summary: Block User by User ID
       tags:
-      - Twitter
+      - Users
       x-contentType: application/json
       x-accepts: application/json
   /2/users/{source_user_id}/blocking/{target_user_id}:
@@ -838,9 +857,13 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - tweet.read
+        - users.read
+        - block.write
       summary: Unblock User by User ID
       tags:
-      - Twitter
+      - Users
       x-accepts: application/json
   /2/users/{source_user_id}/muting/{target_user_id}:
     delete:
@@ -882,9 +905,13 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - tweet.read
+        - users.read
+        - mute.write
       summary: Unmute User by User ID
       tags:
-      - Twitter
+      - Users
       x-accepts: application/json
   /2/users/{id}/muting:
     get:
@@ -938,9 +965,13 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - tweet.read
+        - users.read
+        - mute.read
       summary: Returns user objects that are muted by the provided user ID
       tags:
-      - Twitter
+      - Users
       x-accepts: application/json
     post:
       description: Causes the user (in the path) to mute the target user. The user
@@ -956,20 +987,16 @@ paths:
           $ref: '#/components/schemas/UserID'
         style: simple
       requestBody:
-        $ref: '#/components/requestBodies/UsersIdMuteRequest'
+        $ref: '#/components/requestBodies/inline_object_1'
         content:
           application/json:
             schema:
-              example:
-                target_user_id: target_user_id
               properties:
                 target_user_id:
                   pattern: ^[0-9]{1,19}$
-                  title: UsersIdMuteRequestTargetUserId
                   type: string
               required:
               - target_user_id
-              title: UsersIdMuteRequest
               type: object
       responses:
         "200":
@@ -989,9 +1016,13 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - tweet.read
+        - users.read
+        - mute.write
       summary: Mute User by User ID
       tags:
-      - Twitter
+      - Users
       x-contentType: application/json
       x-accepts: application/json
   /2/users/{id}/followers:
@@ -1047,68 +1078,14 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - follows.read
       summary: Returns user objects that follow the provided user ID
       tags:
-      - Twitter
-      x-accepts: application/json
-  /2/users/by/username/{username}/followers:
-    get:
-      description: Returns a list of users that follow the provided username
-      operationId: usernameFollowers
-      parameters:
-      - description: The username of the user for whom to return results
-        explode: false
-        in: path
-        name: username
-        required: true
-        schema:
-          $ref: '#/components/schemas/UserName'
-        style: simple
-      - description: The maximum number of results
-        explode: true
-        in: query
-        name: max_results
-        required: false
-        schema:
-          format: int32
-          maximum: 1000
-          minimum: 1
-          type: integer
-        style: form
-      - description: This value is populated by passing the 'next_token' or 'previous_token'
-          returned in a request to paginate through results.
-        explode: true
-        in: query
-        name: pagination_token
-        required: false
-        schema:
-          maxLength: 16
-          minLength: 16
-          type: string
-        style: form
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/GenericMultipleUsersLookupResponse'
-          description: The request was successful
-        default:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/Problem'
-          description: The request has failed.
-      security:
-      - BearerToken: []
-        UserToken: []
-      summary: Returns user objects that follow the provided username
-      tags:
-      - Twitter
+      - Users
       x-accepts: application/json
   /2/users/{id}/following:
     get:
@@ -1164,10 +1141,14 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - follows.read
       summary: Following by User ID
       tags:
-      - Twitter
+      - Users
       x-accepts: application/json
     post:
       description: Causes the user(in the path) to follow, or “request to follow”
@@ -1184,20 +1165,16 @@ paths:
           $ref: '#/components/schemas/UserID'
         style: simple
       requestBody:
-        $ref: '#/components/requestBodies/UsersIdFollowRequest'
+        $ref: '#/components/requestBodies/inline_object_2'
         content:
           application/json:
             schema:
-              example:
-                target_user_id: target_user_id
               properties:
                 target_user_id:
                   pattern: ^[0-9]{1,19}$
-                  title: UsersIdFollowRequestTargetUserId
                   type: string
               required:
               - target_user_id
-              title: UsersIdFollowRequest
               type: object
       responses:
         "200":
@@ -1217,68 +1194,14 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - follows.write
       summary: Follow User
       tags:
-      - Twitter
+      - Users
       x-contentType: application/json
-      x-accepts: application/json
-  /2/users/by/username/{username}/following:
-    get:
-      description: Returns a list of users that being followed by the provided username
-      operationId: usernameFollowing
-      parameters:
-      - description: The username of the user for whom to return results
-        explode: false
-        in: path
-        name: username
-        required: true
-        schema:
-          $ref: '#/components/schemas/UserName'
-        style: simple
-      - description: The maximum number of results
-        explode: true
-        in: query
-        name: max_results
-        required: false
-        schema:
-          format: int32
-          maximum: 1000
-          minimum: 1
-          type: integer
-        style: form
-      - description: This value is populated by passing the 'next_token' or 'previous_token'
-          returned in a request to paginate through results.
-        explode: true
-        in: query
-        name: pagination_token
-        required: false
-        schema:
-          maxLength: 16
-          minLength: 16
-          type: string
-        style: form
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/UsersFollowingLookupResponse'
-          description: The request was successful
-        default:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/Problem'
-          description: The request has failed.
-      security:
-      - BearerToken: []
-        UserToken: []
-      summary: Following by username
-      tags:
-      - Twitter
       x-accepts: application/json
   /2/users/{source_user_id}/following/{target_user_id}:
     delete:
@@ -1321,9 +1244,13 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - follows.write
       summary: Unfollow User
       tags:
-      - Twitter
+      - Users
       x-accepts: application/json
   /2/users/{id}/followed_lists:
     get:
@@ -1456,10 +1383,14 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - list.read
       summary: Get User's Followed Lists
       tags:
-      - Twitter
+      - Lists
       x-accepts: application/json
     post:
       description: Causes a user to follow a List.
@@ -1497,9 +1428,13 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - list.write
       summary: Follow a List
       tags:
-      - Twitter
+      - Lists
       x-contentType: application/json
       x-accepts: application/json
   /2/users/{id}/followed_lists/{list_id}:
@@ -1542,9 +1477,13 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - list.write
       summary: Unfollow a List
       tags:
-      - Twitter
+      - Lists
       x-accepts: application/json
   /2/users/{id}/list_memberships:
     get:
@@ -1677,10 +1616,14 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - list.read
       summary: Get a User's List Memberships
       tags:
-      - Twitter
+      - Lists
       x-accepts: application/json
   /2/users/{id}/owned_lists:
     get:
@@ -1813,10 +1756,14 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - list.read
       summary: Get a User's Owned Lists
       tags:
-      - Twitter
+      - Lists
       x-accepts: application/json
   /2/users/{id}/pinned_lists:
     get:
@@ -1928,9 +1875,13 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - list.read
       summary: Get a User's Pinned Lists
       tags:
-      - Twitter
+      - Lists
       x-accepts: application/json
     post:
       description: Causes a user to pin a List.
@@ -1967,9 +1918,13 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - list.write
       summary: Pin a List
       tags:
-      - Twitter
+      - Lists
       x-contentType: application/json
       x-accepts: application/json
   /2/users/{id}/pinned_lists/{list_id}:
@@ -2012,9 +1967,13 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - list.write
       summary: Unpin a List
       tags:
-      - Twitter
+      - Lists
       x-accepts: application/json
   /2/tweets:
     get:
@@ -2248,46 +2207,23 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - tweet.read
+        - users.read
       summary: Tweet lookup by Tweet IDs
       tags:
-      - Twitter
+      - Tweets
       x-accepts: application/json
     post:
       description: Causes the user to create a tweet under the authorized account.
       operationId: createTweet
       parameters: []
       requestBody:
-        $ref: '#/components/requestBodies/CreateTweetRequest'
+        $ref: '#/components/requestBodies/inline_object_3'
         content:
           application/json:
             schema:
-              example:
-                geo:
-                  place_id: place_id
-                quote_tweet_id: "1346889436626259968"
-                for_super_followers_only: true
-                direct_message_deep_link: direct_message_deep_link
-                text: Learn how to use the user Tweet timeline and user mention timeline
-                  endpoints in the Twitter API v2 to explore Tweet\u2026 https:\/\/t.co\/56a0vZUx7i
-                media:
-                  media_ids:
-                  - "1146654567674912769"
-                  - "1146654567674912769"
-                  tagged_user_ids:
-                  - "2244994945"
-                  - "2244994945"
-                poll:
-                  duration_minutes: 811
-                  options:
-                  - null
-                  - null
-                reply:
-                  exclude_reply_user_ids:
-                  - "2244994945"
-                  - "2244994945"
-                  in_reply_to_tweet_id: "1346889436626259968"
-                reply_settings: following
               properties:
                 text:
                   description: The content of the Tweet.
@@ -2298,7 +2234,6 @@ paths:
                 direct_message_deep_link:
                   description: Link to take the conversation from the public timeline
                     to a private Direct Message.
-                  title: CreateTweetRequestDirectMessageDeepLink
                   type: string
                 quote_tweet_id:
                   description: Unique identifier of this Tweet. This is returned as
@@ -2309,24 +2244,21 @@ paths:
                   type: string
                 for_super_followers_only:
                   description: Exclusive Tweet for super followers.
-                  title: CreateTweetRequestForSuperFollowersOnly
                   type: boolean
                 reply:
-                  $ref: '#/components/schemas/CreateTweetRequestReply'
+                  $ref: '#/components/schemas/_2_tweets_reply'
                 media:
-                  $ref: '#/components/schemas/CreateTweetRequestMedia'
+                  $ref: '#/components/schemas/_2_tweets_media'
                 poll:
-                  $ref: '#/components/schemas/CreateTweetRequestPoll'
+                  $ref: '#/components/schemas/_2_tweets_poll'
                 reply_settings:
                   description: Settings to indicate who can reply to the Tweet.
                   enum:
                   - following
                   - mentionedUsers
-                  title: CreateTweetRequestReplySettings
                   type: string
                 geo:
-                  $ref: '#/components/schemas/CreateTweetRequestGeo'
-              title: CreateTweetRequest
+                  $ref: '#/components/schemas/_2_tweets_geo'
               type: object
       responses:
         "201":
@@ -2346,9 +2278,13 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - tweet.write
       summary: Creation of a Tweet
       tags:
-      - Twitter
+      - Tweets
       x-contentType: application/json
       x-accepts: application/json
   /2/tweets/{id}:
@@ -2382,9 +2318,13 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - tweet.write
       summary: Tweet delete by Tweet ID
       tags:
-      - Twitter
+      - Tweets
       x-accepts: application/json
     get:
       description: Returns a variety of information about the Tweet specified by the
@@ -2612,10 +2552,13 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - tweet.read
+        - users.read
       summary: Tweet lookup by Tweet ID
       tags:
-      - Twitter
+      - Tweets
       x-accepts: application/json
   /2/tweets/{id}/hidden:
     put:
@@ -2631,7 +2574,7 @@ paths:
           $ref: '#/components/schemas/TweetID'
         style: simple
       requestBody:
-        $ref: '#/components/requestBodies/HideReplyByIdRequest'
+        $ref: '#/components/requestBodies/inline_object_4'
         content:
           application/json:
             schema:
@@ -2639,16 +2582,14 @@ paths:
                 hidden: true
               properties:
                 hidden:
-                  title: HideReplyByIdRequestHidden
                   type: boolean
-              title: HideReplyByIdRequest
               type: object
       responses:
         "200":
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/HideReplyByIdResponse'
+                $ref: '#/components/schemas/inline_response_200'
           description: A successful response. The reply has been hidden or unhidden.
         default:
           content:
@@ -2661,9 +2602,13 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - tweet.moderate.write
       summary: Hide replies
       tags:
-      - Twitter
+      - Tweets
       x-contentType: application/json
       x-accepts: application/json
   /2/tweets/search/recent:
@@ -2958,10 +2903,13 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - tweet.read
+        - users.read
       summary: Recent search
       tags:
-      - Twitter
+      - Tweets
       x-accepts: application/json
   /2/tweets/search/all:
     get:
@@ -3257,7 +3205,7 @@ paths:
       - BearerToken: []
       summary: Full-archive search
       tags:
-      - Twitter
+      - Tweets
       x-accepts: application/json
   /2/tweets/search/stream:
     get:
@@ -3491,7 +3439,7 @@ paths:
       - BearerToken: []
       summary: Filtered stream
       tags:
-      - Twitter
+      - Tweets
       x-twitter-streaming: true
       x-accepts: application/json
   /2/tweets/search/stream/rules:
@@ -3538,7 +3486,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/GetRulesResponse'
+                $ref: '#/components/schemas/inline_response_200_1'
           description: The request was successful
         default:
           content:
@@ -3553,7 +3501,7 @@ paths:
       - BearerToken: []
       summary: Rules lookup
       tags:
-      - Twitter
+      - Tweets
       x-accepts: application/json
     post:
       description: Add or delete rules from a user's active rule set. Users can provide
@@ -3598,7 +3546,7 @@ paths:
       - BearerToken: []
       summary: Add/Delete rules
       tags:
-      - Twitter
+      - Tweets
       x-contentType: application/json
       x-accepts: application/json
   /2/tweets/sample/stream:
@@ -3833,7 +3781,7 @@ paths:
       - BearerToken: []
       summary: Sample stream
       tags:
-      - Twitter
+      - Tweets
       x-twitter-streaming: true
       x-accepts: application/json
   /2/openapi.json:
@@ -3846,12 +3794,11 @@ paths:
           content:
             application/json:
               schema:
-                title: GetOpenApiSpecResponse
                 type: object
           description: The request was successful
       summary: Returns the open api spec document.
       tags:
-      - Twitter
+      - General
       x-accepts: application/json
   /2/users/{id}/tweets:
     get:
@@ -4162,324 +4109,13 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - tweet.read
+        - users.read
       summary: User Tweets timeline by User ID
       tags:
-      - Twitter
-      x-accepts: application/json
-  /2/users/by/username/{username}/tweets:
-    get:
-      description: Returns a list of Tweets authored by the provided username
-      operationId: usersByUsernameTweets
-      parameters:
-      - description: The username of the User to list Tweets of
-        explode: false
-        in: path
-        name: username
-        required: true
-        schema:
-          $ref: '#/components/schemas/UserName'
-        style: simple
-      - description: The minimum Tweet ID to be included in the result set. This parameter
-          takes precedence over start_time if both are specified.
-        example: "791775337160081409"
-        explode: true
-        in: query
-        name: since_id
-        required: false
-        schema:
-          $ref: '#/components/schemas/TweetID'
-        style: form
-      - description: The maximum Tweet ID to be included in the result set. This parameter
-          takes precedence over end_time if both are specified.
-        example: "1346889436626259968"
-        explode: true
-        in: query
-        name: until_id
-        required: false
-        schema:
-          $ref: '#/components/schemas/TweetID'
-        style: form
-      - description: The maximum number of results
-        explode: true
-        in: query
-        name: max_results
-        required: false
-        schema:
-          format: int32
-          maximum: 100
-          minimum: 5
-          type: integer
-        style: form
-      - description: This parameter is used to get the next 'page' of results.
-        explode: true
-        in: query
-        name: pagination_token
-        required: false
-        schema:
-          minLength: 1
-          type: string
-        style: form
-      - description: YYYY-MM-DDTHH:mm:ssZ. The earliest UTC timestamp from which the
-          Tweets will be provided. The since_id parameter takes precedence if it is
-          also specified.
-        example: 2021-02-01T18:40:40.000Z
-        explode: true
-        in: query
-        name: start_time
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      - description: YYYY-MM-DDTHH:mm:ssZ. The latest UTC timestamp to which the Tweets
-          will be provided. The until_id parameter takes precedence if it is also
-          specified.
-        example: 2021-02-14T18:40:40.000Z
-        explode: true
-        in: query
-        name: end_time
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      - description: The set of entities to exclude (e.g. 'replies' or 'retweets')
-        explode: false
-        in: query
-        name: exclude
-        required: false
-        schema:
-          description: The set of entities to exclude (e.g. 'replies' or 'retweets')
-          example:
-          - replies
-          - retweets
-          items:
-            enum:
-            - replies
-            - retweets
-            type: string
-          minItems: 1
-          type: array
-          uniqueItems: true
-        style: form
-      - description: A comma separated list of fields to expand.
-        explode: false
-        in: query
-        name: expansions
-        required: false
-        schema:
-          description: The list of fields you can expand for a [Tweet](#Tweet) object.
-            If the field has an ID, it can be expanded into a full object.
-          example:
-          - author_id
-          - referenced_tweets.id
-          - in_reply_to_user_id
-          - geo.place_id
-          - attachments.media_keys
-          - attachments.poll_ids
-          - entities.mentions.username
-          - referenced_tweets.id.author_id
-          items:
-            enum:
-            - author_id
-            - referenced_tweets.id
-            - in_reply_to_user_id
-            - geo.place_id
-            - attachments.media_keys
-            - attachments.poll_ids
-            - entities.mentions.username
-            - referenced_tweets.id.author_id
-            type: string
-          minItems: 1
-          type: array
-          uniqueItems: true
-        style: form
-      - description: A comma separated list of Tweet fields to display.
-        explode: false
-        in: query
-        name: tweet.fields
-        required: false
-        schema:
-          description: The list of fields you can display for a [Tweet](#Tweet) object.
-          example:
-          - created_at
-          - author_id
-          - entities
-          - conversation_id
-          - reply_settings
-          - public_metrics
-          items:
-            enum:
-            - id
-            - created_at
-            - text
-            - author_id
-            - in_reply_to_user_id
-            - referenced_tweets
-            - attachments
-            - withheld
-            - geo
-            - entities
-            - public_metrics
-            - possibly_sensitive
-            - source
-            - lang
-            - context_annotations
-            - non_public_metrics
-            - promoted_metrics
-            - organic_metrics
-            - conversation_id
-            - reply_settings
-            type: string
-          minItems: 1
-          type: array
-          uniqueItems: true
-        style: form
-      - description: A comma separated list of User fields to display.
-        explode: false
-        in: query
-        name: user.fields
-        required: false
-        schema:
-          description: The list of fields you can display for a [User](#User) object.
-          example:
-          - username
-          - verified
-          - profile_image_url
-          items:
-            enum:
-            - id
-            - created_at
-            - name
-            - username
-            - protected
-            - verified
-            - withheld
-            - profile_image_url
-            - location
-            - url
-            - description
-            - entities
-            - pinned_tweet_id
-            - public_metrics
-            type: string
-          minItems: 1
-          type: array
-          uniqueItems: true
-        style: form
-      - description: A comma separated list of Media fields to display.
-        explode: false
-        in: query
-        name: media.fields
-        required: false
-        schema:
-          description: The list of fields you can display for a Media object.
-          example:
-          - media_key
-          - duration_ms
-          - height
-          - preview_image_url
-          - type
-          - url
-          - width
-          - public_metrics
-          items:
-            enum:
-            - media_key
-            - duration_ms
-            - height
-            - preview_image_url
-            - type
-            - url
-            - width
-            - public_metrics
-            - non_public_metrics
-            - organic_metrics
-            - promoted_metrics
-            - alt_text
-            type: string
-          minItems: 1
-          type: array
-          uniqueItems: true
-        style: form
-      - description: A comma separated list of Place fields to display.
-        explode: false
-        in: query
-        name: place.fields
-        required: false
-        schema:
-          description: The list of fields you can display for a Place object.
-          example:
-          - id
-          - name
-          - country_code
-          - place_type
-          - full_name
-          - country
-          - contained_within
-          - geo
-          items:
-            enum:
-            - id
-            - name
-            - country_code
-            - place_type
-            - full_name
-            - country
-            - contained_within
-            - geo
-            type: string
-          minItems: 1
-          type: array
-          uniqueItems: true
-        style: form
-      - description: A comma separated list of Poll fields to display.
-        explode: false
-        in: query
-        name: poll.fields
-        required: false
-        schema:
-          description: The list of fields you can display for a Poll object.
-          example:
-          - duration_minutes
-          - options
-          - voting_status
-          - end_datetime
-          items:
-            enum:
-            - id
-            - options
-            - voting_status
-            - end_datetime
-            - duration_minutes
-            type: string
-          minItems: 1
-          type: array
-          uniqueItems: true
-        style: form
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/GenericTweetsTimelineResponse'
-          description: The request was successful
-        default:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/Problem'
-          description: The request has failed.
-      security:
-      - BearerToken: []
-        UserToken: []
-      summary: User Tweets timeline by username
-      tags:
-      - Twitter
+      - Tweets
       x-accepts: application/json
   /2/users/{id}/mentions:
     get:
@@ -4772,305 +4408,13 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - tweet.read
+        - users.read
       summary: User mention timeline by User ID
       tags:
-      - Twitter
-      x-accepts: application/json
-  /2/users/by/username/{username}/mentions:
-    get:
-      description: Returns Tweet objects that mention the provided username
-      operationId: usersByUsernameMentions
-      parameters:
-      - description: The username of the User to list mentions of
-        explode: false
-        in: path
-        name: username
-        required: true
-        schema:
-          $ref: '#/components/schemas/UserName'
-        style: simple
-      - description: The minimum Tweet ID to be included in the result set. This parameter
-          takes precedence over start_time if both are specified.
-        example: "791775337160081409"
-        explode: true
-        in: query
-        name: since_id
-        required: false
-        schema:
-          $ref: '#/components/schemas/TweetID'
-        style: form
-      - description: The maximum Tweet ID to be included in the result set. This parameter
-          takes precedence over end_time if both are specified.
-        example: "1346889436626259968"
-        explode: true
-        in: query
-        name: until_id
-        required: false
-        schema:
-          $ref: '#/components/schemas/TweetID'
-        style: form
-      - description: The maximum number of results
-        explode: true
-        in: query
-        name: max_results
-        required: false
-        schema:
-          format: int32
-          maximum: 100
-          minimum: 5
-          type: integer
-        style: form
-      - description: This parameter is used to get the next 'page' of results.
-        explode: true
-        in: query
-        name: pagination_token
-        required: false
-        schema:
-          minLength: 1
-          type: string
-        style: form
-      - description: YYYY-MM-DDTHH:mm:ssZ. The earliest UTC timestamp from which the
-          Tweets will be provided. The since_id parameter takes precedence if it is
-          also specified.
-        example: 2021-02-01T18:40:40.000Z
-        explode: true
-        in: query
-        name: start_time
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      - description: YYYY-MM-DDTHH:mm:ssZ. The latest UTC timestamp to which the Tweets
-          will be provided. The until_id parameter takes precedence if it is also
-          specified.
-        example: 2021-02-14T18:40:40.000Z
-        explode: true
-        in: query
-        name: end_time
-        required: false
-        schema:
-          format: date-time
-          type: string
-        style: form
-      - description: A comma separated list of fields to expand.
-        explode: false
-        in: query
-        name: expansions
-        required: false
-        schema:
-          description: The list of fields you can expand for a [Tweet](#Tweet) object.
-            If the field has an ID, it can be expanded into a full object.
-          example:
-          - author_id
-          - referenced_tweets.id
-          - in_reply_to_user_id
-          - geo.place_id
-          - attachments.media_keys
-          - attachments.poll_ids
-          - entities.mentions.username
-          - referenced_tweets.id.author_id
-          items:
-            enum:
-            - author_id
-            - referenced_tweets.id
-            - in_reply_to_user_id
-            - geo.place_id
-            - attachments.media_keys
-            - attachments.poll_ids
-            - entities.mentions.username
-            - referenced_tweets.id.author_id
-            type: string
-          minItems: 1
-          type: array
-          uniqueItems: true
-        style: form
-      - description: A comma separated list of Tweet fields to display.
-        explode: false
-        in: query
-        name: tweet.fields
-        required: false
-        schema:
-          description: The list of fields you can display for a [Tweet](#Tweet) object.
-          example:
-          - created_at
-          - author_id
-          - entities
-          - conversation_id
-          - reply_settings
-          - public_metrics
-          items:
-            enum:
-            - id
-            - created_at
-            - text
-            - author_id
-            - in_reply_to_user_id
-            - referenced_tweets
-            - attachments
-            - withheld
-            - geo
-            - entities
-            - public_metrics
-            - possibly_sensitive
-            - source
-            - lang
-            - context_annotations
-            - non_public_metrics
-            - promoted_metrics
-            - organic_metrics
-            - conversation_id
-            - reply_settings
-            type: string
-          minItems: 1
-          type: array
-          uniqueItems: true
-        style: form
-      - description: A comma separated list of User fields to display.
-        explode: false
-        in: query
-        name: user.fields
-        required: false
-        schema:
-          description: The list of fields you can display for a [User](#User) object.
-          example:
-          - username
-          - verified
-          - profile_image_url
-          items:
-            enum:
-            - id
-            - created_at
-            - name
-            - username
-            - protected
-            - verified
-            - withheld
-            - profile_image_url
-            - location
-            - url
-            - description
-            - entities
-            - pinned_tweet_id
-            - public_metrics
-            type: string
-          minItems: 1
-          type: array
-          uniqueItems: true
-        style: form
-      - description: A comma separated list of Media fields to display.
-        explode: false
-        in: query
-        name: media.fields
-        required: false
-        schema:
-          description: The list of fields you can display for a Media object.
-          example:
-          - media_key
-          - duration_ms
-          - height
-          - preview_image_url
-          - type
-          - url
-          - width
-          - public_metrics
-          items:
-            enum:
-            - media_key
-            - duration_ms
-            - height
-            - preview_image_url
-            - type
-            - url
-            - width
-            - public_metrics
-            - non_public_metrics
-            - organic_metrics
-            - promoted_metrics
-            - alt_text
-            type: string
-          minItems: 1
-          type: array
-          uniqueItems: true
-        style: form
-      - description: A comma separated list of Place fields to display.
-        explode: false
-        in: query
-        name: place.fields
-        required: false
-        schema:
-          description: The list of fields you can display for a Place object.
-          example:
-          - id
-          - name
-          - country_code
-          - place_type
-          - full_name
-          - country
-          - contained_within
-          - geo
-          items:
-            enum:
-            - id
-            - name
-            - country_code
-            - place_type
-            - full_name
-            - country
-            - contained_within
-            - geo
-            type: string
-          minItems: 1
-          type: array
-          uniqueItems: true
-        style: form
-      - description: A comma separated list of Poll fields to display.
-        explode: false
-        in: query
-        name: poll.fields
-        required: false
-        schema:
-          description: The list of fields you can display for a Poll object.
-          example:
-          - duration_minutes
-          - options
-          - voting_status
-          - end_datetime
-          items:
-            enum:
-            - id
-            - options
-            - voting_status
-            - end_datetime
-            - duration_minutes
-            type: string
-          minItems: 1
-          type: array
-          uniqueItems: true
-        style: form
-      responses:
-        "200":
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/GenericTweetsTimelineResponse'
-          description: The request was successful
-        default:
-          content:
-            application/json:
-              schema:
-                $ref: '#/components/schemas/Error'
-            application/problem+json:
-              schema:
-                $ref: '#/components/schemas/Problem'
-          description: The request has failed.
-      security:
-      - BearerToken: []
-        UserToken: []
-      summary: User mention timeline by username
-      tags:
-      - Twitter
+      - Tweets
       x-accepts: application/json
   /2/users/{id}/likes:
     post:
@@ -5109,9 +4453,13 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - like.write
       summary: Causes the user (in the path) to like the specified tweet
       tags:
-      - Twitter
+      - Tweets
       x-contentType: application/json
       x-accepts: application/json
   /2/users/{id}/likes/{tweet_id}:
@@ -5154,9 +4502,13 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - like.write
       summary: Causes the user (in the path) to unlike the specified tweet
       tags:
-      - Twitter
+      - Tweets
       x-accepts: application/json
   /2/users/{id}/liked_tweets:
     get:
@@ -5391,7 +4743,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/UsersIdLikedTweetsResponse'
+                $ref: '#/components/schemas/inline_response_200_2'
           description: The request was successful
         default:
           content:
@@ -5404,10 +4756,14 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - like.read
       summary: Returns Tweet objects liked by the provided User ID
       tags:
-      - Twitter
+      - Tweets
       x-accepts: application/json
   /2/tweets/{id}/liking_users:
     get:
@@ -5422,26 +4778,6 @@ paths:
         schema:
           $ref: '#/components/schemas/TweetID'
         style: simple
-      - description: The maximum number of results
-        explode: true
-        in: query
-        name: max_results
-        required: false
-        schema:
-          format: int32
-          maximum: 100
-          minimum: 5
-          type: integer
-        style: form
-      - description: This parameter is used to get the next 'page' of results.
-        explode: true
-        in: query
-        name: pagination_token
-        required: false
-        schema:
-          minLength: 1
-          type: string
-        style: form
       responses:
         "200":
           content:
@@ -5460,10 +4796,14 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - like.read
       summary: Returns user objects that have liked the provided Tweet ID
       tags:
-      - Twitter
+      - Users
       x-accepts: application/json
   /2/tweets/{id}/retweeted_by:
     get:
@@ -5479,26 +4819,6 @@ paths:
         schema:
           $ref: '#/components/schemas/TweetID'
         style: simple
-      - description: The maximum number of results
-        explode: true
-        in: query
-        name: max_results
-        required: false
-        schema:
-          format: int32
-          maximum: 100
-          minimum: 5
-          type: integer
-        style: form
-      - description: This parameter is used to get the next 'page' of results.
-        explode: true
-        in: query
-        name: pagination_token
-        required: false
-        schema:
-          minLength: 1
-          type: string
-        style: form
       responses:
         "200":
           content:
@@ -5517,10 +4837,13 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - tweet.read
+        - users.read
       summary: Returns user objects that have retweeted the provided Tweet ID
       tags:
-      - Twitter
+      - Users
       x-accepts: application/json
   /2/users/{id}/retweets:
     post:
@@ -5559,9 +4882,13 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - tweet.write
       summary: Causes the user (in the path) to retweet the specified tweet
       tags:
-      - Twitter
+      - Tweets
       x-contentType: application/json
       x-accepts: application/json
   /2/users/{id}/retweets/{source_tweet_id}:
@@ -5604,9 +4931,13 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - tweet.write
       summary: Causes the user (in the path) to unretweet the specified tweet
       tags:
-      - Twitter
+      - Tweets
       x-accepts: application/json
   /2/tweets/counts/recent:
     get:
@@ -5701,10 +5032,9 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
       summary: Recent search counts
       tags:
-      - Twitter
+      - Tweets
       x-accepts: application/json
   /2/tweets/counts/all:
     get:
@@ -5799,10 +5129,9 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
       summary: Full archive search counts
       tags:
-      - Twitter
+      - Tweets
       x-accepts: application/json
   /2/compliance/jobs:
     get:
@@ -5846,28 +5175,24 @@ paths:
       - BearerToken: []
       summary: List compliance jobs
       tags:
-      - Twitter
+      - Compliance
       x-accepts: application/json
     post:
       description: Creates a compliance for the given job type
       operationId: createBatchComplianceJob
       parameters: []
       requestBody:
-        $ref: '#/components/requestBodies/CreateBatchComplianceJobRequest'
+        $ref: '#/components/requestBodies/inline_object_5'
         content:
           application/json:
             schema:
               description: A request to create a new batch compliance job.
-              example:
-                resumable: true
-                name: my-job
               properties:
                 type:
                   $ref: '#/components/schemas/ComplianceJobType'
                 resumable:
                   description: If true, this endpoint will return a pre-signed URL
                     with resumable uploads enabled
-                  title: CreateBatchComplianceJobRequestResumable
                   type: boolean
                 name:
                   description: User-provided name for a compliance job
@@ -5876,7 +5201,6 @@ paths:
                   type: string
               required:
               - type
-              title: CreateBatchComplianceJobRequest
               type: object
         required: true
       responses:
@@ -5899,7 +5223,7 @@ paths:
       - BearerToken: []
       summary: Create compliance job
       tags:
-      - Twitter
+      - Compliance
       x-contentType: application/json
       x-accepts: application/json
   /2/compliance/jobs/{id}:
@@ -5935,7 +5259,7 @@ paths:
       - BearerToken: []
       summary: Get compliance job
       tags:
-      - Twitter
+      - Compliance
       x-accepts: application/json
   /2/lists:
     post:
@@ -5965,9 +5289,14 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - list.write
+        - list.read
       summary: Create List
       tags:
-      - Twitter
+      - Lists
       x-contentType: application/json
       x-accepts: application/json
   /2/lists/{id}:
@@ -6001,9 +5330,13 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - list.write
       summary: Delete List
       tags:
-      - Twitter
+      - Lists
       x-accepts: application/json
     get:
       description: Returns a List
@@ -6114,10 +5447,14 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - list.read
       summary: List lookup by List ID
       tags:
-      - Twitter
+      - Lists
       x-accepts: application/json
     put:
       description: Update a List that you own.
@@ -6154,9 +5491,13 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - list.write
       summary: Update List
       tags:
-      - Twitter
+      - Lists
       x-contentType: application/json
       x-accepts: application/json
   /2/lists/{id}/followers:
@@ -6303,10 +5644,14 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - list.read
       summary: Returns user objects that follow a List by the provided List ID
       tags:
-      - Twitter
+      - Users
       x-accepts: application/json
   /2/lists/{id}/members:
     get:
@@ -6452,11 +5797,15 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - list.read
       summary: Returns user objects that are members of a List by the provided List
         ID
       tags:
-      - Twitter
+      - Users
       x-accepts: application/json
     post:
       description: Causes a user to become a member of a List.
@@ -6493,9 +5842,13 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - list.write
       summary: Add a List member
       tags:
-      - Twitter
+      - Lists
       x-contentType: application/json
       x-accepts: application/json
   /2/lists/{id}/members/{user_id}:
@@ -6537,9 +5890,13 @@ paths:
           description: The request has failed.
       security:
       - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - list.write
       summary: Remove a List member
       tags:
-      - Twitter
+      - Lists
       x-accepts: application/json
   /2/lists/{id}/tweets:
     get:
@@ -6775,7 +6132,7 @@ paths:
           content:
             application/json:
               schema:
-                $ref: '#/components/schemas/ListsIdTweetsResponse'
+                $ref: '#/components/schemas/inline_response_200_2'
           description: The request was successful
         default:
           content:
@@ -6788,10 +6145,14 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - list.read
       summary: List Tweets timeline by List ID
       tags:
-      - Twitter
+      - Tweets
       x-accepts: application/json
   /2/spaces/{id}:
     get:
@@ -6888,10 +6249,13 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - space.read
       summary: Space lookup by Space ID
       tags:
-      - Twitter
+      - Spaces
       x-accepts: application/json
   /2/spaces:
     get:
@@ -6991,10 +6355,13 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - space.read
       summary: Space lookup up Space IDs
       tags:
-      - Twitter
+      - Spaces
       x-accepts: application/json
   /2/spaces/by/creator_ids:
     get:
@@ -7094,10 +6461,13 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - space.read
       summary: Space lookup by their creators
       tags:
-      - Twitter
+      - Spaces
       x-accepts: application/json
   /2/spaces/search:
     get:
@@ -7220,10 +6590,13 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - space.read
       summary: Search for Spaces
       tags:
-      - Twitter
+      - Spaces
       x-accepts: application/json
   /2/spaces/{id}/tweets:
     get:
@@ -7307,10 +6680,14 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - space.read
       summary: Retrieve tweets from a Space
       tags:
-      - Twitter
+      - Spaces
+      - Tweets
       x-accepts: application/json
   /2/spaces/{id}/buyers:
     get:
@@ -7377,10 +6754,15 @@ paths:
           description: The request has failed.
       security:
       - BearerToken: []
-        UserToken: []
+      - UserToken: []
+      - OAuth2UserToken:
+        - users.read
+        - tweet.read
+        - space.read
       summary: Retrieve the list of users who purchased a ticket to the given space
       tags:
-      - Twitter
+      - Spaces
+      - Tweets
       x-accepts: application/json
 components:
   parameters:
@@ -7772,6 +7154,19 @@ components:
         minimum: 5
         type: integer
       style: form
+    DefaultMaxResultsRequestParameter:
+      description: The maximum number of results
+      explode: true
+      in: query
+      name: max_results
+      required: false
+      schema:
+        default: 100
+        format: int32
+        maximum: 100
+        minimum: 1
+        type: integer
+      style: form
     StartTimeRequestParameter:
       description: YYYY-MM-DDTHH:mm:ssZ. The earliest UTC timestamp from which the
         Tweets will be provided. The since_id parameter takes precedence if it is
@@ -7830,37 +7225,37 @@ components:
         type: integer
       style: form
   requestBodies:
-    HideReplyByIdRequest:
+    inline_object_1:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/HideReplyByIdRequest'
-    CreateBatchComplianceJobRequest:
+            $ref: '#/components/schemas/inline_object_1'
+    inline_object:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/CreateBatchComplianceJobRequest'
+            $ref: '#/components/schemas/inline_object'
+    inline_object_5:
+      content:
+        application/json:
+          schema:
+            $ref: '#/components/schemas/inline_object_5'
       required: true
-    UsersIdBlockRequest:
+    inline_object_4:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/UsersIdBlockRequest'
-    CreateTweetRequest:
+            $ref: '#/components/schemas/inline_object_4'
+    inline_object_3:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/CreateTweetRequest'
-    UsersIdMuteRequest:
+            $ref: '#/components/schemas/inline_object_3'
+    inline_object_2:
       content:
         application/json:
           schema:
-            $ref: '#/components/schemas/UsersIdMuteRequest'
-    UsersIdFollowRequest:
-      content:
-        application/json:
-          schema:
-            $ref: '#/components/schemas/UsersIdFollowRequest'
+            $ref: '#/components/schemas/inline_object_2'
   responses:
     HttpErrorResponse:
       content:
@@ -8113,30 +7508,6 @@ components:
         cashtags:
           items:
             $ref: '#/components/schemas/CashtagEntity'
-          minItems: 1
-          type: array
-        annotations:
-          items:
-            allOf:
-            - $ref: '#/components/schemas/EntityIndicesInclusiveInclusive'
-            - description: Represents the data for the annotation.
-              properties:
-                probability:
-                  description: Confidence factor for annotation type.
-                  format: double
-                  maximum: 1
-                  minimum: 0
-                  type: number
-                type:
-                  description: Annotation type.
-                  example: Person
-                  type: string
-                normalized_text:
-                  description: Text used to determine annotation.
-                  example: Barack Obama
-                  type: string
-              type: object
-            description: Annotation for entities based on the Tweet text.
           minItems: 1
           type: array
       type: object
@@ -9878,6 +9249,7 @@ components:
     DuplicateRuleProblem:
       allOf:
       - $ref: '#/components/schemas/Problem'
+      - $ref: '#/components/schemas/DuplicateRuleProblem_allOf'
       description: The rule you have submitted is a duplicate.
       type: object
     ConflictProblem:
@@ -9889,11 +9261,6 @@ components:
       allOf:
       - $ref: '#/components/schemas/Problem'
       description: A problem that indicates the user's rule set is not compliant.
-    ProblemOrError:
-      description: Problem or Error
-      oneOf:
-      - $ref: '#/components/schemas/Problem'
-      - $ref: '#/components/schemas/Error'
     Problem:
       description: An HTTP Problem Details object, as defined in IETF RFC 7807 (https://tools.ietf.org/html/rfc7807).
       discriminator:
@@ -9929,9 +9296,15 @@ components:
         detail:
           type: string
       required:
-      - detail
       - title
       - type
+      type: object
+    ProblemOrError:
+      description: Represents the response in case of throwing an exception. Mainly
+        for the openapi-generator
+      oneOf:
+      - $ref: '#/components/schemas/Error'
+      - $ref: '#/components/schemas/Problem'
       type: object
     TweetSearchResponse:
       example:
@@ -10150,24 +9523,12 @@ components:
       type: string
     RulesResponseMetadata:
       example:
-        next_token: next_token
         sent: sent
-        result_count: 0
       properties:
         sent:
           type: string
         summary:
           $ref: '#/components/schemas/RulesRequestSummary'
-        next_token:
-          description: This parameter is used to get the next 'page' of results. The
-            value used with the parameter is pulled directly from the response provided
-            by the API, and should not be modified.
-          minLength: 1
-          type: string
-        result_count:
-          description: Number of Rules in result set
-          format: int32
-          type: integer
       required:
       - sent
       type: object
@@ -10206,8 +9567,11 @@ components:
           type: array
         meta:
           $ref: '#/components/schemas/RulesResponseMetadata'
+        errors:
+          items:
+            $ref: '#/components/schemas/Problem'
+          type: array
       required:
-      - data
       - meta
       type: object
     DeleteRulesRequest:
@@ -10222,6 +9586,10 @@ components:
       properties:
         meta:
           $ref: '#/components/schemas/RulesResponseMetadata'
+        errors:
+          items:
+            $ref: '#/components/schemas/Problem'
+          type: array
       required:
       - meta
       type: object
@@ -11738,49 +11106,32 @@ components:
       maximum: 100
       minimum: 1
       type: integer
-    UsersIdBlockRequest:
-      example:
-        target_user_id: target_user_id
+    inline_object:
       properties:
         target_user_id:
           pattern: ^[0-9]{1,19}$
-          title: UsersIdBlockRequestTargetUserId
           type: string
       required:
       - target_user_id
-      title: UsersIdBlockRequest
       type: object
-    UsersIdMuteRequest:
-      example:
-        target_user_id: target_user_id
+    inline_object_1:
       properties:
         target_user_id:
           pattern: ^[0-9]{1,19}$
-          title: UsersIdMuteRequestTargetUserId
           type: string
       required:
       - target_user_id
-      title: UsersIdMuteRequest
       type: object
-    UsersIdFollowRequest:
-      example:
-        target_user_id: target_user_id
+    inline_object_2:
       properties:
         target_user_id:
           pattern: ^[0-9]{1,19}$
-          title: UsersIdFollowRequestTargetUserId
           type: string
       required:
       - target_user_id
-      title: UsersIdFollowRequest
       type: object
-    CreateTweetRequestReply:
+    _2_tweets_reply:
       description: Tweet information of the Tweet being replied to.
-      example:
-        exclude_reply_user_ids:
-        - "2244994945"
-        - "2244994945"
-        in_reply_to_tweet_id: "1346889436626259968"
       properties:
         in_reply_to_tweet_id:
           description: Unique identifier of this Tweet. This is returned as a string
@@ -11794,18 +11145,10 @@ components:
           items:
             $ref: '#/components/schemas/UserID'
           type: array
-      title: CreateTweetRequestReply
       type: object
-    CreateTweetRequestMedia:
+    _2_tweets_media:
       description: Media information being attached to created Tweet. This is mutually
         exclusive from Quote Tweet Id and Poll.
-      example:
-        media_ids:
-        - "1146654567674912769"
-        - "1146654567674912769"
-        tagged_user_ids:
-        - "2244994945"
-        - "2244994945"
       properties:
         media_ids:
           description: A list of Media Ids to be attached to a created Tweet.
@@ -11817,16 +11160,10 @@ components:
           items:
             $ref: '#/components/schemas/UserID'
           type: array
-      title: CreateTweetRequestMedia
       type: object
-    CreateTweetRequestPoll:
+    _2_tweets_poll:
       description: Poll options for a Tweet with a poll. This is mutually exclusive
         from Media and Quote Tweet Id.
-      example:
-        duration_minutes: 811
-        options:
-        - null
-        - null
       properties:
         options:
           items:
@@ -11838,44 +11175,14 @@ components:
           maximum: 10080
           minimum: 5
           type: integer
-      title: CreateTweetRequestPoll
       type: object
-    CreateTweetRequestGeo:
+    _2_tweets_geo:
       description: Place ID being attached to the Tweet for geo location.
-      example:
-        place_id: place_id
       properties:
         place_id:
           type: string
-      title: CreateTweetRequestGeo
       type: object
-    CreateTweetRequest:
-      example:
-        geo:
-          place_id: place_id
-        quote_tweet_id: "1346889436626259968"
-        for_super_followers_only: true
-        direct_message_deep_link: direct_message_deep_link
-        text: Learn how to use the user Tweet timeline and user mention timeline endpoints
-          in the Twitter API v2 to explore Tweet\u2026 https:\/\/t.co\/56a0vZUx7i
-        media:
-          media_ids:
-          - "1146654567674912769"
-          - "1146654567674912769"
-          tagged_user_ids:
-          - "2244994945"
-          - "2244994945"
-        poll:
-          duration_minutes: 811
-          options:
-          - null
-          - null
-        reply:
-          exclude_reply_user_ids:
-          - "2244994945"
-          - "2244994945"
-          in_reply_to_tweet_id: "1346889436626259968"
-        reply_settings: following
+    inline_object_3:
       properties:
         text:
           description: The content of the Tweet.
@@ -11885,7 +11192,6 @@ components:
         direct_message_deep_link:
           description: Link to take the conversation from the public timeline to a
             private Direct Message.
-          title: CreateTweetRequestDirectMessageDeepLink
           type: string
         quote_tweet_id:
           description: Unique identifier of this Tweet. This is returned as a string
@@ -11896,51 +11202,38 @@ components:
           type: string
         for_super_followers_only:
           description: Exclusive Tweet for super followers.
-          title: CreateTweetRequestForSuperFollowersOnly
           type: boolean
         reply:
-          $ref: '#/components/schemas/CreateTweetRequestReply'
+          $ref: '#/components/schemas/_2_tweets_reply'
         media:
-          $ref: '#/components/schemas/CreateTweetRequestMedia'
+          $ref: '#/components/schemas/_2_tweets_media'
         poll:
-          $ref: '#/components/schemas/CreateTweetRequestPoll'
+          $ref: '#/components/schemas/_2_tweets_poll'
         reply_settings:
           description: Settings to indicate who can reply to the Tweet.
           enum:
           - following
           - mentionedUsers
-          title: CreateTweetRequestReplySettings
           type: string
         geo:
-          $ref: '#/components/schemas/CreateTweetRequestGeo'
-      title: CreateTweetRequest
+          $ref: '#/components/schemas/_2_tweets_geo'
       type: object
-    HideReplyByIdRequest:
-      example:
-        hidden: true
-      properties:
-        hidden:
-          title: HideReplyByIdRequestHidden
-          type: boolean
-      title: HideReplyByIdRequest
-      type: object
-    HideReplyByIdResponse_data:
+    inline_object_4:
       example:
         hidden: true
       properties:
         hidden:
           type: boolean
       type: object
-    HideReplyByIdResponse:
+    inline_response_200:
       example:
         data:
           hidden: true
       properties:
         data:
-          $ref: '#/components/schemas/HideReplyByIdResponse_data'
-      title: HideReplyByIdResponse
+          $ref: '#/components/schemas/inline_object_4'
       type: object
-    GetRulesResponse:
+    inline_response_200_1:
       example:
         data:
         - tag: Non-retweeted coffee tweets
@@ -11950,9 +11243,7 @@ components:
           id: "120897978112909812"
           value: coffee -is:retweet
         meta:
-          next_token: next_token
           sent: sent
-          result_count: 0
       properties:
         data:
           items:
@@ -11963,9 +11254,8 @@ components:
       required:
       - data
       - meta
-      title: GetRulesResponse
       type: object
-    UsersIdLikedTweetsResponse_meta:
+    inline_response_200_2_meta:
       example:
         previous_token: previous_token
         next_token: next_token
@@ -11984,7 +11274,7 @@ components:
           format: int32
           type: integer
       type: object
-    UsersIdLikedTweetsResponse:
+    inline_response_200_2:
       example:
         data:
         - id: "1346889436626259968"
@@ -12134,21 +11424,16 @@ components:
           minItems: 1
           type: array
         meta:
-          $ref: '#/components/schemas/UsersIdLikedTweetsResponse_meta'
-      title: UsersIdLikedTweetsResponse
+          $ref: '#/components/schemas/inline_response_200_2_meta'
       type: object
-    CreateBatchComplianceJobRequest:
+    inline_object_5:
       description: A request to create a new batch compliance job.
-      example:
-        resumable: true
-        name: my-job
       properties:
         type:
           $ref: '#/components/schemas/ComplianceJobType'
         resumable:
           description: If true, this endpoint will return a pre-signed URL with resumable
             uploads enabled
-          title: CreateBatchComplianceJobRequestResumable
           type: boolean
         name:
           description: User-provided name for a compliance job
@@ -12157,160 +11442,6 @@ components:
           type: string
       required:
       - type
-      title: CreateBatchComplianceJobRequest
-      type: object
-    ListsIdTweetsResponse:
-      example:
-        data:
-        - id: "1346889436626259968"
-          created_at: Wed Jan 06 18:40:40 +0000 2021
-          text: Learn how to use the user Tweet timeline and user mention timeline
-            endpoints in the Twitter API v2 to explore Tweet\u2026 https:\/\/t.co\/56a0vZUx7i
-          author_id: "2244994945"
-        - id: "1346889436626259968"
-          created_at: Wed Jan 06 18:40:40 +0000 2021
-          text: Learn how to use the user Tweet timeline and user mention timeline
-            endpoints in the Twitter API v2 to explore Tweet\u2026 https:\/\/t.co\/56a0vZUx7i
-          author_id: "2244994945"
-        meta:
-          previous_token: previous_token
-          next_token: next_token
-          result_count: 0
-        includes:
-          places:
-          - geo:
-              bbox:
-              - -105.193475
-              - 39.60973
-              - -105.053164
-              - 39.761974
-              geometry:
-                coordinates:
-                - -105.18816086351444
-                - 40.247749999999996
-                type: Point
-              type: Feature
-              properties: '{}'
-            country_code: US
-            country: United States
-            contained_within:
-            - f7eb2fa2fea288b1
-            - f7eb2fa2fea288b1
-            full_name: Lakewood, CO
-            place_type: city
-            name: Lakewood
-            id: f7eb2fa2fea288b1
-          - geo:
-              bbox:
-              - -105.193475
-              - 39.60973
-              - -105.053164
-              - 39.761974
-              geometry:
-                coordinates:
-                - -105.18816086351444
-                - 40.247749999999996
-                type: Point
-              type: Feature
-              properties: '{}'
-            country_code: US
-            country: United States
-            contained_within:
-            - f7eb2fa2fea288b1
-            - f7eb2fa2fea288b1
-            full_name: Lakewood, CO
-            place_type: city
-            name: Lakewood
-            id: f7eb2fa2fea288b1
-          polls:
-          - voting_status: open
-            duration_minutes: 5
-            end_datetime: 2000-01-23T04:56:07.000+00:00
-            options:
-            - votes: 5
-              position: 1
-              label: label
-            - votes: 5
-              position: 1
-              label: label
-            - votes: 5
-              position: 1
-              label: label
-            - votes: 5
-              position: 1
-              label: label
-            id: "1365059861688410112"
-          - voting_status: open
-            duration_minutes: 5
-            end_datetime: 2000-01-23T04:56:07.000+00:00
-            options:
-            - votes: 5
-              position: 1
-              label: label
-            - votes: 5
-              position: 1
-              label: label
-            - votes: 5
-              position: 1
-              label: label
-            - votes: 5
-              position: 1
-              label: label
-            id: "1365059861688410112"
-          media:
-          - width: 0
-            type: type
-            media_key: media_key
-            height: 0
-          - width: 0
-            type: type
-            media_key: media_key
-            height: 0
-          tweets:
-          - id: "1346889436626259968"
-            created_at: Wed Jan 06 18:40:40 +0000 2021
-            text: Learn how to use the user Tweet timeline and user mention timeline
-              endpoints in the Twitter API v2 to explore Tweet\u2026 https:\/\/t.co\/56a0vZUx7i
-            author_id: "2244994945"
-          - id: "1346889436626259968"
-            created_at: Wed Jan 06 18:40:40 +0000 2021
-            text: Learn how to use the user Tweet timeline and user mention timeline
-              endpoints in the Twitter API v2 to explore Tweet\u2026 https:\/\/t.co\/56a0vZUx7i
-            author_id: "2244994945"
-          users:
-          - id: "2244994945"
-            created_at: 2013-12-14T04:35:55Z
-            name: Twitter Dev
-            username: TwitterDev
-            protected: false
-          - id: "2244994945"
-            created_at: 2013-12-14T04:35:55Z
-            name: Twitter Dev
-            username: TwitterDev
-            protected: false
-        errors:
-        - detail: detail
-          type: type
-          title: title
-        - detail: detail
-          type: type
-          title: title
-      properties:
-        data:
-          items:
-            $ref: '#/components/schemas/Tweet'
-          minItems: 1
-          type: array
-        includes:
-          $ref: '#/components/schemas/Expansions'
-        errors:
-          items:
-            $ref: '#/components/schemas/Problem'
-          minItems: 1
-          type: array
-        meta:
-          $ref: '#/components/schemas/UsersIdLikedTweetsResponse_meta'
-      title: ListsIdTweetsResponse
       type: object
     Tweet_referenced_tweets:
       properties:
@@ -12797,10 +11928,6 @@ components:
         registration_url:
           format: uri
           type: string
-        client_id:
-          type: string
-        required_enrollment:
-          type: string
       type: object
     DisallowedResourceProblem_allOf:
       properties:
@@ -12855,6 +11982,12 @@ components:
           - InternalError
           - ClientApplicationStateDegraded
           - InvalidRules
+          type: string
+    DuplicateRuleProblem_allOf:
+      properties:
+        value:
+          type: string
+        id:
           type: string
     TweetSearchResponse_meta:
       example:
@@ -13129,4 +12262,42 @@ components:
     UserToken:
       scheme: OAuth
       type: http
+    OAuth2UserToken:
+      flows:
+        authorizationCode:
+          authorizationUrl: https://api.twitter.com/2/oauth2/authorize
+          scopes:
+            tweet.read: Allows the app to view any Tweets the authenticated user can
+              see, including Tweets from protected accounts.
+            tweet.write: Allows the app to tweet and retweet for the authenticated
+              user.
+            users.read: Allows the app to view any account the authenticated user
+              can see, including protected accounts.
+            list.write: Allows the app to create and manage lists for the authenticated
+              user.
+            list.read: Allows the app to view any lists the authenticated user has
+              created and lists they are a member of, including private lists.
+            like.read: Allows the app to read Tweets that the authenticated user has
+              liked.
+            like.write: Allows the app to like and un-likes Tweets for the authenticated
+              user.
+            mute.read: Allows the app to read the users the authenticated user has
+              muted.
+            mute.write: Allows the app to mute and unmute users for the authenticated
+              user.
+            block.read: Allows the app to read the users the authenticated user has
+              blocked.
+            block.write: Allows the app to block and unblock users for the authenticated
+              user.
+            tweet.moderate.write: Allows the app to hide and unhide replies to the
+              authenticated user's Tweets.
+            follows.read: Allows the app to read the users who follow the authenticated
+              user and users that they follow.
+            follows.write: Allows the app to follow and unfollow users for the authenticated
+              user.
+            space.read: Allows the app to read the Spaces the authenticated user can
+              see.
+            offline.access: Allows the app to request a refresh token.
+          tokenUrl: https://api.twitter.com/2/oauth2/token
+      type: oauth2
 

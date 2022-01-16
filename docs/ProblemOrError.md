@@ -2,7 +2,7 @@
 
 # ProblemOrError
 
-Problem or Error
+Represents the response in case of throwing an exception. Mainly for the openapi-generator
 
 ## Properties
 

@@ -11,7 +11,6 @@ Name | Type | Description | Notes
 **hashtags** | [**List&lt;HashtagEntity&gt;**](HashtagEntity.md) |  |  [optional]
 **mentions** | [**List&lt;MentionEntity&gt;**](MentionEntity.md) |  |  [optional]
 **cashtags** | [**List&lt;CashtagEntity&gt;**](CashtagEntity.md) |  |  [optional]
-**annotations** | [**List&lt;EntityIndicesInclusiveInclusive&gt;**](EntityIndicesInclusiveInclusive.md) |  |  [optional]
 
 
 
